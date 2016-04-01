@@ -9,10 +9,13 @@
 /* Begin PBXBuildFile section */
 		10527BD01CAE75B1004EB822 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10527BCF1CAE75B1004EB822 /* main.m */; };
 		10527BD31CAE75B1004EB822 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10527BD21CAE75B1004EB822 /* AppDelegate.m */; };
-		10527BD61CAE75B1004EB822 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10527BD51CAE75B1004EB822 /* ViewController.m */; };
 		10527BD91CAE75B1004EB822 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10527BD71CAE75B1004EB822 /* Main.storyboard */; };
 		10527BDB1CAE75B1004EB822 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10527BDA1CAE75B1004EB822 /* Assets.xcassets */; };
 		10527BDE1CAE75B1004EB822 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10527BDC1CAE75B1004EB822 /* LaunchScreen.storyboard */; };
+		10527BE81CAE7CF7004EB822 /* SWHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10527BE71CAE7CF7004EB822 /* SWHomeViewController.m */; };
+		10527BEB1CAE7D74004EB822 /* SWHomeCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 10527BEA1CAE7D74004EB822 /* SWHomeCollectionViewLayout.m */; };
+		10527BEE1CAE82BC004EB822 /* SWHomeImageCellNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 10527BED1CAE82BC004EB822 /* SWHomeImageCellNode.m */; };
+		4FA1FFDB573DCD865B01428C /* libPods-StarWallpaper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A049281CB78DED15F89540DF /* libPods-StarWallpaper.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +23,19 @@
 		10527BCF1CAE75B1004EB822 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		10527BD11CAE75B1004EB822 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		10527BD21CAE75B1004EB822 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		10527BD41CAE75B1004EB822 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		10527BD51CAE75B1004EB822 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		10527BD81CAE75B1004EB822 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		10527BDA1CAE75B1004EB822 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10527BDD1CAE75B1004EB822 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10527BDF1CAE75B1004EB822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10527BE61CAE7CF7004EB822 /* SWHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWHomeViewController.h; sourceTree = "<group>"; };
+		10527BE71CAE7CF7004EB822 /* SWHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWHomeViewController.m; sourceTree = "<group>"; };
+		10527BE91CAE7D74004EB822 /* SWHomeCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWHomeCollectionViewLayout.h; sourceTree = "<group>"; };
+		10527BEA1CAE7D74004EB822 /* SWHomeCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWHomeCollectionViewLayout.m; sourceTree = "<group>"; };
+		10527BEC1CAE82BC004EB822 /* SWHomeImageCellNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWHomeImageCellNode.h; sourceTree = "<group>"; };
+		10527BED1CAE82BC004EB822 /* SWHomeImageCellNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWHomeImageCellNode.m; sourceTree = "<group>"; };
+		1DDFE378E9E3C31C9F735237 /* Pods-StarWallpaper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWallpaper.release.xcconfig"; path = "Pods/Target Support Files/Pods-StarWallpaper/Pods-StarWallpaper.release.xcconfig"; sourceTree = "<group>"; };
+		626A14ABE24A101A5DE4B671 /* Pods-StarWallpaper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWallpaper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StarWallpaper/Pods-StarWallpaper.debug.xcconfig"; sourceTree = "<group>"; };
+		A049281CB78DED15F89540DF /* libPods-StarWallpaper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StarWallpaper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FA1FFDB573DCD865B01428C /* libPods-StarWallpaper.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +55,8 @@
 			children = (
 				10527BCD1CAE75B1004EB822 /* StarWallpaper */,
 				10527BCC1CAE75B0004EB822 /* Products */,
+				A27B998D13F062CE0BF2C2C0 /* Pods */,
+				2DE0C02812EA3956749A9C75 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,10 +71,9 @@
 		10527BCD1CAE75B1004EB822 /* StarWallpaper */ = {
 			isa = PBXGroup;
 			children = (
+				10527BE51CAE7CF7004EB822 /* Home */,
 				10527BD11CAE75B1004EB822 /* AppDelegate.h */,
 				10527BD21CAE75B1004EB822 /* AppDelegate.m */,
-				10527BD41CAE75B1004EB822 /* ViewController.h */,
-				10527BD51CAE75B1004EB822 /* ViewController.m */,
 				10527BD71CAE75B1004EB822 /* Main.storyboard */,
 				10527BDA1CAE75B1004EB822 /* Assets.xcassets */,
 				10527BDC1CAE75B1004EB822 /* LaunchScreen.storyboard */,
@@ -79,6 +91,36 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		10527BE51CAE7CF7004EB822 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				10527BEC1CAE82BC004EB822 /* SWHomeImageCellNode.h */,
+				10527BED1CAE82BC004EB822 /* SWHomeImageCellNode.m */,
+				10527BE91CAE7D74004EB822 /* SWHomeCollectionViewLayout.h */,
+				10527BEA1CAE7D74004EB822 /* SWHomeCollectionViewLayout.m */,
+				10527BE61CAE7CF7004EB822 /* SWHomeViewController.h */,
+				10527BE71CAE7CF7004EB822 /* SWHomeViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2DE0C02812EA3956749A9C75 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A049281CB78DED15F89540DF /* libPods-StarWallpaper.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A27B998D13F062CE0BF2C2C0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				626A14ABE24A101A5DE4B671 /* Pods-StarWallpaper.debug.xcconfig */,
+				1DDFE378E9E3C31C9F735237 /* Pods-StarWallpaper.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +128,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 10527BE21CAE75B1004EB822 /* Build configuration list for PBXNativeTarget "StarWallpaper" */;
 			buildPhases = (
+				8DB91AE70A5DB0083117F195 /* Check Pods Manifest.lock */,
 				10527BC71CAE75B0004EB822 /* Sources */,
 				10527BC81CAE75B0004EB822 /* Frameworks */,
 				10527BC91CAE75B0004EB822 /* Resources */,
+				55AF5352156F1DD1588B4D51 /* Embed Pods Frameworks */,
+				A6709A54FC6D0765917BE0A8 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,14 +189,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		55AF5352156F1DD1588B4D51 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StarWallpaper/Pods-StarWallpaper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8DB91AE70A5DB0083117F195 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A6709A54FC6D0765917BE0A8 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StarWallpaper/Pods-StarWallpaper-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		10527BC71CAE75B0004EB822 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10527BD61CAE75B1004EB822 /* ViewController.m in Sources */,
+				10527BEB1CAE7D74004EB822 /* SWHomeCollectionViewLayout.m in Sources */,
+				10527BEE1CAE82BC004EB822 /* SWHomeImageCellNode.m in Sources */,
 				10527BD31CAE75B1004EB822 /* AppDelegate.m in Sources */,
 				10527BD01CAE75B1004EB822 /* main.m in Sources */,
+				10527BE81CAE7CF7004EB822 /* SWHomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +356,7 @@
 		};
 		10527BE31CAE75B1004EB822 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 626A14ABE24A101A5DE4B671 /* Pods-StarWallpaper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = StarWallpaper/Info.plist;
@@ -272,6 +368,7 @@
 		};
 		10527BE41CAE75B1004EB822 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DDFE378E9E3C31C9F735237 /* Pods-StarWallpaper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = StarWallpaper/Info.plist;
@@ -300,6 +397,7 @@
 				10527BE41CAE75B1004EB822 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
