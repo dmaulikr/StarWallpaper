@@ -10,6 +10,6 @@
 
 @interface SWHomeImageCellNode : ASCellNode
 
-- (instancetype)initWithImage:(UIImage *)image;
+- (id)initWithImageUrl:(NSURL *)url;
 
 @end

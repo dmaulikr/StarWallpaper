@@ -24,9 +24,9 @@
   self = [super init];
   if (self != nil) {
     self.numberOfColumns = 3;
-    self.columnSpacing = 10.0;
-    self.sectionInset = UIEdgeInsetsMake(10.0, 10.0, 10.0, 10.0);
-    self.interItemSpacing = UIEdgeInsetsMake(10.0, 0, 10.0, 0);
+    self.columnSpacing = 3.0;
+    self.sectionInset = UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0);
+    self.interItemSpacing = UIEdgeInsetsMake(3.0, 0.0, 3.0, 0.0);
   }
   return self;
 }

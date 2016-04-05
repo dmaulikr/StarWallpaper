@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "SWConstDef.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+    
+    NSString *keyword = [[NSUserDefaults standardUserDefaults] objectForKey:kKeyword];
+    if (!keyword || keyword.length<=0) {
+        [[NSUserDefaults standardUserDefaults] setObject:@"宋仲基" forKey:kKeyword];
+    }
+    
     return YES;
 }
 
