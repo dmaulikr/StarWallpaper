@@ -7,10 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SWBaseDO.h"
 
-@interface SWImageItemDO : NSObject
+@interface SWImageItemDO : SWBaseDO
 
-@property (nonatomic, copy) NSString *thumnailImageUrl;
+@property (nonatomic, copy) NSString *diyImageUrl;
+@property (nonatomic, copy) NSString *smallImageUrl;
 @property (nonatomic, copy) NSString *bigImageUrl;
+@property (nonatomic, copy) NSString *middleImageUrl;  //自己拼接尺寸
 
 @end

@@ -58,7 +58,7 @@
     [bottomBar addSubview:leftBtn];
     
     _keywordBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 160, 30)];
-    [_keywordBtn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+    [_keywordBtn setTitleColor:[UIColor colorWithRed:0x99/255.0 green:0xc8/255.0 blue:0x00/255.0 alpha:0.7] forState:UIControlStateNormal];
     _keywordBtn.center = CGPointMake(bottomBar.frame.size.width*0.5, bottomBar.frame.size.height*0.5);
     [bottomBar addSubview:_keywordBtn];
     
@@ -86,7 +86,7 @@
     
     @weakify(self)
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    [manager GET:@"http://api.lovebizhi.com/iphone_v3.php" parameters:@{@"a":@"search", @"kw":keyword, @"client_id":@"1002", @"model_id":@"100", @"screen_width":@kScreenWidth, @"screen_height":@kScreenHeight, @"bizhi_width":@1080, @"bizhi_height":@"1920"} progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [manager GET:@"http://api.lovebizhi.com/iphone_v3.php" parameters:@{@"a":@"search", @"kw":keyword, @"client_id":@"1002", @"model_id":@"100", @"screen_width":@(kScreenWidth * [UIScreen mainScreen].scale), @"screen_height":@(kScreenHeight * [UIScreen mainScreen].scale), @"bizhi_width":@(kScreenWidth * [UIScreen mainScreen].scale), @"bizhi_height":@(kScreenHeight * [UIScreen mainScreen].scale)} progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         @strongify(self)
         SWImageListDO *imageList = [SWImageListDO yy_modelWithDictionary:responseObject];
         self.itemArray = imageList.itemArray;
@@ -118,7 +118,7 @@
 {
     SWImageItemDO *imageItem = _itemArray.count>indexPath.row?[_itemArray objectAtIndex:indexPath.row]:nil;
     return ^{
-        return [[SWHomeImageCellNode alloc] initWithImageUrl:[NSURL URLWithString:imageItem.thumnailImageUrl]];
+        return [[SWHomeImageCellNode alloc] initWithImageUrl:[NSURL URLWithString:imageItem.middleImageUrl]];
     };
 }
 
@@ -140,7 +140,7 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout originalItemSizeAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(100, 100);
+    return CGSizeMake(100, 100 * kScreenHeight / kScreenWidth);
 }
 
 @end

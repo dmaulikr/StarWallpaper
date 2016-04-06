@@ -7,39 +7,53 @@
 //
 
 #import "SWHomeImageCellNode.h"
-#import "SDWebImageManager.h"
+#import "SWConstDef.h"
+
+@interface SWHomeImageCellNode () <ASNetworkImageNodeDelegate>
+
+@property (nonatomic, strong) NSURL *imageUrl;
+
+@end
 
 @implementation SWHomeImageCellNode {
-  ASImageNode *_imageNode;
+  ASNetworkImageNode *_imageNode;
 }
 
 - (id)initWithImageUrl:(NSURL *)url
 {
   self = [super init];
   if (self != nil) {
-      _imageNode = [[ASImageNode alloc] init];
+      _imageUrl = url;
+      _imageNode = [[ASNetworkImageNode alloc] init];
+      _imageNode.delegate = self;
       [self addSubnode:_imageNode];
-      //fnoztodo 用SD下载图片
-      [[SDWebImageManager sharedManager] downloadImageWithURL:[NSURL URLWithString:@"http://s.qdcdn.com/cl/11990432,125,222.jpg"] options:SDWebImageRetryFailed progress:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
-          if (image) {
-              _imageNode.image = image;
-          }
-      }];
   }
   return self;
 }
 
-- (CGSize)calculateSizeThatFits:(CGSize)constrainedSize
+- (void)layoutDidFinish
 {
-  [_imageNode measure:constrainedSize];
-  return constrainedSize;
+    [super layoutDidFinish];
+    _imageNode.URL = _imageUrl;
 }
 
-- (void)layout
+- (CGSize)calculateSizeThatFits:(CGSize)constrainedSize
 {
-  [super layout];
-  
-  _imageNode.frame = CGRectMake(0, 0, _imageNode.calculatedSize.width, _imageNode.calculatedSize.height);
+    _imageNode.frame = CGRectMake(0, 0, constrainedSize.width, constrainedSize.width * kScreenHeight / kScreenWidth);
+    return constrainedSize;
+}
+
+#pragma - mark ASNetworkImageNode Delegate
+- (void)imageNode:(ASNetworkImageNode *)imageNode didLoadImage:(UIImage *)image {
+    NSLog(@"%@", image);
+}
+
+- (void)imageNode:(ASNetworkImageNode *)imageNode didFailWithError:(NSError *)error {
+    NSLog(@"%@", error);
+}
+
+- (void)imageNodeDidFinishDecoding:(ASNetworkImageNode *)imageNode {
+    NSLog(@"%@", imageNode);
 }
 
 @end

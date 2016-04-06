@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SWBaseDO.h"
 
-@interface SWImageListDO : NSObject
+@interface SWImageListDO : SWBaseDO
 
 @property (nonatomic, strong) NSArray *itemArray;
 

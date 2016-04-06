@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a99dd066-57ea-4888-afcb-96860f2e5af5" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SDWebImage/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SDWebImage/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/MKAnnotationView+WebCache.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/MKAnnotationView+WebCache.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/NSData+ImageContentType.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/NSData+ImageContentType.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDImageCache.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDImageCache.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageCompat.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageCompat.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageDecoder.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageDecoder.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageDownloader.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageDownloader.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageManager.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageManager.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImageOperation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImagePrefetcher.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/SDWebImagePrefetcher.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/UIButton+WebCache.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/UIButton+WebCache.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/UIImage+GIF.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/UIImage+GIF.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/UIImage+MultiFormat.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/UIImage+MultiFormat.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/UIImage+WebP.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/UIImage+WebP.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/UIImageView+HighlightedWebCache.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/UIImageView+HighlightedWebCache.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/UIImageView+WebCache.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/UIImageView+WebCache.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/UIView+WebCacheOperation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/SDWebImage/SDWebImage/UIView+WebCacheOperation.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/SDWebImage/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/SDWebImage/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/SDWebImage/SDWebImage/NSData+ImageContentType.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/SDWebImage/SDWebImage/NSData+ImageContentType.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/SDWebImage/SDWebImage/SDImageCache.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/SDWebImage/SDWebImage/SDImageCache.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/SDWebImage/SDWebImage/SDWebImageCompat.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/SDWebImage/SDWebImage/SDWebImageCompat.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/SDWebImage/SDWebImage/SDWebImageDecoder.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/SDWebImage/SDWebImage/SDWebImageDecoder.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/SDWebImage/SDWebImage/SDWebImageDownloader.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/SDWebImage/SDWebImage/SDWebImageDownloader.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/SDWebImage/SDWebImage/SDWebImageDownloaderOperation.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/SDWebImage/SDWebImage/SDWebImageManager.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/SDWebImage/SDWebImage/SDWebImageManager.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/SDWebImage/SDWebImage/SDWebImageOperation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/SDWebImage/SDWebImage/SDWebImagePrefetcher.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/SDWebImage/SDWebImage/SDWebImagePrefetcher.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/SDWebImage/SDWebImage/UIButton+WebCache.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/SDWebImage/SDWebImage/UIButton+WebCache.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/SDWebImage/SDWebImage/UIImage+GIF.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/SDWebImage/SDWebImage/UIImage+GIF.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/SDWebImage/SDWebImage/UIImage+MultiFormat.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/SDWebImage/SDWebImage/UIImage+MultiFormat.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/SDWebImage/SDWebImage/UIImage+WebP.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/SDWebImage/SDWebImage/UIImage+WebP.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/SDWebImage/SDWebImage/UIImageView+HighlightedWebCache.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/SDWebImage/SDWebImage/UIImageView+HighlightedWebCache.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/SDWebImage/SDWebImage/UIImageView+WebCache.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/SDWebImage/SDWebImage/UIImageView+WebCache.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/SDWebImage/SDWebImage/UIView+WebCacheOperation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/SDWebImage/SDWebImage/UIView+WebCacheOperation.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/README" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/README.mux" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/dec/alpha.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/dec/alphai.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/dec/buffer.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/dec/decode_vp8.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/dec/frame.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/dec/idec.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/dec/io.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/dec/quant.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/dec/tree.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/dec/vp8.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/dec/vp8i.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/dec/vp8l.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/dec/vp8li.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/dec/webp.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/dec/webpi.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/demux/demux.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/dsp/alpha_processing.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/dsp/alpha_processing_sse2.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/dsp/cpu.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/dsp/dec.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/dsp/dec_clip_tables.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/dsp/dec_mips32.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/dsp/dec_neon.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/dsp/dec_sse2.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/dsp/dsp.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/dsp/enc.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/dsp/enc_avx2.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/dsp/enc_mips32.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/dsp/enc_neon.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/dsp/enc_sse2.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/dsp/lossless.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/dsp/lossless.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/dsp/lossless_mips32.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/dsp/lossless_neon.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/dsp/lossless_sse2.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/dsp/neon.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/dsp/upsampling.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/dsp/upsampling_neon.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/dsp/upsampling_sse2.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/dsp/yuv.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/dsp/yuv.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/dsp/yuv_mips32.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/dsp/yuv_sse2.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/dsp/yuv_tables_sse2.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/enc/alpha.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/enc/analysis.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/enc/backward_references.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/enc/backward_references.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/enc/config.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/enc/cost.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/enc/cost.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/enc/filter.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/enc/frame.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/enc/histogram.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/enc/histogram.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/enc/iterator.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/enc/picture.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/enc/picture_csp.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/enc/picture_psnr.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/enc/picture_rescale.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/enc/picture_tools.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/enc/quant.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/enc/syntax.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/enc/token.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/enc/tree.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/enc/vp8enci.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/enc/vp8l.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/enc/vp8li.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/enc/webpenc.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/mux/muxedit.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/mux/muxi.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/mux/muxinternal.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/mux/muxread.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/utils/bit_reader.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/utils/bit_reader.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/utils/bit_reader_inl.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/utils/bit_writer.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/utils/bit_writer.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/utils/color_cache.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/utils/color_cache.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/utils/endian_inl.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/utils/filters.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/utils/filters.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/utils/huffman.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/utils/huffman.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/utils/huffman_encode.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/utils/huffman_encode.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/utils/quant_levels.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/utils/quant_levels.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/utils/quant_levels_dec.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/utils/quant_levels_dec.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/utils/random.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/utils/random.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/utils/rescaler.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/utils/rescaler.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/utils/thread.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/utils/thread.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/utils/utils.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/utils/utils.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/webp/decode.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/webp/demux.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/webp/encode.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/webp/format_constants.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/webp/mux.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/webp/mux_types.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/StarWallpaper/OpenSource/libwebp/src/webp/types.h" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Podfile" afterPath="$PROJECT_DIR$/Podfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Podfile.lock" afterPath="$PROJECT_DIR$/Podfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Manifest.lock" afterPath="$PROJECT_DIR$/Pods/Manifest.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Fnoz.xcuserdatad/xcschemes/AFNetworking.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Fnoz.xcuserdatad/xcschemes/AFNetworking.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Fnoz.xcuserdatad/xcschemes/AsyncDisplayKit.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Fnoz.xcuserdatad/xcschemes/AsyncDisplayKit.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Fnoz.xcuserdatad/xcschemes/PINCache.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Fnoz.xcuserdatad/xcschemes/PINCache.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Fnoz.xcuserdatad/xcschemes/PINRemoteImage.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Fnoz.xcuserdatad/xcschemes/PINRemoteImage.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Fnoz.xcuserdatad/xcschemes/Pods-StarWallpaper.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Fnoz.xcuserdatad/xcschemes/Pods-StarWallpaper.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Fnoz.xcuserdatad/xcschemes/RZSquaresLoading.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Fnoz.xcuserdatad/xcschemes/RZSquaresLoading.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Fnoz.xcuserdatad/xcschemes/YYModel.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Fnoz.xcuserdatad/xcschemes/YYModel.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Fnoz.xcuserdatad/xcschemes/libextobjc.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Fnoz.xcuserdatad/xcschemes/libextobjc.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/AFNetworking/AFNetworking.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/AFNetworking/AFNetworking.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/AsyncDisplayKit/AsyncDisplayKit.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/AsyncDisplayKit/AsyncDisplayKit.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/PINCache/PINCache.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/PINCache/PINCache.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/PINRemoteImage/PINRemoteImage.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/PINRemoteImage/PINRemoteImage.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-StarWallpaper/Pods-StarWallpaper.debug.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-StarWallpaper/Pods-StarWallpaper.debug.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-StarWallpaper/Pods-StarWallpaper.release.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-StarWallpaper/Pods-StarWallpaper.release.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/RZSquaresLoading/RZSquaresLoading.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/RZSquaresLoading/RZSquaresLoading.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/YYModel/YYModel.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/YYModel/YYModel.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/libextobjc/libextobjc.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/libextobjc/libextobjc.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StarWallpaper.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/StarWallpaper.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StarWallpaper/Home/SWHomeImageCellNode.m" afterPath="$PROJECT_DIR$/StarWallpaper/Home/SWHomeImageCellNode.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StarWallpaper/Home/SWHomeViewController.m" afterPath="$PROJECT_DIR$/StarWallpaper/Home/SWHomeViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StarWallpaper/Model/SWImageItemDO.h" afterPath="$PROJECT_DIR$/StarWallpaper/Model/SWImageItemDO.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StarWallpaper/Model/SWImageItemDO.m" afterPath="$PROJECT_DIR$/StarWallpaper/Model/SWImageItemDO.m" />
+    </list>
+    <ignored path="StarWallpaper.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="StarWallpaper" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="708" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a99dd066-57ea-4888-afcb-96860f2e5af5" name="Default" comment="" />
+      <created>1459867132080</created>
+      <option name="number" value="Default" />
+      <updated>1459867132080</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1280" height="708" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+</project>
