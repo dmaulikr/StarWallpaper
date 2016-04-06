@@ -23,7 +23,6 @@
     if (!keyword || keyword.length<=0) {
         [[NSUserDefaults standardUserDefaults] setObject:@"宋仲基" forKey:kKeyword];
     }
-    
     return YES;
 }
 

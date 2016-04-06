@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1028A94F1CB5087100C3E276 /* RTWSYueGoTrial-LightCond.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1028A94E1CB5087100C3E276 /* RTWSYueGoTrial-LightCond.ttf */; };
 		10527BD01CAE75B1004EB822 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10527BCF1CAE75B1004EB822 /* main.m */; };
 		10527BD31CAE75B1004EB822 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10527BD21CAE75B1004EB822 /* AppDelegate.m */; };
 		10527BD91CAE75B1004EB822 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10527BD71CAE75B1004EB822 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1028A94E1CB5087100C3E276 /* RTWSYueGoTrial-LightCond.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RTWSYueGoTrial-LightCond.ttf"; sourceTree = "<group>"; };
 		10527BCB1CAE75B0004EB822 /* StarWallpaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWallpaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10527BCF1CAE75B1004EB822 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		10527BD11CAE75B1004EB822 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				10527BDA1CAE75B1004EB822 /* Assets.xcassets */,
 				10527BDC1CAE75B1004EB822 /* LaunchScreen.storyboard */,
 				10527BDF1CAE75B1004EB822 /* Info.plist */,
+				1028A94E1CB5087100C3E276 /* RTWSYueGoTrial-LightCond.ttf */,
 				10527BCE1CAE75B1004EB822 /* Supporting Files */,
 			);
 			path = StarWallpaper;
@@ -222,6 +225,7 @@
 			files = (
 				10527BDE1CAE75B1004EB822 /* LaunchScreen.storyboard in Resources */,
 				10527BDB1CAE75B1004EB822 /* Assets.xcassets in Resources */,
+				1028A94F1CB5087100C3E276 /* RTWSYueGoTrial-LightCond.ttf in Resources */,
 				10527BD91CAE75B1004EB822 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

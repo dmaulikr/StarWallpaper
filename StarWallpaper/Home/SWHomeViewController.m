@@ -60,6 +60,7 @@
     _keywordBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 160, 30)];
     [_keywordBtn setTitleColor:[UIColor colorWithRed:0x99/255.0 green:0xc8/255.0 blue:0x00/255.0 alpha:0.7] forState:UIControlStateNormal];
     _keywordBtn.center = CGPointMake(bottomBar.frame.size.width*0.5, bottomBar.frame.size.height*0.5);
+    _keywordBtn.titleLabel.font = SWFontOfSize(20);
     [bottomBar addSubview:_keywordBtn];
     
     UIButton *rightBtn = [[UIButton alloc] initWithFrame:CGRectMake(bottomBar.frame.size.width - 50, 0, 50, 50)];
