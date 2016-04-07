@@ -12,4 +12,8 @@ typedef void (^SWSelectedKeywordBlock)(NSString *keyword);
 
 @interface SearchViewController : UIViewController
 
+@property (nonatomic, copy) NSString *keyword;
+
++ (void)presentWithKeyword:(NSString *)keyword selectedKeywordBlock:(SWSelectedKeywordBlock)block;
+
 @end

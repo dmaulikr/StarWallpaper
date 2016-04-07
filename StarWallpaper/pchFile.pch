@@ -1,0 +1,16 @@
+//
+//  PrefixHeader.pch
+//  StarWallpaper
+//
+//  Created by Fnoz on 16/4/6.
+//  Copyright © 2016年 Fnoz. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "SWConstDef.h"
+
+#endif /* PrefixHeader_pch */

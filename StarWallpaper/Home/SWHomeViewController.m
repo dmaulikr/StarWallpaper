@@ -17,6 +17,7 @@
 #import "NSObject+YYModel.h"
 #import "EXTScope.h"
 #import "SWImageItemDO.h"
+#import "SearchViewController.h"
 
 @interface SWHomeViewController () <ASCollectionViewDataSource, SWHomeCollectionViewLayoutDelegate>
 
@@ -61,6 +62,7 @@
     [_keywordBtn setTitleColor:[UIColor colorWithRed:0x99/255.0 green:0xc8/255.0 blue:0x00/255.0 alpha:0.7] forState:UIControlStateNormal];
     _keywordBtn.center = CGPointMake(bottomBar.frame.size.width*0.5, bottomBar.frame.size.height*0.5);
     _keywordBtn.titleLabel.font = SWFontOfSize(20);
+    [_keywordBtn addTarget:self action:@selector(keywordClicked) forControlEvents:UIControlEventTouchUpInside];
     [bottomBar addSubview:_keywordBtn];
     
     UIButton *rightBtn = [[UIButton alloc] initWithFrame:CGRectMake(bottomBar.frame.size.width - 50, 0, 50, 50)];
@@ -112,6 +114,12 @@
         [_loading removeFromSuperview];
         _loading = nil;
     }
+}
+
+- (void)keywordClicked {
+    [SearchViewController presentWithKeyword:@"abc" selectedKeywordBlock:^(NSString *keyword) {
+        ;
+    }];
 }
 
 #pragma mark - Collection delegate

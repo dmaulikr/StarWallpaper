@@ -11,6 +11,7 @@
 
 #define SWScreenWidth [UIScreen mainScreen].bounds
 #define SWFontOfSize(sz) [UIFont fontWithName:@"RTWS YueGothic Trial" size:(sz)]
+#define SWCurrentVC [SWCommonUtil getCurrentVC]
 
 #define kSWBackGroundGray [UIColor colorWithRed:0x22/255.0 green:0x22/255.0 blue:0x22/255.0 alpha:1.0]
 #define kKeyword @"keyword"

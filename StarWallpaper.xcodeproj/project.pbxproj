@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1028A94F1CB5087100C3E276 /* RTWSYueGoTrial-LightCond.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1028A94E1CB5087100C3E276 /* RTWSYueGoTrial-LightCond.ttf */; };
+		1028A9521CB50D4800C3E276 /* SWCommonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1028A9511CB50D4800C3E276 /* SWCommonUtil.m */; };
+		1028A9541CB50E7600C3E276 /* pchFile.pch in Resources */ = {isa = PBXBuildFile; fileRef = 1028A9531CB50D9E00C3E276 /* pchFile.pch */; };
 		10527BD01CAE75B1004EB822 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10527BCF1CAE75B1004EB822 /* main.m */; };
 		10527BD31CAE75B1004EB822 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10527BD21CAE75B1004EB822 /* AppDelegate.m */; };
 		10527BD91CAE75B1004EB822 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10527BD71CAE75B1004EB822 /* Main.storyboard */; };
@@ -25,6 +27,9 @@
 
 /* Begin PBXFileReference section */
 		1028A94E1CB5087100C3E276 /* RTWSYueGoTrial-LightCond.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RTWSYueGoTrial-LightCond.ttf"; sourceTree = "<group>"; };
+		1028A9501CB50D4800C3E276 /* SWCommonUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWCommonUtil.h; sourceTree = "<group>"; };
+		1028A9511CB50D4800C3E276 /* SWCommonUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWCommonUtil.m; sourceTree = "<group>"; };
+		1028A9531CB50D9E00C3E276 /* pchFile.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pchFile.pch; sourceTree = "<group>"; };
 		10527BCB1CAE75B0004EB822 /* StarWallpaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWallpaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10527BCF1CAE75B1004EB822 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		10527BD11CAE75B1004EB822 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -90,11 +95,14 @@
 				10527BF01CB209D4004EB822 /* Search */,
 				10527BE51CAE7CF7004EB822 /* Home */,
 				10527BEF1CAFEDBF004EB822 /* SWConstDef.h */,
+				1028A9501CB50D4800C3E276 /* SWCommonUtil.h */,
+				1028A9511CB50D4800C3E276 /* SWCommonUtil.m */,
 				10527BD11CAE75B1004EB822 /* AppDelegate.h */,
 				10527BD21CAE75B1004EB822 /* AppDelegate.m */,
 				10527BD71CAE75B1004EB822 /* Main.storyboard */,
 				10527BDA1CAE75B1004EB822 /* Assets.xcassets */,
 				10527BDC1CAE75B1004EB822 /* LaunchScreen.storyboard */,
+				1028A9531CB50D9E00C3E276 /* pchFile.pch */,
 				10527BDF1CAE75B1004EB822 /* Info.plist */,
 				1028A94E1CB5087100C3E276 /* RTWSYueGoTrial-LightCond.ttf */,
 				10527BCE1CAE75B1004EB822 /* Supporting Files */,
@@ -223,6 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1028A9541CB50E7600C3E276 /* pchFile.pch in Resources */,
 				10527BDE1CAE75B1004EB822 /* LaunchScreen.storyboard in Resources */,
 				10527BDB1CAE75B1004EB822 /* Assets.xcassets in Resources */,
 				1028A94F1CB5087100C3E276 /* RTWSYueGoTrial-LightCond.ttf in Resources */,
@@ -287,6 +296,7 @@
 			files = (
 				10527BEB1CAE7D74004EB822 /* SWHomeCollectionViewLayout.m in Sources */,
 				10527BFA1CB2CECD004EB822 /* SWImageItemDO.m in Sources */,
+				1028A9521CB50D4800C3E276 /* SWCommonUtil.m in Sources */,
 				10527BEE1CAE82BC004EB822 /* SWHomeImageCellNode.m in Sources */,
 				10527BD31CAE75B1004EB822 /* AppDelegate.m in Sources */,
 				10527BF71CB2CE72004EB822 /* SWImageListDO.m in Sources */,
@@ -408,6 +418,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/StarWallpaper/pchFile.pch";
 				INFOPLIST_FILE = StarWallpaper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Fnoz.StarWallpaper;
@@ -423,6 +434,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/StarWallpaper/pchFile.pch";
 				INFOPLIST_FILE = StarWallpaper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Fnoz.StarWallpaper;
