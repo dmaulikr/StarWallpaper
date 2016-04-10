@@ -57,9 +57,9 @@ static NSString *const kSWHomeImageCellCollectionViewCellID = @"SWHomeImageCellC
     [bottomBar addSubview:leftBtn];
     
     _keywordBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 160, 30)];
-    [_keywordBtn setTitleColor:[UIColor colorWithRed:0x99/255.0 green:0xc8/255.0 blue:0x00/255.0 alpha:0.7] forState:UIControlStateNormal];
+    [_keywordBtn setTitleColor:kSWFontGreen forState:UIControlStateNormal];
     _keywordBtn.center = CGPointMake(bottomBar.frame.size.width*0.5, bottomBar.frame.size.height*0.5);
-    _keywordBtn.titleLabel.font = SWFontOfSize(20);
+    _keywordBtn.titleLabel.font = SWFontOfSize(22);
     [_keywordBtn addTarget:self action:@selector(keywordClicked) forControlEvents:UIControlEventTouchUpInside];
     [bottomBar addSubview:_keywordBtn];
     
@@ -79,7 +79,8 @@ static NSString *const kSWHomeImageCellCollectionViewCellID = @"SWHomeImageCellC
     if ([keyword isEqualToString:_currentKeyword]) {
         return;
     }
-    _currentKeyword = [[NSUserDefaults standardUserDefaults] objectForKey:kKeyword];
+    _currentKeyword = keyword;
+    [[NSUserDefaults standardUserDefaults] setObject:_currentKeyword forKey:kKeyword];
     _itemArray = nil;
     [_collectionView reloadData];
     [self showLoading:YES];
@@ -118,8 +119,10 @@ static NSString *const kSWHomeImageCellCollectionViewCellID = @"SWHomeImageCellC
 }
 
 - (void)keywordClicked {
-    [SearchViewController presentWithKeyword:@"abc" selectedKeywordBlock:^(NSString *keyword) {
-        ;
+    @weakify(self)
+    [SearchViewController presentWithKeyword:_currentKeyword selectedKeywordBlock:^(NSString *keyword) {
+        @strongify(self)
+        [self getResultForKeyword:keyword];
     }];
 }
 
