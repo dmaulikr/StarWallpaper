@@ -11,5 +11,7 @@
 @interface SWCommonUtil : NSObject
 
 + (UIViewController *)getCurrentVC;
++ (NSString *)replaceUnicode:(NSString *)unicodeStr;
++ (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString;
 
 @end

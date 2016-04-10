@@ -21,7 +21,7 @@
     
     NSString *keyword = [[NSUserDefaults standardUserDefaults] objectForKey:kKeyword];
     if (!keyword || keyword.length<=0) {
-        [[NSUserDefaults standardUserDefaults] setObject:@"宋仲基" forKey:kKeyword];
+        [[NSUserDefaults standardUserDefaults] setObject:@"鹿晗" forKey:kKeyword];
     }
     return YES;
 }

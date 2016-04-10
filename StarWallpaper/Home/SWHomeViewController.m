@@ -18,6 +18,7 @@
 #import "EXTScope.h"
 #import "SWImageItemDO.h"
 #import "SearchViewController.h"
+#import "SWCommonUtil.h"
 
 @interface SWHomeViewController () <ASCollectionViewDataSource, SWHomeCollectionViewLayoutDelegate>
 
@@ -89,9 +90,12 @@
     
     @weakify(self)
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    [manager GET:@"http://api.lovebizhi.com/iphone_v3.php" parameters:@{@"a":@"search", @"kw":keyword, @"client_id":@"1002", @"model_id":@"100", @"screen_width":@(kScreenWidth * [UIScreen mainScreen].scale), @"screen_height":@(kScreenHeight * [UIScreen mainScreen].scale), @"bizhi_width":@(kScreenWidth * [UIScreen mainScreen].scale), @"bizhi_height":@(kScreenHeight * [UIScreen mainScreen].scale)} progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    NSString *urlStr = [NSString stringWithFormat:@"http://starwallpaper.duapp.com?keyword=%@&imgWidth=%@&imgHeight=%@", [keyword stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding], @(kScreenWidth * [UIScreen mainScreen].scale), @(kScreenHeight * [UIScreen mainScreen].scale)];
+    [manager GET:urlStr parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSString *responseString = [SWCommonUtil replaceUnicode:[[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding]];
+        NSDictionary  *responseDic = [SWCommonUtil dictionaryWithJsonString:responseString];
         @strongify(self)
-        SWImageListDO *imageList = [SWImageListDO yy_modelWithDictionary:responseObject];
+        SWImageListDO *imageList = [SWImageListDO yy_modelWithJSON:responseString];
         self.itemArray = imageList.itemArray;
         [self showLoading:NO];
         [self.collectionView reloadData];
@@ -99,6 +103,8 @@
         @strongify(self)
         [self showLoading:NO];
     }];
+    manager.responseSerializer=[AFHTTPResponseSerializer serializer];
+//    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/json"];
 }
 
 - (void)showLoading:(BOOL)isShow {
