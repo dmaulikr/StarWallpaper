@@ -14,12 +14,6 @@ PODS:
   - AFNetworking/Serialization (3.0.4)
   - AFNetworking/UIKit (3.0.4):
     - AFNetworking/NSURLSession
-  - AsyncDisplayKit (1.9.7.1):
-    - AsyncDisplayKit/PINRemoteImage (= 1.9.7.1)
-  - AsyncDisplayKit/ASDealloc2MainObject (1.9.7.1)
-  - AsyncDisplayKit/PINRemoteImage (1.9.7.1):
-    - AsyncDisplayKit/ASDealloc2MainObject
-    - PINRemoteImage/iOS (>= 2.1.2)
   - libextobjc (0.4.1):
     - libextobjc/EXTADT (= 0.4.1)
     - libextobjc/EXTConcreteProtocol (= 0.4.1)
@@ -70,34 +64,26 @@ PODS:
   - libwebp/mux (0.4.3.1)
   - libwebp/utils (0.4.3.1)
   - libwebp/webp (0.4.3.1)
-  - PINCache (2.2.2)
-  - PINRemoteImage/Core (2.1.2):
-    - PINCache (>= 2.1)
-  - PINRemoteImage/iOS (2.1.2):
-    - PINRemoteImage/Core
-  - PINRemoteImage/WebP (2.1.2):
-    - libwebp
-    - PINRemoteImage/Core
   - RZSquaresLoading (1.1)
+  - SDWebImage/Core (3.7.5)
+  - SDWebImage/WebP (3.7.5):
+    - libwebp
+    - SDWebImage/Core
   - YYModel (1.0.2)
 
 DEPENDENCIES:
   - AFNetworking (= 3.0.4)
-  - AsyncDisplayKit (= 1.9.7.1)
   - libextobjc (= 0.4.1)
-  - libwebp (= 0.4.3.1)
-  - PINRemoteImage/WebP (= 2.1.2)
   - RZSquaresLoading (= 1.1)
+  - SDWebImage/WebP (= 3.7.5)
   - YYModel (= 1.0.2)
 
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
-  AsyncDisplayKit: 2b52f841e384e7326d4f59323b1bf35d00696e17
   libextobjc: a650fc1bf489a3d3a9bc2e621efa3e1006fc5471
   libwebp: 5f9db23073868b94b4f62ef8769ab052837fecc7
-  PINCache: 078426d356ab95ef875e9e62e5c35a2ea3333c28
-  PINRemoteImage: 2ce3f1fcc52f0360a3821f91f1a1bc653c5d2338
   RZSquaresLoading: c0aefa508119a76497424829e439e1b8b0d12fdc
+  SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
   YYModel: 7a467eff45ae3641c33efb136c262d33b6f48c1a
 
 COCOAPODS: 0.39.0

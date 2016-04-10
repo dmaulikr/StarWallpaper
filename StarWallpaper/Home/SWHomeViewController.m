@@ -7,9 +7,6 @@
 //
 
 #import "SWHomeViewController.h"
-#import "ASCollectionView.h"
-#import "SWHomeCollectionViewLayout.h"
-#import "SWHomeImageCellNode.h"
 #import "SWConstDef.h"
 #import "RZSquaresLoading.h"
 #import "AFHTTPSessionManager.h"
@@ -19,11 +16,13 @@
 #import "SWImageItemDO.h"
 #import "SearchViewController.h"
 #import "SWCommonUtil.h"
+#import "SWHomeImageCellCollectionViewCell.h"
 
-@interface SWHomeViewController () <ASCollectionViewDataSource, SWHomeCollectionViewLayoutDelegate>
+static NSString *const kSWHomeImageCellCollectionViewCellID = @"SWHomeImageCellCollectionViewCell";
 
-@property (nonatomic, strong) ASCollectionView *collectionView;
-@property (nonatomic, strong) SWHomeCollectionViewLayoutInspector *layoutInspector;
+@interface SWHomeViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
+
+@property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) UIButton *keywordBtn;
 @property (nonatomic, copy) NSString *currentKeyword;
 @property (nonatomic, strong) NSArray *itemArray;
@@ -36,19 +35,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    SWHomeCollectionViewLayout *layout = [[SWHomeCollectionViewLayout alloc] init];
-    layout.numberOfColumns = 3;
-    layout.headerHeight = 0.0;
-    
-    _layoutInspector = [[SWHomeCollectionViewLayoutInspector alloc] init];
-    
-    _collectionView = [[ASCollectionView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-50) collectionViewLayout:layout];
-    _collectionView.asyncDataSource = self;
-    _collectionView.asyncDelegate = self;
-    _collectionView.layoutInspector = _layoutInspector;
-    _collectionView.backgroundColor = kSWBackGroundGray;
-    [_collectionView registerSupplementaryNodeOfKind:UICollectionElementKindSectionHeader];
-    [self.view addSubview:_collectionView];
+    UICollectionViewFlowLayout *flowLayout=[[UICollectionViewFlowLayout alloc] init];
+    [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
+    _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-50) collectionViewLayout:flowLayout];
+    [self.collectionView setBackgroundColor:kSWBackGroundGray];
+    self.collectionView.dataSource=self;
+    self.collectionView.delegate=self;
+    self.collectionView.alwaysBounceVertical = YES;
+    self.collectionView.showsVerticalScrollIndicator = NO;
+    self.collectionView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
+    [self.collectionView registerClass:[SWHomeImageCellCollectionViewCell class] forCellWithReuseIdentifier:kSWHomeImageCellCollectionViewCellID];
+    [self.view addSubview:self.collectionView];
     
     UIView *bottomBar = [[UIView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height-50, self.view.frame.size.width, 50)];
     bottomBar.backgroundColor = [UIColor blackColor];
@@ -126,34 +123,51 @@
     }];
 }
 
-#pragma mark - Collection delegate
-- (ASCellNodeBlock)collectionView:(ASCollectionView *)collectionView nodeBlockForItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    SWImageItemDO *imageItem = _itemArray.count>indexPath.row?[_itemArray objectAtIndex:indexPath.row]:nil;
-    return ^{
-        return [[SWHomeImageCellNode alloc] initWithImageUrl:[NSURL URLWithString:imageItem.middleImageUrl]];
-    };
-}
-
-- (ASCellNode *)collectionView:(ASCollectionView *)collectionView nodeForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
-{
-    ASTextCellNode *textCellNode = [[ASTextCellNode alloc] init];
-    return textCellNode;
-}
-
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
-{
-    return 1;
-}
-
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+#pragma mark UICollectionViewDataSource
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return _itemArray.count;
 }
 
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout originalItemSizeAtIndexPath:(NSIndexPath *)indexPath
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return CGSizeMake(100, 100 * kScreenHeight / kScreenWidth);
+    return 1;
 }
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    SWHomeImageCellCollectionViewCell *cell = (SWHomeImageCellCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:kSWHomeImageCellCollectionViewCellID forIndexPath:indexPath];
+    SWImageItemDO *imageItem = _itemArray.count>indexPath.row?[_itemArray objectAtIndex:indexPath.row]:nil;
+    [cell setImageUrl:imageItem.middleImageUrl];
+    return cell;
+}
+
+#pragma mark UICollectionViewDelegateFlowLayout
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    return CGSizeMake((kScreenWidth-8)/3, (kScreenWidth-8)/3 * kScreenHeight / kScreenWidth + 4);
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
+{
+    return 0;
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
+{
+    return 0;
+}
+
+#pragma mark UICollectionViewDelegate
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+
+}
+
+-(BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
 
 @end

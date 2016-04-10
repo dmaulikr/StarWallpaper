@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '7593CF8ADC6D348058B7C4CD'
+               BlueprintIdentifier = 'CEE23BB3DF28DDC1ED7A472B'
                BlueprintName = 'RZSquaresLoading'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libRZSquaresLoading.a'>

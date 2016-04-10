@@ -16,11 +16,10 @@
 		10527BDB1CAE75B1004EB822 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10527BDA1CAE75B1004EB822 /* Assets.xcassets */; };
 		10527BDE1CAE75B1004EB822 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10527BDC1CAE75B1004EB822 /* LaunchScreen.storyboard */; };
 		10527BE81CAE7CF7004EB822 /* SWHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10527BE71CAE7CF7004EB822 /* SWHomeViewController.m */; };
-		10527BEB1CAE7D74004EB822 /* SWHomeCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 10527BEA1CAE7D74004EB822 /* SWHomeCollectionViewLayout.m */; };
-		10527BEE1CAE82BC004EB822 /* SWHomeImageCellNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 10527BED1CAE82BC004EB822 /* SWHomeImageCellNode.m */; };
 		10527BF31CB209F6004EB822 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10527BF21CB209F6004EB822 /* SearchViewController.m */; };
 		10527BF71CB2CE72004EB822 /* SWImageListDO.m in Sources */ = {isa = PBXBuildFile; fileRef = 10527BF61CB2CE72004EB822 /* SWImageListDO.m */; };
 		10527BFA1CB2CECD004EB822 /* SWImageItemDO.m in Sources */ = {isa = PBXBuildFile; fileRef = 10527BF91CB2CECD004EB822 /* SWImageItemDO.m */; };
+		1088743C1CBA8DDD000F9CEF /* SWHomeImageCellCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1088743B1CBA8DDD000F9CEF /* SWHomeImageCellCollectionViewCell.m */; };
 		10E9C9181CB406DA00871C90 /* SWBaseDO.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E9C9171CB406DA00871C90 /* SWBaseDO.m */; };
 		4FA1FFDB573DCD865B01428C /* libPods-StarWallpaper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A049281CB78DED15F89540DF /* libPods-StarWallpaper.a */; };
 /* End PBXBuildFile section */
@@ -40,10 +39,6 @@
 		10527BDF1CAE75B1004EB822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10527BE61CAE7CF7004EB822 /* SWHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWHomeViewController.h; sourceTree = "<group>"; };
 		10527BE71CAE7CF7004EB822 /* SWHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWHomeViewController.m; sourceTree = "<group>"; };
-		10527BE91CAE7D74004EB822 /* SWHomeCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWHomeCollectionViewLayout.h; sourceTree = "<group>"; };
-		10527BEA1CAE7D74004EB822 /* SWHomeCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWHomeCollectionViewLayout.m; sourceTree = "<group>"; };
-		10527BEC1CAE82BC004EB822 /* SWHomeImageCellNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWHomeImageCellNode.h; sourceTree = "<group>"; };
-		10527BED1CAE82BC004EB822 /* SWHomeImageCellNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWHomeImageCellNode.m; sourceTree = "<group>"; };
 		10527BEF1CAFEDBF004EB822 /* SWConstDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWConstDef.h; sourceTree = "<group>"; };
 		10527BF11CB209F6004EB822 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		10527BF21CB209F6004EB822 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
@@ -51,6 +46,8 @@
 		10527BF61CB2CE72004EB822 /* SWImageListDO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWImageListDO.m; sourceTree = "<group>"; };
 		10527BF81CB2CECD004EB822 /* SWImageItemDO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWImageItemDO.h; sourceTree = "<group>"; };
 		10527BF91CB2CECD004EB822 /* SWImageItemDO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWImageItemDO.m; sourceTree = "<group>"; };
+		1088743A1CBA8DDD000F9CEF /* SWHomeImageCellCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWHomeImageCellCollectionViewCell.h; sourceTree = "<group>"; };
+		1088743B1CBA8DDD000F9CEF /* SWHomeImageCellCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWHomeImageCellCollectionViewCell.m; sourceTree = "<group>"; };
 		10E9C9161CB406DA00871C90 /* SWBaseDO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWBaseDO.h; sourceTree = "<group>"; };
 		10E9C9171CB406DA00871C90 /* SWBaseDO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWBaseDO.m; sourceTree = "<group>"; };
 		1DDFE378E9E3C31C9F735237 /* Pods-StarWallpaper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWallpaper.release.xcconfig"; path = "Pods/Target Support Files/Pods-StarWallpaper/Pods-StarWallpaper.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,12 +118,10 @@
 		10527BE51CAE7CF7004EB822 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				10527BEC1CAE82BC004EB822 /* SWHomeImageCellNode.h */,
-				10527BED1CAE82BC004EB822 /* SWHomeImageCellNode.m */,
-				10527BE91CAE7D74004EB822 /* SWHomeCollectionViewLayout.h */,
-				10527BEA1CAE7D74004EB822 /* SWHomeCollectionViewLayout.m */,
 				10527BE61CAE7CF7004EB822 /* SWHomeViewController.h */,
 				10527BE71CAE7CF7004EB822 /* SWHomeViewController.m */,
+				1088743A1CBA8DDD000F9CEF /* SWHomeImageCellCollectionViewCell.h */,
+				1088743B1CBA8DDD000F9CEF /* SWHomeImageCellCollectionViewCell.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -294,12 +289,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10527BEB1CAE7D74004EB822 /* SWHomeCollectionViewLayout.m in Sources */,
 				10527BFA1CB2CECD004EB822 /* SWImageItemDO.m in Sources */,
 				1028A9521CB50D4800C3E276 /* SWCommonUtil.m in Sources */,
-				10527BEE1CAE82BC004EB822 /* SWHomeImageCellNode.m in Sources */,
 				10527BD31CAE75B1004EB822 /* AppDelegate.m in Sources */,
 				10527BF71CB2CE72004EB822 /* SWImageListDO.m in Sources */,
+				1088743C1CBA8DDD000F9CEF /* SWHomeImageCellCollectionViewCell.m in Sources */,
 				10E9C9181CB406DA00871C90 /* SWBaseDO.m in Sources */,
 				10527BD01CAE75B1004EB822 /* main.m in Sources */,
 				10527BF31CB209F6004EB822 /* SearchViewController.m in Sources */,
