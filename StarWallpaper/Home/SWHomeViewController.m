@@ -138,7 +138,7 @@ static NSString *const kSWHomeImageCellCollectionViewCellID = @"SWHomeImageCellC
 {
     SWHomeImageCellCollectionViewCell *cell = (SWHomeImageCellCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:kSWHomeImageCellCollectionViewCellID forIndexPath:indexPath];
     SWImageItemDO *imageItem = _itemArray.count>indexPath.row?[_itemArray objectAtIndex:indexPath.row]:nil;
-    [cell setImageUrl:imageItem.middleImageUrl];
+    [cell setImageUrl:imageItem.smallImageUrl];
     return cell;
 }
 
