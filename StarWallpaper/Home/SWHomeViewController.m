@@ -93,7 +93,6 @@
     NSString *urlStr = [NSString stringWithFormat:@"http://starwallpaper.duapp.com?keyword=%@&imgWidth=%@&imgHeight=%@", [keyword stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding], @(kScreenWidth * [UIScreen mainScreen].scale), @(kScreenHeight * [UIScreen mainScreen].scale)];
     [manager GET:urlStr parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSString *responseString = [SWCommonUtil replaceUnicode:[[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding]];
-        NSDictionary  *responseDic = [SWCommonUtil dictionaryWithJsonString:responseString];
         @strongify(self)
         SWImageListDO *imageList = [SWImageListDO yy_modelWithJSON:responseString];
         self.itemArray = imageList.itemArray;
@@ -104,7 +103,6 @@
         [self showLoading:NO];
     }];
     manager.responseSerializer=[AFHTTPResponseSerializer serializer];
-//    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/json"];
 }
 
 - (void)showLoading:(BOOL)isShow {
