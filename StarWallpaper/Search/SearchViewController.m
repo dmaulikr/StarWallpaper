@@ -36,9 +36,9 @@
     inputAngBtnBgView.layer.cornerRadius = 5.0f;
     [self.view addSubview:inputAngBtnBgView];
     
-    UIImageView *logoView = [[UIImageView alloc] initWithFrame:CGRectMake(-(kSearchFieldHeight-16), 0, inputAngBtnBgView.frame.size.height, inputAngBtnBgView.frame.size.height)];
+    UIImageView *logoView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 8, inputAngBtnBgView.frame.size.height, inputAngBtnBgView.frame.size.height)];
     logoView.image = [UIImage imageNamed:@"Launch"];
-    [inputAngBtnBgView addSubview:logoView];
+    [self.view addSubview:logoView];
     
     self.textField = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, inputAngBtnBgView.frame.size.width, inputAngBtnBgView.frame.size.height)];
     self.textField.backgroundColor = [UIColor whiteColor];
@@ -53,12 +53,12 @@
     self.textField.returnKeyType = UIReturnKeySearch;
     [inputAngBtnBgView addSubview:self.textField];
     
-    UIButton *searchBtn = [[UIButton alloc] initWithFrame:CGRectMake(inputAngBtnBgView.frame.size.width-40+(kSearchFieldHeight-16), 0, 40, inputAngBtnBgView.frame.size.height)];
+    UIButton *searchBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width-(10+(kSearchFieldHeight-16)), 8, (kSearchFieldHeight-16), inputAngBtnBgView.frame.size.height)];
     [searchBtn setImage:[UIImage imageNamed:@"goToSearch"] forState:UIControlStateNormal];
-    searchBtn.imageEdgeInsets = UIEdgeInsetsMake(7, 9, 7, 9);
+    searchBtn.imageEdgeInsets = UIEdgeInsetsMake(7, 7, 7, 7);
     searchBtn.backgroundColor = [UIColor clearColor];
     [searchBtn addTarget:self action:@selector(search) forControlEvents:UIControlEventTouchUpInside];
-    [inputAngBtnBgView addSubview:searchBtn];
+    [self.view addSubview:searchBtn];
     
     UIButton *homeBtn = [[UIButton alloc] initWithFrame:CGRectMake((self.view.frame.size.width-50)*0.5, self.view.frame.size.height - 50, 50, 50)];
     homeBtn.alpha = 0.6;
