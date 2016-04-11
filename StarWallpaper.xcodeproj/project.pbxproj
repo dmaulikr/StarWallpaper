@@ -21,6 +21,7 @@
 		10527BFA1CB2CECD004EB822 /* SWImageItemDO.m in Sources */ = {isa = PBXBuildFile; fileRef = 10527BF91CB2CECD004EB822 /* SWImageItemDO.m */; };
 		1088743C1CBA8DDD000F9CEF /* SWHomeImageCellCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1088743B1CBA8DDD000F9CEF /* SWHomeImageCellCollectionViewCell.m */; };
 		108874401CBAA121000F9CEF /* UIImageView+SWPlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1088743F1CBAA121000F9CEF /* UIImageView+SWPlaceHolder.m */; };
+		1088748D1CBB73B8000F9CEF /* SWPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1088748C1CBB73B8000F9CEF /* SWPhotoBrowser.m */; };
 		10E9C9181CB406DA00871C90 /* SWBaseDO.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E9C9171CB406DA00871C90 /* SWBaseDO.m */; };
 		4FA1FFDB573DCD865B01428C /* libPods-StarWallpaper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A049281CB78DED15F89540DF /* libPods-StarWallpaper.a */; };
 /* End PBXBuildFile section */
@@ -51,6 +52,8 @@
 		1088743B1CBA8DDD000F9CEF /* SWHomeImageCellCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWHomeImageCellCollectionViewCell.m; sourceTree = "<group>"; };
 		1088743E1CBAA121000F9CEF /* UIImageView+SWPlaceHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SWPlaceHolder.h"; sourceTree = "<group>"; };
 		1088743F1CBAA121000F9CEF /* UIImageView+SWPlaceHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SWPlaceHolder.m"; sourceTree = "<group>"; };
+		1088748B1CBB73B8000F9CEF /* SWPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWPhotoBrowser.h; sourceTree = "<group>"; };
+		1088748C1CBB73B8000F9CEF /* SWPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWPhotoBrowser.m; sourceTree = "<group>"; };
 		10E9C9161CB406DA00871C90 /* SWBaseDO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWBaseDO.h; sourceTree = "<group>"; };
 		10E9C9171CB406DA00871C90 /* SWBaseDO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWBaseDO.m; sourceTree = "<group>"; };
 		1DDFE378E9E3C31C9F735237 /* Pods-StarWallpaper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWallpaper.release.xcconfig"; path = "Pods/Target Support Files/Pods-StarWallpaper/Pods-StarWallpaper.release.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +129,8 @@
 				10527BE71CAE7CF7004EB822 /* SWHomeViewController.m */,
 				1088743A1CBA8DDD000F9CEF /* SWHomeImageCellCollectionViewCell.h */,
 				1088743B1CBA8DDD000F9CEF /* SWHomeImageCellCollectionViewCell.m */,
+				1088748B1CBB73B8000F9CEF /* SWPhotoBrowser.h */,
+				1088748C1CBB73B8000F9CEF /* SWPhotoBrowser.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -302,6 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1088748D1CBB73B8000F9CEF /* SWPhotoBrowser.m in Sources */,
 				10527BFA1CB2CECD004EB822 /* SWImageItemDO.m in Sources */,
 				1028A9521CB50D4800C3E276 /* SWCommonUtil.m in Sources */,
 				10527BD31CAE75B1004EB822 /* AppDelegate.m in Sources */,

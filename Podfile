@@ -9,4 +9,5 @@ target 'StarWallpaper' do
   pod 'SDWebImage/WebP', '3.7.5'
   pod 'RZSquaresLoading', '1.1'
   pod 'libextobjc', '0.4.1'
+  pod 'MWPhotoBrowser', '2.1.1'
 end

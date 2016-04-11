@@ -17,10 +17,12 @@
 #import "SearchViewController.h"
 #import "SWCommonUtil.h"
 #import "SWHomeImageCellCollectionViewCell.h"
+#import "MWPhoto.h"
+#import "SWPhotoBrowser.h"
 
 static NSString *const kSWHomeImageCellCollectionViewCellID = @"SWHomeImageCellCollectionViewCell";
 
-@interface SWHomeViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
+@interface SWHomeViewController () <UICollectionViewDelegate, UICollectionViewDataSource, MWPhotoBrowserDelegate>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) UIButton *keywordBtn;
@@ -164,7 +166,12 @@ static NSString *const kSWHomeImageCellCollectionViewCellID = @"SWHomeImageCellC
 #pragma mark UICollectionViewDelegate
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-
+    SWPhotoBrowser *browser = [[SWPhotoBrowser alloc] initWithDelegate:self];
+    browser.zoomPhotosToFill = YES;
+    browser.customImageSelectedIconName = @"ImageSelected.png";
+    browser.customImageSelectedSmallIconName = @"ImageSelectedSmall.png";
+    [browser setCurrentPhotoIndex:indexPath.row];
+    [self presentViewController:browser animated:YES completion:nil];
 }
 
 -(BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath
@@ -172,5 +179,17 @@ static NSString *const kSWHomeImageCellCollectionViewCellID = @"SWHomeImageCellC
     return YES;
 }
 
+#pragma mark MWPhotoBrowserDelegate
+- (NSUInteger)numberOfPhotosInPhotoBrowser:(MWPhotoBrowser *)photoBrowser {
+    return _itemArray.count;
+}
+
+- (id <MWPhoto>)photoBrowser:(MWPhotoBrowser *)photoBrowser photoAtIndex:(NSUInteger)index {
+    if (index < _itemArray.count) {
+        SWImageItemDO *item = [_itemArray objectAtIndex:index];
+        return [MWPhoto photoWithURL:[NSURL URLWithString:item.bigImageUrl]];
+    }
+    return nil;
+}
 
 @end
