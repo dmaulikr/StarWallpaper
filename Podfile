@@ -10,4 +10,5 @@ target 'StarWallpaper' do
   pod 'RZSquaresLoading', '1.1'
   pod 'libextobjc', '0.4.1'
   pod 'MWPhotoBrowser', '2.1.1'
+  pod 'FMDB', '~> 2.6.2'
 end

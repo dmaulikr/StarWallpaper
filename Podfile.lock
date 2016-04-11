@@ -15,6 +15,9 @@ PODS:
   - AFNetworking/UIKit (3.0.4):
     - AFNetworking/NSURLSession
   - DACircularProgress (2.3.1)
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
   - libextobjc (0.4.1):
     - libextobjc/EXTADT (= 0.4.1)
     - libextobjc/EXTConcreteProtocol (= 0.4.1)
@@ -81,6 +84,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (= 3.0.4)
+  - FMDB (~> 2.6.2)
   - libextobjc (= 0.4.1)
   - MWPhotoBrowser (= 2.1.1)
   - RZSquaresLoading (= 1.1)
@@ -90,6 +94,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   libextobjc: a650fc1bf489a3d3a9bc2e621efa3e1006fc5471
   libwebp: 5f9db23073868b94b4f62ef8769ab052837fecc7
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
