@@ -33,6 +33,12 @@
     [_likeBtn addTarget:self action:@selector(like) forControlEvents:UIControlEventTouchUpInside];
     [self updateLikeBtn];
     [self.view addSubview:_likeBtn];
+    
+    UISwipeGestureRecognizer *swipeGesture = [[UISwipeGestureRecognizer alloc] init];
+    swipeGesture.direction = UISwipeGestureRecognizerDirectionDown;
+    swipeGesture.delegate = self;
+    [swipeGesture addTarget:self action:@selector(swipe:)];
+    [self.view addGestureRecognizer:swipeGesture];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -64,6 +70,11 @@
             }];
         }];
     }
+}
+
+- (void)swipe:(UISwipeGestureRecognizer *)swipe
+{
+    [self back];
 }
 
 - (void)back {
