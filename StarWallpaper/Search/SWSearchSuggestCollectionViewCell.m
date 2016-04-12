@@ -32,7 +32,14 @@
 
 - (void)setData:(id)data {
     SWSearchSuggestSubDO *item = data;
-    [_mainImageView sw_setImageUrl:item.imageUrl progress:nil completed:nil];
+    [_mainImageView sw_setImageUrl:item.imageUrl progress:nil completed:^(UIImage *image, NSError *error) {
+        if (image) {
+            CGRect rect = CGRectMake(0, 0, image.size.width * image.scale, image.size.width * image.scale);
+            CGImageRef imageRef=CGImageCreateWithImageInRect([image CGImage],rect);
+            UIImage *image1=[UIImage imageWithCGImage:imageRef];
+            [_mainImageView setImage:image1];
+        }
+    }];
     _titleLabel.text = item.keyword;
 }
 

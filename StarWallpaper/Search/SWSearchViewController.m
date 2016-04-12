@@ -16,7 +16,7 @@
 #define kSearchFieldHeight 52.0f
 static NSString *const kSWSearchSuggestTableViewCell = @"SWSearchSuggestTableViewCell";
 
-@interface SWSearchViewController () <UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface SWSearchViewController () <UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource, SWSearchSuggestTableViewCellDelegate>
 
 @property (nonatomic, strong) UITextField *textField;
 @property (nonatomic, strong) SWSelectedKeywordBlock block;
@@ -89,6 +89,13 @@ static NSString *const kSWSearchSuggestTableViewCell = @"SWSearchSuggestTableVie
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+#pragma mark SWSearchSuggestTableViewCellDelegate
+- (void)clickWithKeyword:(NSString *)keyword
+{
+    _textField.text = @"陈学冬";
+    [self search];
+}
+
 #pragma mark UITextFieldDelegate
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
@@ -149,6 +156,7 @@ static NSString *const kSWSearchSuggestTableViewCell = @"SWSearchSuggestTableVie
         cell = [[SWSearchSuggestTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kSWSearchSuggestTableViewCell];
     }
     [cell setData:[_suggestArray objectAtIndex:indexPath.row]];
+    cell.delegate = self;
     return cell;
 }
 

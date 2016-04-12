@@ -9,6 +9,7 @@
 #import "SWSearchSuggestTableViewCell.h"
 #import "SWSearchSuggestDO.h"
 #import "SWSearchSuggestCollectionViewCell.h"
+#import "SWSearchSuggestSubDO.h"
 
 static NSString *const kSWSearchSuggestCollectionViewCell = @"SWSearchSuggestCollectionViewCell";
 
@@ -37,7 +38,7 @@ static NSString *const kSWSearchSuggestCollectionViewCell = @"SWSearchSuggestCol
 #pragma mark UICollectionViewDataSource
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 8;
+    return _item.keywordItems.count;
 }
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -50,6 +51,18 @@ static NSString *const kSWSearchSuggestCollectionViewCell = @"SWSearchSuggestCol
     SWSearchSuggestCollectionViewCell *cell = (SWSearchSuggestCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:kSWSearchSuggestCollectionViewCell forIndexPath:indexPath];
     [cell setData:[_item.keywordItems objectAtIndex:indexPath.row]];
     return cell;
+}
+
+#pragma mark UICollectionViewDelegate
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    SWSearchSuggestSubDO *subItem = [_item.keywordItems objectAtIndex:indexPath.row];
+    [_delegate clickWithKeyword:subItem.keyword];
+}
+
+-(BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
 }
 
 #pragma mark UICollectionViewDelegateFlowLayout
