@@ -167,6 +167,7 @@ static NSString *const kSWHomeImageCellCollectionViewCellID = @"SWHomeImageCellC
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     SWPhotoBrowser *browser = [[SWPhotoBrowser alloc] initWithDelegate:self];
+    browser.itemArray = _itemArray;
     browser.zoomPhotosToFill = YES;
     browser.customImageSelectedIconName = @"ImageSelected.png";
     browser.customImageSelectedSmallIconName = @"ImageSelectedSmall.png";

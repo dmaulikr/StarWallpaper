@@ -10,4 +10,6 @@
 
 @interface SWPhotoBrowser : MWPhotoBrowser
 
+@property (nonatomic, strong) NSArray *itemArray;
+
 @end
