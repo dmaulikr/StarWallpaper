@@ -1,28 +1,34 @@
 //
-//  SearchViewController.m
+//  SWSearchViewController.m
 //  StarWallpaper
 //
 //  Created by Fnoz on 16/4/4.
 //  Copyright © 2016年 Fnoz. All rights reserved.
 //
 
-#import "SearchViewController.h"
+#import "SWSearchViewController.h"
 #import "SWConstDef.h"
 #import "SWCommonUtil.h"
+#import "SWSearchSuggestTableViewCell.h"
+#import "SWSearchUtil.h"
+#import "SWSearchSuggestDO.h"
 
 #define kSearchFieldHeight 52.0f
+static NSString *const kSWSearchSuggestTableViewCell = @"SWSearchSuggestTableViewCell";
 
-@interface SearchViewController () <UITextFieldDelegate>
+@interface SWSearchViewController () <UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITextField *textField;
 @property (nonatomic, strong) SWSelectedKeywordBlock block;
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSArray *suggestArray;
 
 @end
 
-@implementation SearchViewController
+@implementation SWSearchViewController
 
 + (void)presentWithKeyword:(NSString *)keyword selectedKeywordBlock:(SWSelectedKeywordBlock)block {
-    SearchViewController *vc = [[SearchViewController alloc] init];
+    SWSearchViewController *vc = [[SWSearchViewController alloc] init];
     vc.keyword = keyword;
     vc.block = block;
     [SWCurrentVC presentViewController:vc animated:YES completion:nil];
@@ -30,6 +36,8 @@
 
 -(void)viewDidLoad {
     [super viewDidLoad];
+    
+    _suggestArray = [SWSearchUtil getSuggestionArray];
     
     UIView *inputAngBtnBgView = [[UIView alloc] initWithFrame:CGRectMake(10+(kSearchFieldHeight-16), 8, self.view.frame.size.width-20 - (kSearchFieldHeight-16)*2, kSearchFieldHeight-16)];
     inputAngBtnBgView.backgroundColor = [UIColor clearColor];
@@ -60,6 +68,12 @@
     [searchBtn addTarget:self action:@selector(search) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:searchBtn];
     
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, inputAngBtnBgView.frame.origin.y+inputAngBtnBgView.frame.size.height, self.view.frame.size.width, self.view.frame.size.height-(inputAngBtnBgView.frame.origin.y+inputAngBtnBgView.frame.size.height)-50) style:UITableViewStyleGrouped];
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    _tableView.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:_tableView];
+    
     UIButton *homeBtn = [[UIButton alloc] initWithFrame:CGRectMake((self.view.frame.size.width-50)*0.5, self.view.frame.size.height - 50, 50, 50)];
     homeBtn.alpha = 0.6;
     [homeBtn setImage:[UIImage imageNamed:@"backDown"] forState:UIControlStateNormal];
@@ -87,6 +101,55 @@
         [self.textField endEditing:YES];
     }
     return YES;
+}
+
+#pragma mark - Table view data source
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return _suggestArray.count;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 25;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 1;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 25)];
+    SWSearchSuggestDO *item = [_suggestArray objectAtIndex:section];
+    UILabel *typeLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 5, self.view.frame.size.width, 18)];
+    typeLabel.text = item.type;
+    typeLabel.textColor = kSWFontGreen;
+    typeLabel.font = SWFontOfSize(18);
+    [header addSubview:typeLabel];
+    return header;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 1;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 80;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    SWSearchSuggestTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:kSWSearchSuggestTableViewCell];
+    if (!cell) {
+        cell = [[SWSearchSuggestTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kSWSearchSuggestTableViewCell];
+    }
+    [cell setData:[_suggestArray objectAtIndex:indexPath.row]];
+    return cell;
 }
 
 @end

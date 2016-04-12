@@ -1,5 +1,5 @@
 //
-//  SearchViewController.h
+//  SWSearchViewController.h
 //  StarWallpaper
 //
 //  Created by Fnoz on 16/4/4.
@@ -10,7 +10,7 @@
 
 typedef void (^SWSelectedKeywordBlock)(NSString *keyword);
 
-@interface SearchViewController : UIViewController
+@interface SWSearchViewController : UIViewController
 
 @property (nonatomic, copy) NSString *keyword;
 

@@ -16,13 +16,18 @@
 		10527BDB1CAE75B1004EB822 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10527BDA1CAE75B1004EB822 /* Assets.xcassets */; };
 		10527BDE1CAE75B1004EB822 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10527BDC1CAE75B1004EB822 /* LaunchScreen.storyboard */; };
 		10527BE81CAE7CF7004EB822 /* SWHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10527BE71CAE7CF7004EB822 /* SWHomeViewController.m */; };
-		10527BF31CB209F6004EB822 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10527BF21CB209F6004EB822 /* SearchViewController.m */; };
+		10527BF31CB209F6004EB822 /* SWSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10527BF21CB209F6004EB822 /* SWSearchViewController.m */; };
 		10527BF71CB2CE72004EB822 /* SWImageListDO.m in Sources */ = {isa = PBXBuildFile; fileRef = 10527BF61CB2CE72004EB822 /* SWImageListDO.m */; };
 		10527BFA1CB2CECD004EB822 /* SWImageItemDO.m in Sources */ = {isa = PBXBuildFile; fileRef = 10527BF91CB2CECD004EB822 /* SWImageItemDO.m */; };
 		1088743C1CBA8DDD000F9CEF /* SWHomeImageCellCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1088743B1CBA8DDD000F9CEF /* SWHomeImageCellCollectionViewCell.m */; };
 		108874401CBAA121000F9CEF /* UIImageView+SWPlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1088743F1CBAA121000F9CEF /* UIImageView+SWPlaceHolder.m */; };
 		108874911CBB87D7000F9CEF /* SWPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 108874901CBB87D7000F9CEF /* SWPhotoBrowser.m */; };
 		108874951CBBF15B000F9CEF /* SWDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 108874941CBBF15B000F9CEF /* SWDatabaseManager.m */; };
+		10A960EB1CBCD06900946028 /* SWSearchSuggestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A960EA1CBCD06900946028 /* SWSearchSuggestTableViewCell.m */; };
+		10A960EE1CBD3CE700946028 /* SWSearchUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A960ED1CBD3CE700946028 /* SWSearchUtil.m */; };
+		10A960F11CBD3E0E00946028 /* SWSearchSuggestDO.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A960F01CBD3E0E00946028 /* SWSearchSuggestDO.m */; };
+		10A960F41CBD3EA600946028 /* SWSearchSuggestSubDO.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A960F31CBD3EA600946028 /* SWSearchSuggestSubDO.m */; };
+		10A960F71CBD4A0900946028 /* SWSearchSuggestCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A960F61CBD4A0900946028 /* SWSearchSuggestCollectionViewCell.m */; };
 		10E9C9181CB406DA00871C90 /* SWBaseDO.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E9C9171CB406DA00871C90 /* SWBaseDO.m */; };
 		4FA1FFDB573DCD865B01428C /* libPods-StarWallpaper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A049281CB78DED15F89540DF /* libPods-StarWallpaper.a */; };
 /* End PBXBuildFile section */
@@ -43,8 +48,8 @@
 		10527BE61CAE7CF7004EB822 /* SWHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWHomeViewController.h; sourceTree = "<group>"; };
 		10527BE71CAE7CF7004EB822 /* SWHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWHomeViewController.m; sourceTree = "<group>"; };
 		10527BEF1CAFEDBF004EB822 /* SWConstDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWConstDef.h; sourceTree = "<group>"; };
-		10527BF11CB209F6004EB822 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
-		10527BF21CB209F6004EB822 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		10527BF11CB209F6004EB822 /* SWSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWSearchViewController.h; sourceTree = "<group>"; };
+		10527BF21CB209F6004EB822 /* SWSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWSearchViewController.m; sourceTree = "<group>"; };
 		10527BF51CB2CE72004EB822 /* SWImageListDO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWImageListDO.h; sourceTree = "<group>"; };
 		10527BF61CB2CE72004EB822 /* SWImageListDO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWImageListDO.m; sourceTree = "<group>"; };
 		10527BF81CB2CECD004EB822 /* SWImageItemDO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWImageItemDO.h; sourceTree = "<group>"; };
@@ -57,6 +62,16 @@
 		108874901CBB87D7000F9CEF /* SWPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWPhotoBrowser.m; sourceTree = "<group>"; };
 		108874931CBBF15B000F9CEF /* SWDatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWDatabaseManager.h; sourceTree = "<group>"; };
 		108874941CBBF15B000F9CEF /* SWDatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWDatabaseManager.m; sourceTree = "<group>"; };
+		10A960E91CBCD06900946028 /* SWSearchSuggestTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWSearchSuggestTableViewCell.h; sourceTree = "<group>"; };
+		10A960EA1CBCD06900946028 /* SWSearchSuggestTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWSearchSuggestTableViewCell.m; sourceTree = "<group>"; };
+		10A960EC1CBD3CE700946028 /* SWSearchUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWSearchUtil.h; sourceTree = "<group>"; };
+		10A960ED1CBD3CE700946028 /* SWSearchUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWSearchUtil.m; sourceTree = "<group>"; };
+		10A960EF1CBD3E0E00946028 /* SWSearchSuggestDO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWSearchSuggestDO.h; sourceTree = "<group>"; };
+		10A960F01CBD3E0E00946028 /* SWSearchSuggestDO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWSearchSuggestDO.m; sourceTree = "<group>"; };
+		10A960F21CBD3EA600946028 /* SWSearchSuggestSubDO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWSearchSuggestSubDO.h; sourceTree = "<group>"; };
+		10A960F31CBD3EA600946028 /* SWSearchSuggestSubDO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWSearchSuggestSubDO.m; sourceTree = "<group>"; };
+		10A960F51CBD4A0900946028 /* SWSearchSuggestCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWSearchSuggestCollectionViewCell.h; sourceTree = "<group>"; };
+		10A960F61CBD4A0900946028 /* SWSearchSuggestCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWSearchSuggestCollectionViewCell.m; sourceTree = "<group>"; };
 		10E9C9161CB406DA00871C90 /* SWBaseDO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWBaseDO.h; sourceTree = "<group>"; };
 		10E9C9171CB406DA00871C90 /* SWBaseDO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWBaseDO.m; sourceTree = "<group>"; };
 		1DDFE378E9E3C31C9F735237 /* Pods-StarWallpaper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWallpaper.release.xcconfig"; path = "Pods/Target Support Files/Pods-StarWallpaper/Pods-StarWallpaper.release.xcconfig"; sourceTree = "<group>"; };
@@ -141,8 +156,18 @@
 		10527BF01CB209D4004EB822 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				10527BF11CB209F6004EB822 /* SearchViewController.h */,
-				10527BF21CB209F6004EB822 /* SearchViewController.m */,
+				10527BF11CB209F6004EB822 /* SWSearchViewController.h */,
+				10527BF21CB209F6004EB822 /* SWSearchViewController.m */,
+				10A960E91CBCD06900946028 /* SWSearchSuggestTableViewCell.h */,
+				10A960EA1CBCD06900946028 /* SWSearchSuggestTableViewCell.m */,
+				10A960EC1CBD3CE700946028 /* SWSearchUtil.h */,
+				10A960ED1CBD3CE700946028 /* SWSearchUtil.m */,
+				10A960EF1CBD3E0E00946028 /* SWSearchSuggestDO.h */,
+				10A960F01CBD3E0E00946028 /* SWSearchSuggestDO.m */,
+				10A960F21CBD3EA600946028 /* SWSearchSuggestSubDO.h */,
+				10A960F31CBD3EA600946028 /* SWSearchSuggestSubDO.m */,
+				10A960F51CBD4A0900946028 /* SWSearchSuggestCollectionViewCell.h */,
+				10A960F61CBD4A0900946028 /* SWSearchSuggestCollectionViewCell.m */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -329,6 +354,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10A960F41CBD3EA600946028 /* SWSearchSuggestSubDO.m in Sources */,
+				10A960F11CBD3E0E00946028 /* SWSearchSuggestDO.m in Sources */,
 				108874951CBBF15B000F9CEF /* SWDatabaseManager.m in Sources */,
 				108874911CBB87D7000F9CEF /* SWPhotoBrowser.m in Sources */,
 				10527BFA1CB2CECD004EB822 /* SWImageItemDO.m in Sources */,
@@ -336,11 +363,14 @@
 				10527BD31CAE75B1004EB822 /* AppDelegate.m in Sources */,
 				10527BF71CB2CE72004EB822 /* SWImageListDO.m in Sources */,
 				1088743C1CBA8DDD000F9CEF /* SWHomeImageCellCollectionViewCell.m in Sources */,
+				10A960F71CBD4A0900946028 /* SWSearchSuggestCollectionViewCell.m in Sources */,
 				10E9C9181CB406DA00871C90 /* SWBaseDO.m in Sources */,
 				10527BD01CAE75B1004EB822 /* main.m in Sources */,
 				108874401CBAA121000F9CEF /* UIImageView+SWPlaceHolder.m in Sources */,
-				10527BF31CB209F6004EB822 /* SearchViewController.m in Sources */,
+				10527BF31CB209F6004EB822 /* SWSearchViewController.m in Sources */,
+				10A960EB1CBCD06900946028 /* SWSearchSuggestTableViewCell.m in Sources */,
 				10527BE81CAE7CF7004EB822 /* SWHomeViewController.m in Sources */,
+				10A960EE1CBD3CE700946028 /* SWSearchUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

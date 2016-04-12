@@ -9,7 +9,6 @@
 #ifndef SWConstDef_h
 #define SWConstDef_h
 
-#define SWScreenWidth [UIScreen mainScreen].bounds
 #define SWFontOfSize(sz) [UIFont fontWithName:@"RTWS YueGothic Trial" size:(sz)]
 #define SWCurrentVC [SWCommonUtil getCurrentVC]
 

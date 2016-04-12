@@ -14,13 +14,13 @@
 #import "NSObject+YYModel.h"
 #import "EXTScope.h"
 #import "SWImageItemDO.h"
-#import "SearchViewController.h"
+#import "SWSearchViewController.h"
 #import "SWCommonUtil.h"
 #import "SWHomeImageCellCollectionViewCell.h"
 #import "MWPhoto.h"
 #import "SWPhotoBrowser.h"
 
-static NSString *const kSWHomeImageCellCollectionViewCellID = @"SWHomeImageCellCollectionViewCell";
+static NSString *const kSWHomeImageCellCollectionViewCell = @"SWHomeImageCellCollectionViewCell";
 
 @interface SWHomeViewController () <UICollectionViewDelegate, UICollectionViewDataSource, MWPhotoBrowserDelegate>
 
@@ -46,7 +46,7 @@ static NSString *const kSWHomeImageCellCollectionViewCellID = @"SWHomeImageCellC
     self.collectionView.alwaysBounceVertical = YES;
     self.collectionView.showsVerticalScrollIndicator = NO;
     self.collectionView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
-    [self.collectionView registerClass:[SWHomeImageCellCollectionViewCell class] forCellWithReuseIdentifier:kSWHomeImageCellCollectionViewCellID];
+    [self.collectionView registerClass:[SWHomeImageCellCollectionViewCell class] forCellWithReuseIdentifier:kSWHomeImageCellCollectionViewCell];
     [self.view addSubview:self.collectionView];
     
     UIView *bottomBar = [[UIView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height-50, self.view.frame.size.width, 50)];
@@ -122,7 +122,7 @@ static NSString *const kSWHomeImageCellCollectionViewCellID = @"SWHomeImageCellC
 
 - (void)keywordClicked {
     @weakify(self)
-    [SearchViewController presentWithKeyword:_currentKeyword selectedKeywordBlock:^(NSString *keyword) {
+    [SWSearchViewController presentWithKeyword:_currentKeyword selectedKeywordBlock:^(NSString *keyword) {
         @strongify(self)
         [self getResultForKeyword:keyword];
     }];
@@ -141,7 +141,7 @@ static NSString *const kSWHomeImageCellCollectionViewCellID = @"SWHomeImageCellC
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    SWHomeImageCellCollectionViewCell *cell = (SWHomeImageCellCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:kSWHomeImageCellCollectionViewCellID forIndexPath:indexPath];
+    SWHomeImageCellCollectionViewCell *cell = (SWHomeImageCellCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:kSWHomeImageCellCollectionViewCell forIndexPath:indexPath];
     SWImageItemDO *imageItem = _itemArray.count>indexPath.row?[_itemArray objectAtIndex:indexPath.row]:nil;
     [cell setImageUrl:imageItem.smallImageUrl];
     return cell;
