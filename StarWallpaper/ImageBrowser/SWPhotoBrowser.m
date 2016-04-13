@@ -63,7 +63,7 @@
         [[SWDatabaseManager sharedFMDBSqlite] deleteImageUrlString:item.bigImageUrl];
         [UIView animateWithDuration:0.4 animations:^{
             _likeBtn.alpha = 0.2;
-        } completion:^(BOOL finished) {
+        } completion:^(BOOL  finished) {
             [_likeBtn setImage:[UIImage imageNamed:@"unLike"] forState:UIControlStateNormal];
             [UIView animateWithDuration:0.4 animations:^{
                 _likeBtn.alpha = 0.6;

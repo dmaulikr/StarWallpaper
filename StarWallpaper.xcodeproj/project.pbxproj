@@ -19,6 +19,7 @@
 		10527BF31CB209F6004EB822 /* SWSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10527BF21CB209F6004EB822 /* SWSearchViewController.m */; };
 		10527BF71CB2CE72004EB822 /* SWImageListDO.m in Sources */ = {isa = PBXBuildFile; fileRef = 10527BF61CB2CE72004EB822 /* SWImageListDO.m */; };
 		10527BFA1CB2CECD004EB822 /* SWImageItemDO.m in Sources */ = {isa = PBXBuildFile; fileRef = 10527BF91CB2CECD004EB822 /* SWImageItemDO.m */; };
+		1085D1291CBEAF0400D34336 /* SWLikeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1085D1281CBEAF0400D34336 /* SWLikeViewController.m */; };
 		1088743C1CBA8DDD000F9CEF /* SWHomeImageCellCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1088743B1CBA8DDD000F9CEF /* SWHomeImageCellCollectionViewCell.m */; };
 		108874401CBAA121000F9CEF /* UIImageView+SWPlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1088743F1CBAA121000F9CEF /* UIImageView+SWPlaceHolder.m */; };
 		108874911CBB87D7000F9CEF /* SWPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 108874901CBB87D7000F9CEF /* SWPhotoBrowser.m */; };
@@ -54,6 +55,8 @@
 		10527BF61CB2CE72004EB822 /* SWImageListDO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWImageListDO.m; sourceTree = "<group>"; };
 		10527BF81CB2CECD004EB822 /* SWImageItemDO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWImageItemDO.h; sourceTree = "<group>"; };
 		10527BF91CB2CECD004EB822 /* SWImageItemDO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWImageItemDO.m; sourceTree = "<group>"; };
+		1085D1271CBEAF0400D34336 /* SWLikeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWLikeViewController.h; sourceTree = "<group>"; };
+		1085D1281CBEAF0400D34336 /* SWLikeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWLikeViewController.m; sourceTree = "<group>"; };
 		1088743A1CBA8DDD000F9CEF /* SWHomeImageCellCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWHomeImageCellCollectionViewCell.h; sourceTree = "<group>"; };
 		1088743B1CBA8DDD000F9CEF /* SWHomeImageCellCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWHomeImageCellCollectionViewCell.m; sourceTree = "<group>"; };
 		1088743E1CBAA121000F9CEF /* UIImageView+SWPlaceHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SWPlaceHolder.h"; sourceTree = "<group>"; };
@@ -112,6 +115,7 @@
 		10527BCD1CAE75B1004EB822 /* StarWallpaper */ = {
 			isa = PBXGroup;
 			children = (
+				1085D1261CBEAEC900D34336 /* Like */,
 				108874921CBBF0A6000F9CEF /* Database */,
 				1088748E1CBB87D7000F9CEF /* ImageBrowser */,
 				1088743D1CBAA121000F9CEF /* Category */,
@@ -183,6 +187,15 @@
 				10E9C9171CB406DA00871C90 /* SWBaseDO.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		1085D1261CBEAEC900D34336 /* Like */ = {
+			isa = PBXGroup;
+			children = (
+				1085D1271CBEAF0400D34336 /* SWLikeViewController.h */,
+				1085D1281CBEAF0400D34336 /* SWLikeViewController.m */,
+			);
+			path = Like;
 			sourceTree = "<group>";
 		};
 		1088743D1CBAA121000F9CEF /* Category */ = {
@@ -357,6 +370,7 @@
 				10A960F41CBD3EA600946028 /* SWSearchSuggestSubDO.m in Sources */,
 				10A960F11CBD3E0E00946028 /* SWSearchSuggestDO.m in Sources */,
 				108874951CBBF15B000F9CEF /* SWDatabaseManager.m in Sources */,
+				1085D1291CBEAF0400D34336 /* SWLikeViewController.m in Sources */,
 				108874911CBB87D7000F9CEF /* SWPhotoBrowser.m in Sources */,
 				10527BFA1CB2CECD004EB822 /* SWImageItemDO.m in Sources */,
 				1028A9521CB50D4800C3E276 /* SWCommonUtil.m in Sources */,

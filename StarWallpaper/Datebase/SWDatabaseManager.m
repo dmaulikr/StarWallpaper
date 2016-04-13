@@ -68,6 +68,7 @@ static SWDatabaseManager *sharedSqlite = nil;
 
 - (void)insertImageUrlString:(NSString *)imageUrlString
 {
+    NSLog(@"Do Like:\n%@", imageUrlString);
     if (![self openDb:db])
     {
         return;

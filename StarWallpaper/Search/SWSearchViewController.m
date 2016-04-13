@@ -68,7 +68,7 @@ static NSString *const kSWSearchSuggestTableViewCell = @"SWSearchSuggestTableVie
     [searchBtn addTarget:self action:@selector(search) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:searchBtn];
     
-    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, inputAngBtnBgView.frame.origin.y+inputAngBtnBgView.frame.size.height, self.view.frame.size.width, self.view.frame.size.height-(inputAngBtnBgView.frame.origin.y+inputAngBtnBgView.frame.size.height)-50) style:UITableViewStyleGrouped];
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, inputAngBtnBgView.frame.origin.y+inputAngBtnBgView.frame.size.height, self.view.frame.size.width, self.view.frame.size.height-(inputAngBtnBgView.frame.origin.y+inputAngBtnBgView.frame.size.height)) style:UITableViewStyleGrouped];
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.separatorStyle = NO;
@@ -82,6 +82,12 @@ static NSString *const kSWSearchSuggestTableViewCell = @"SWSearchSuggestTableVie
     [self.view addSubview:homeBtn];
     
     self.view.backgroundColor = kSWBackGroundGray;
+}
+
+- (void)back {
+    SWSelectedKeywordBlock block = _block;
+    block(@"");
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)search {

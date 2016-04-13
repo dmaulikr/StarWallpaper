@@ -78,7 +78,7 @@ static NSString *const kSWHomeImageCellCollectionViewCell = @"SWHomeImageCellCol
 }
 
 - (void)getResultForKeyword:(NSString *)keyword {
-    if ([keyword isEqualToString:_currentKeyword]) {
+    if ([keyword isEqualToString:_currentKeyword] || 0 == [keyword stringByReplacingOccurrencesOfString:@" " withString:@""].length) {
         return;
     }
     _currentKeyword = keyword;
