@@ -71,6 +71,7 @@ static NSString *const kSWSearchSuggestTableViewCell = @"SWSearchSuggestTableVie
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, inputAngBtnBgView.frame.origin.y+inputAngBtnBgView.frame.size.height, self.view.frame.size.width, self.view.frame.size.height-(inputAngBtnBgView.frame.origin.y+inputAngBtnBgView.frame.size.height)-50) style:UITableViewStyleGrouped];
     _tableView.delegate = self;
     _tableView.dataSource = self;
+    _tableView.separatorStyle = NO;
     _tableView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:_tableView];
     
@@ -92,7 +93,7 @@ static NSString *const kSWSearchSuggestTableViewCell = @"SWSearchSuggestTableVie
 #pragma mark SWSearchSuggestTableViewCellDelegate
 - (void)clickWithKeyword:(NSString *)keyword
 {
-    _textField.text = @"陈学冬";
+    _textField.text = keyword;
     [self search];
 }
 
@@ -119,7 +120,7 @@ static NSString *const kSWSearchSuggestTableViewCell = @"SWSearchSuggestTableVie
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 25;
+    return 35;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
@@ -131,7 +132,7 @@ static NSString *const kSWSearchSuggestTableViewCell = @"SWSearchSuggestTableVie
 {
     UIView *header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 25)];
     SWSearchSuggestDO *item = [_suggestArray objectAtIndex:section];
-    UILabel *typeLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 5, self.view.frame.size.width, 18)];
+    UILabel *typeLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 10, self.view.frame.size.width, 18)];
     typeLabel.text = item.type;
     typeLabel.textColor = kSWFontGreen;
     typeLabel.font = SWFontOfSize(18);
@@ -155,7 +156,7 @@ static NSString *const kSWSearchSuggestTableViewCell = @"SWSearchSuggestTableVie
     if (!cell) {
         cell = [[SWSearchSuggestTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kSWSearchSuggestTableViewCell];
     }
-    [cell setData:[_suggestArray objectAtIndex:indexPath.row]];
+    [cell setData:[_suggestArray objectAtIndex:indexPath.section]];
     cell.delegate = self;
     return cell;
 }
