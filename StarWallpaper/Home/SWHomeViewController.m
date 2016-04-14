@@ -19,6 +19,7 @@
 #import "SWHomeImageCellCollectionViewCell.h"
 #import "SWPhotoBrowser.h"
 #import "SWLikeViewController.h"
+#import "SWSettingViewController.h"
 
 @interface SWHomeViewController () <UICollectionViewDelegate, UICollectionViewDataSource, MWPhotoBrowserDelegate>
 
@@ -67,6 +68,7 @@
     UIButton *rightBtn = [[UIButton alloc] initWithFrame:CGRectMake(bottomBar.frame.size.width - 50, 0, 50, 50)];
     [rightBtn setImage:[UIImage imageNamed:@"homeSetting"] forState:UIControlStateNormal];
     rightBtn.alpha = 0.6;
+    [rightBtn addTarget:self action:@selector(settingClicked) forControlEvents:UIControlEventTouchUpInside];
     [bottomBar addSubview:rightBtn];
  
     [self getResultForKeyword:[[NSUserDefaults standardUserDefaults] objectForKey:kKeyword]];
@@ -130,6 +132,11 @@
 - (void)likeBtnClicked {
     SWLikeViewController *likeListVC = [[SWLikeViewController alloc] init];
     [self presentViewController:likeListVC animated:YES completion:nil];
+}
+
+- (void)settingClicked {
+    SWSettingViewController *settingVc = [[SWSettingViewController alloc] init];
+    [self presentViewController:settingVc animated:YES completion:nil];
 }
 
 #pragma mark UICollectionViewDataSource

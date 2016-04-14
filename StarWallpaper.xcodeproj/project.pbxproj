@@ -24,6 +24,8 @@
 		108874401CBAA121000F9CEF /* UIImageView+SWPlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1088743F1CBAA121000F9CEF /* UIImageView+SWPlaceHolder.m */; };
 		108874911CBB87D7000F9CEF /* SWPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 108874901CBB87D7000F9CEF /* SWPhotoBrowser.m */; };
 		108874951CBBF15B000F9CEF /* SWDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 108874941CBBF15B000F9CEF /* SWDatabaseManager.m */; };
+		10A7BBDE1CBFE8600053209E /* SWSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A7BBDD1CBFE8600053209E /* SWSettingViewController.m */; };
+		10A7BBE11CBFECBB0053209E /* SWSettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A7BBE01CBFECBB0053209E /* SWSettingTableViewCell.m */; };
 		10A960EB1CBCD06900946028 /* SWSearchSuggestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A960EA1CBCD06900946028 /* SWSearchSuggestTableViewCell.m */; };
 		10A960EE1CBD3CE700946028 /* SWSearchUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A960ED1CBD3CE700946028 /* SWSearchUtil.m */; };
 		10A960F11CBD3E0E00946028 /* SWSearchSuggestDO.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A960F01CBD3E0E00946028 /* SWSearchSuggestDO.m */; };
@@ -65,6 +67,10 @@
 		108874901CBB87D7000F9CEF /* SWPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWPhotoBrowser.m; sourceTree = "<group>"; };
 		108874931CBBF15B000F9CEF /* SWDatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWDatabaseManager.h; sourceTree = "<group>"; };
 		108874941CBBF15B000F9CEF /* SWDatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWDatabaseManager.m; sourceTree = "<group>"; };
+		10A7BBDC1CBFE8600053209E /* SWSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWSettingViewController.h; sourceTree = "<group>"; };
+		10A7BBDD1CBFE8600053209E /* SWSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWSettingViewController.m; sourceTree = "<group>"; };
+		10A7BBDF1CBFECBB0053209E /* SWSettingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWSettingTableViewCell.h; sourceTree = "<group>"; };
+		10A7BBE01CBFECBB0053209E /* SWSettingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWSettingTableViewCell.m; sourceTree = "<group>"; };
 		10A960E91CBCD06900946028 /* SWSearchSuggestTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWSearchSuggestTableViewCell.h; sourceTree = "<group>"; };
 		10A960EA1CBCD06900946028 /* SWSearchSuggestTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWSearchSuggestTableViewCell.m; sourceTree = "<group>"; };
 		10A960EC1CBD3CE700946028 /* SWSearchUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWSearchUtil.h; sourceTree = "<group>"; };
@@ -115,6 +121,7 @@
 		10527BCD1CAE75B1004EB822 /* StarWallpaper */ = {
 			isa = PBXGroup;
 			children = (
+				10A7BBDB1CBFE8260053209E /* Setting */,
 				1085D1261CBEAEC900D34336 /* Like */,
 				108874921CBBF0A6000F9CEF /* Database */,
 				1088748E1CBB87D7000F9CEF /* ImageBrowser */,
@@ -224,6 +231,17 @@
 			);
 			name = Database;
 			path = Datebase;
+			sourceTree = "<group>";
+		};
+		10A7BBDB1CBFE8260053209E /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				10A7BBDC1CBFE8600053209E /* SWSettingViewController.h */,
+				10A7BBDD1CBFE8600053209E /* SWSettingViewController.m */,
+				10A7BBDF1CBFECBB0053209E /* SWSettingTableViewCell.h */,
+				10A7BBE01CBFECBB0053209E /* SWSettingTableViewCell.m */,
+			);
+			path = Setting;
 			sourceTree = "<group>";
 		};
 		2DE0C02812EA3956749A9C75 /* Frameworks */ = {
@@ -377,6 +395,7 @@
 				10527BD31CAE75B1004EB822 /* AppDelegate.m in Sources */,
 				10527BF71CB2CE72004EB822 /* SWImageListDO.m in Sources */,
 				1088743C1CBA8DDD000F9CEF /* SWHomeImageCellCollectionViewCell.m in Sources */,
+				10A7BBE11CBFECBB0053209E /* SWSettingTableViewCell.m in Sources */,
 				10A960F71CBD4A0900946028 /* SWSearchSuggestCollectionViewCell.m in Sources */,
 				10E9C9181CB406DA00871C90 /* SWBaseDO.m in Sources */,
 				10527BD01CAE75B1004EB822 /* main.m in Sources */,
@@ -385,6 +404,7 @@
 				10A960EB1CBCD06900946028 /* SWSearchSuggestTableViewCell.m in Sources */,
 				10527BE81CAE7CF7004EB822 /* SWHomeViewController.m in Sources */,
 				10A960EE1CBD3CE700946028 /* SWSearchUtil.m in Sources */,
+				10A7BBDE1CBFE8600053209E /* SWSettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -74,6 +74,7 @@ static NSString *const kSWSearchSuggestTableViewCell = @"SWSearchSuggestTableVie
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.separatorStyle = NO;
+    [_tableView registerClass:[SWSearchSuggestTableViewCell class] forCellReuseIdentifier:kSWSearchSuggestTableViewCell];
     _tableView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:_tableView];
     
