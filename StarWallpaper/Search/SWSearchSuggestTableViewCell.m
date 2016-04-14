@@ -30,6 +30,7 @@ static NSString *const kSWSearchSuggestCollectionViewCell = @"SWSearchSuggestCol
     self.collectionView.dataSource=self;
     self.collectionView.delegate=self;
     self.collectionView.showsHorizontalScrollIndicator = NO;
+    _collectionView.backgroundColor = kSWBackGroundGray;
     self.collectionView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
     [_collectionView registerClass:[SWSearchSuggestCollectionViewCell class] forCellWithReuseIdentifier:kSWSearchSuggestCollectionViewCell];
     [self.contentView addSubview:self.collectionView];

@@ -28,6 +28,7 @@
 @property (nonatomic, copy) NSString *currentKeyword;
 @property (nonatomic, strong) NSArray *itemArray;
 @property (nonatomic, strong) RZSquaresLoading *loading;
+@property (nonatomic, strong) UIButton *retryBtn;
 
 @end
 
@@ -87,11 +88,12 @@
     _itemArray = nil;
     [_collectionView reloadData];
     [self showLoading:YES];
+    [self showRetry:NO];
     [_keywordBtn setTitle:keyword forState:UIControlStateNormal];
     
     @weakify(self)
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    NSString *urlStr = [NSString stringWithFormat:@"http://starwallpaper.duapp.com?keyword=%@&imgWidth=%@&imgHeight=%@", [keyword stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding], @(kScreenWidth * [UIScreen mainScreen].scale), @(kScreenHeight * [UIScreen mainScreen].scale)];
+    NSString *urlStr = [NSString stringWithFormat:@"htp://starwallpaper.duapp.com?keyword=%@&imgWidth=%@&imgHeight=%@", [keyword stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding], @(kScreenWidth * [UIScreen mainScreen].scale), @(kScreenHeight * [UIScreen mainScreen].scale)];
     [manager GET:urlStr parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSString *responseString = [SWCommonUtil replaceUnicode:[[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding]];
         @strongify(self)
@@ -102,6 +104,7 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         @strongify(self)
         [self showLoading:NO];
+        [self showRetry:YES];
     }];
     manager.responseSerializer=[AFHTTPResponseSerializer serializer];
 }
@@ -119,6 +122,28 @@
         [_loading removeFromSuperview];
         _loading = nil;
     }
+}
+
+- (void)showRetry:(BOOL)isShow {
+    if (isShow) {
+        if (!_retryBtn) {
+            _retryBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 50, 30)];
+            [_retryBtn setTitle:@"重试" forState:UIControlStateNormal];
+            _retryBtn.titleLabel.font = SWFontOfSize(20);
+            [_retryBtn setTitleColor:kSWFontGreen forState:UIControlStateNormal];
+            _retryBtn.center = self.view.center;
+            [_retryBtn addTarget:self action:@selector(retry) forControlEvents:UIControlEventTouchUpInside];
+            [self.view addSubview:_retryBtn];
+        }
+    }
+    else {
+        [_retryBtn removeFromSuperview];
+        _retryBtn = nil;
+    }
+}
+
+- (void)retry {
+    [self getResultForKeyword:[[NSUserDefaults standardUserDefaults] objectForKey:kKeyword]];
 }
 
 - (void)keywordClicked {
