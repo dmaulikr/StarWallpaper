@@ -37,6 +37,8 @@ static NSString *const kSWSearchSuggestTableViewCell = @"SWSearchSuggestTableVie
 -(void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = kSWBackGroundGray;
+    
     _suggestArray = [SWSearchUtil getSuggestionArray];
     
     UIView *inputAngBtnBgView = [[UIView alloc] initWithFrame:CGRectMake(10+(kSearchFieldHeight-16), 8, self.view.frame.size.width-20 - (kSearchFieldHeight-16)*2, kSearchFieldHeight-16)];
@@ -78,15 +80,13 @@ static NSString *const kSWSearchSuggestTableViewCell = @"SWSearchSuggestTableVie
     UIButton *homeBtn = [[UIButton alloc] initWithFrame:CGRectMake((self.view.frame.size.width-50)*0.5, self.view.frame.size.height - 50, 50, 50)];
     homeBtn.alpha = 0.6;
     [homeBtn setImage:[UIImage imageNamed:@"backDown"] forState:UIControlStateNormal];
-    [homeBtn addTarget:self action:@selector(search) forControlEvents:UIControlEventTouchUpInside];
+    [homeBtn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:homeBtn];
     
     self.view.backgroundColor = kSWBackGroundGray;
 }
 
 - (void)back {
-    SWSelectedKeywordBlock block = _block;
-    block(@"");
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

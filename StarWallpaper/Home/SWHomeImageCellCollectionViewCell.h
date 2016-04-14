@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+static NSString *const kSWHomeImageCellCollectionViewCell = @"SWHomeImageCellCollectionViewCell";
+
 @interface SWHomeImageCellCollectionViewCell : UICollectionViewCell
 
 @property (nonatomic, strong) UIImageView *imageView;

@@ -17,10 +17,8 @@
 #import "SWSearchViewController.h"
 #import "SWCommonUtil.h"
 #import "SWHomeImageCellCollectionViewCell.h"
-#import "MWPhoto.h"
 #import "SWPhotoBrowser.h"
-
-static NSString *const kSWHomeImageCellCollectionViewCell = @"SWHomeImageCellCollectionViewCell";
+#import "SWLikeViewController.h"
 
 @interface SWHomeViewController () <UICollectionViewDelegate, UICollectionViewDataSource, MWPhotoBrowserDelegate>
 
@@ -56,6 +54,7 @@ static NSString *const kSWHomeImageCellCollectionViewCell = @"SWHomeImageCellCol
     UIButton *leftBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
     [leftBtn setImage:[UIImage imageNamed:@"homeLike"] forState:UIControlStateNormal];
     leftBtn.alpha = 0.6;
+    [leftBtn addTarget:self action:@selector(likeBtnClicked) forControlEvents:UIControlEventTouchUpInside];
     [bottomBar addSubview:leftBtn];
     
     _keywordBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 160, 30)];
@@ -126,6 +125,11 @@ static NSString *const kSWHomeImageCellCollectionViewCell = @"SWHomeImageCellCol
         @strongify(self)
         [self getResultForKeyword:keyword];
     }];
+}
+
+- (void)likeBtnClicked {
+    SWLikeViewController *likeListVC = [[SWLikeViewController alloc] init];
+    [self presentViewController:likeListVC animated:YES completion:nil];
 }
 
 #pragma mark UICollectionViewDataSource

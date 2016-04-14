@@ -13,5 +13,7 @@
 + (UIViewController *)getCurrentVC;
 + (NSString *)replaceUnicode:(NSString *)unicodeStr;
 + (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString;
++ (NSString *)getBigImageUrl:(NSString *)imageUrl;
++ (NSString *)getSmallImageUrl:(NSString *)imageUrl;
 
 @end

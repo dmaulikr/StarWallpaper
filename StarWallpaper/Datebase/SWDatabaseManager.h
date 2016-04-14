@@ -24,4 +24,6 @@
 
 - (BOOL)imageUrlStringHasInDB:(NSString *)imageUrlString;
 
+- (NSArray *)getLikeList;
+
 @end

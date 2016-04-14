@@ -70,4 +70,25 @@
     return dic;
 }
 
++ (NSString *)getBigImageUrl:(NSString *)imageUrl
+{
+    if ([imageUrl rangeOfString:@","].location != NSNotFound) {
+        imageUrl = [imageUrl substringToIndex:[imageUrl rangeOfString:@","].location];
+        NSInteger width = (NSInteger)(kScreenWidth* [UIScreen mainScreen].scale);
+        imageUrl = [imageUrl stringByAppendingString:[NSString stringWithFormat:@"%ld,%f.webp", (long)width, width*kScreenHeight/kScreenWidth]];
+    }
+    return imageUrl;
+}
+
++ (NSString *)getSmallImageUrl:(NSString *)imageUrl
+{
+    
+    if ([imageUrl rangeOfString:@","].location != NSNotFound) {
+        imageUrl = [imageUrl substringToIndex:[imageUrl rangeOfString:@","].location];
+        NSInteger width = (NSInteger)(kScreenWidth * [UIScreen mainScreen].scale /3);
+        imageUrl = [imageUrl stringByAppendingString:[NSString stringWithFormat:@",%ld,%ld.webp", (long)width, (long)(width*kScreenHeight/kScreenWidth)]];
+    }
+    return imageUrl;
+}
+
 @end

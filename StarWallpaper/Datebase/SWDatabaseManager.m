@@ -9,6 +9,8 @@
 #import "SWDatabaseManager.h"
 #import "FMDatabase.h"
 #import <pthread.h>
+#import "SWCommonUtil.h"
+#import "SWImageItemDO.h"
 
 pthread_mutex_t db_mutex = PTHREAD_MUTEX_INITIALIZER;
 
@@ -112,6 +114,28 @@ static SWDatabaseManager *sharedSqlite = nil;
         [self closeDb:db];
         return NO;
     }
+}
+
+- (NSArray *)getLikeList
+{
+    NSMutableArray *infoArray = [[NSMutableArray alloc] init];
+    if (![self openDb:db])
+    {
+        return nil;
+    }
+    
+    [db setShouldCacheStatements:YES];
+    
+    FMResultSet *rs = [db executeQuery:@"SELECT * FROM sw_image_like_list"];
+    while ([rs next])
+    {
+        SWImageItemDO *item = [[SWImageItemDO alloc] init];
+        item.bigImageUrl = [rs stringForColumn:@"imageUrlString"];
+        item.smallImageUrl = [SWCommonUtil getSmallImageUrl:[rs stringForColumn:@"imageUrlString"]];
+        [infoArray addObject:item];
+    }
+    [self closeDb:db];
+    return infoArray;
 }
 
 @end
