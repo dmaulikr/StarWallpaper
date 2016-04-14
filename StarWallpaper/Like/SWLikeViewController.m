@@ -63,8 +63,19 @@
     _itemArray = [[SWDatabaseManager sharedFMDBSqlite] getLikeList];
     [_collectionView reloadData];
     [self showLoading:NO];
+    if(!(_itemArray.count>0)) {
+        [self showEmpty];
+    }
 }
 
+- (void)showEmpty {
+    UIButton *emptyBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 120, 30)];
+    [emptyBtn setTitle:@"你还没有收藏呢" forState:UIControlStateNormal];
+    emptyBtn.titleLabel.font = SWFontOfSize(20);
+    [emptyBtn setTitleColor:kSWFontGreen forState:UIControlStateNormal];
+    emptyBtn.center = self.view.center;
+    [self.view addSubview:emptyBtn];
+}
 
 - (void)showLoading:(BOOL)isShow {
     if (isShow) {
