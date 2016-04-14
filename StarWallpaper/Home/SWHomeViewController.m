@@ -93,7 +93,7 @@
     
     @weakify(self)
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    NSString *urlStr = [NSString stringWithFormat:@"htp://starwallpaper.duapp.com?keyword=%@&imgWidth=%@&imgHeight=%@", [keyword stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding], @(kScreenWidth * [UIScreen mainScreen].scale), @(kScreenHeight * [UIScreen mainScreen].scale)];
+    NSString *urlStr = [NSString stringWithFormat:@"http://starwallpaper.duapp.com?keyword=%@&imgWidth=%@&imgHeight=%@", [keyword stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding], @(kScreenWidth * [UIScreen mainScreen].scale), @(kScreenHeight * [UIScreen mainScreen].scale)];
     [manager GET:urlStr parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSString *responseString = [SWCommonUtil replaceUnicode:[[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding]];
         @strongify(self)
