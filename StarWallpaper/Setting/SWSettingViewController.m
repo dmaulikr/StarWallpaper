@@ -88,17 +88,17 @@
         case 1:
             cell.leftImageView.image = [UIImage imageNamed:@"mail.jpg"];
             [cell.rightBtn setTitle:@"发邮件反馈 >" forState:UIControlStateNormal];
-            [cell.rightBtn addTarget:self action:@selector(gotoWeibo) forControlEvents:UIControlEventTouchUpInside];
+            [cell.rightBtn addTarget:self action:@selector(gotoMail) forControlEvents:UIControlEventTouchUpInside];
             break;
         case 2:
             cell.leftImageView.image = [UIImage imageNamed:@"appStore"];
             [cell.rightBtn setTitle:@"赞美或吐槽 >" forState:UIControlStateNormal];
-            [cell.rightBtn addTarget:self action:@selector(gotoMail) forControlEvents:UIControlEventTouchUpInside];
+            [cell.rightBtn addTarget:self action:@selector(gotoStore) forControlEvents:UIControlEventTouchUpInside];
             break;
         default:
             cell.leftImageView.image = [UIImage imageNamed:@"weibo.jpg"];
             [cell.rightBtn setTitle:@"去微博反馈 >" forState:UIControlStateNormal];
-            [cell.rightBtn addTarget:self action:@selector(gotoStore) forControlEvents:UIControlEventTouchUpInside];
+            [cell.rightBtn addTarget:self action:@selector(gotoWeibo) forControlEvents:UIControlEventTouchUpInside];
             break;
     }
     return cell;
@@ -109,7 +109,7 @@
 }
 
 - (void)gotoMail {
-    NSString *email = @"mailto:fnoz@sina.com&subject=Feedback4StarWallpaper";
+    NSString *email = @"mailto:fnoz@sina.com?subject=Feedback For StarWallpaper";
     email = [email stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:email]];
 }
