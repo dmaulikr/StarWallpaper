@@ -10,6 +10,9 @@
 
 @interface UIImageView (SWPlaceHolder)
 
+@property (nonatomic, strong) UIView *muskView;
+@property (nonatomic, strong) UIImageView *kdPlaceHolder;
+
 typedef void(^SWImageCenterDownloadProgressBlock)(CGFloat percentage);
 
 typedef void(^SWImageCenterDownloadCompletedBlock)(UIImage *image, NSError *error);

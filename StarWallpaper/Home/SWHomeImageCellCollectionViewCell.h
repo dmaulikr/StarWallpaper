@@ -13,8 +13,6 @@ static NSString *const kSWHomeImageCellCollectionViewCell = @"SWHomeImageCellCol
 @interface SWHomeImageCellCollectionViewCell : UICollectionViewCell
 
 @property (nonatomic, strong) UIImageView *imageView;
-@property (nonatomic, strong) UIImageView *loadingView;
-@property (nonatomic, strong) UIImageView *animationView;
 
 - (void)setImageUrl:(NSString *)imageUrl;
 
