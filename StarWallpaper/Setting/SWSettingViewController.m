@@ -115,7 +115,7 @@
 }
 
 - (void)gotoStore {
-    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"itms-apps://"]];
 }
 
 @end

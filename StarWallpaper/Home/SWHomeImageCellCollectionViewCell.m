@@ -21,6 +21,10 @@
         _loadingView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
         _loadingView.image = [UIImage imageNamed:@"imageLoading"];
         _loadingView.center = _imageView.center;
+        
+        
+        
+        
         CABasicAnimation *rotationAnimation;
         rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
         rotationAnimation.toValue = [NSNumber numberWithFloat:M_PI * 2.0];
