@@ -18,6 +18,8 @@
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) NSArray *itemArray;
 @property (nonatomic, strong) RZSquaresLoading *loading;
+@property (nonatomic, strong) UIButton *backToTopBtn;
+@property (nonatomic, strong) UIButton *emptyBtn;
 
 @end
 
@@ -40,10 +42,10 @@
     [self.collectionView registerClass:[SWHomeImageCellCollectionViewCell class] forCellWithReuseIdentifier:kSWHomeImageCellCollectionViewCell];
     [self.view addSubview:self.collectionView];
     
-    UIButton *backToTopBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width-50, _collectionView.frame.size.height-80, 50, 50)];
-    [backToTopBtn setImage:[UIImage imageNamed:@"backUp"] forState:UIControlStateNormal];
-    [backToTopBtn addTarget:self action:@selector(backToTop) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:backToTopBtn];
+    _backToTopBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width-50, _collectionView.frame.size.height-80, 50, 50)];
+    [_backToTopBtn setImage:[UIImage imageNamed:@"backUp"] forState:UIControlStateNormal];
+    [_backToTopBtn addTarget:self action:@selector(backToTop) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_backToTopBtn];
     
     UIButton *homeBtn = [[UIButton alloc] initWithFrame:CGRectMake((self.view.frame.size.width-50)*0.5, self.view.frame.size.height - 50, 50, 50)];
     homeBtn.alpha = 0.6;
@@ -74,16 +76,17 @@
     [self showLoading:NO];
     if(!(_itemArray.count>0)) {
         [self showEmpty];
+        [_backToTopBtn removeFromSuperview];
     }
 }
 
 - (void)showEmpty {
-    UIButton *emptyBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 120, 30)];
-    [emptyBtn setTitle:@"你还没有收藏呢" forState:UIControlStateNormal];
-    emptyBtn.titleLabel.font = SWFontOfSize(20);
-    [emptyBtn setTitleColor:kSWFontGreen forState:UIControlStateNormal];
-    emptyBtn.center = self.view.center;
-    [self.view addSubview:emptyBtn];
+    _emptyBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 30)];
+    [_emptyBtn setTitle:@"你还没有收藏呢" forState:UIControlStateNormal];
+    _emptyBtn.titleLabel.font = SWFontOfSize(20);
+    [_emptyBtn setTitleColor:kSWFontGreen forState:UIControlStateNormal];
+    _emptyBtn.center = self.view.center;
+    [self.view addSubview:_emptyBtn];
 }
 
 - (void)showLoading:(BOOL)isShow {

@@ -30,6 +30,8 @@
 @property (nonatomic, strong) RZSquaresLoading *loading;
 @property (nonatomic, strong) UIButton *retryBtn;
 @property (nonatomic, strong) UIView *launchView;
+@property (nonatomic, strong) UIButton *backToTopBtn;
+@property (nonatomic, strong) UIButton *emptyBtn;
 
 @end
 
@@ -50,10 +52,10 @@
     [self.collectionView registerClass:[SWHomeImageCellCollectionViewCell class] forCellWithReuseIdentifier:kSWHomeImageCellCollectionViewCell];
     [self.view addSubview:self.collectionView];
     
-    UIButton *backToTopBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width-50, _collectionView.frame.size.height-80, 50, 50)];
-    [backToTopBtn setImage:[UIImage imageNamed:@"backUp"] forState:UIControlStateNormal];
-    [backToTopBtn addTarget:self action:@selector(backToTop) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:backToTopBtn];
+    _backToTopBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width-50, _collectionView.frame.size.height-80, 50, 50)];
+    [_backToTopBtn setImage:[UIImage imageNamed:@"backUp"] forState:UIControlStateNormal];
+    [_backToTopBtn addTarget:self action:@selector(backToTop) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_backToTopBtn];
     
     UIView *bottomBar = [[UIView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height-50, self.view.frame.size.width, 50)];
     bottomBar.backgroundColor = [UIColor blackColor];
@@ -107,6 +109,7 @@
 }
 
 - (void)getResultForKeyword:(NSString *)keyword {
+    [_emptyBtn removeFromSuperview];
     if ([keyword isEqualToString:_currentKeyword] || 0 == [keyword stringByReplacingOccurrencesOfString:@" " withString:@""].length) {
         return;
     }
@@ -128,6 +131,10 @@
         self.itemArray = imageList.itemArray;
         [self showLoading:NO];
         [self.collectionView reloadData];
+        if (!imageList.itemArray.count) {
+            [_backToTopBtn removeFromSuperview];
+            [self showEmpty];
+        }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         @strongify(self)
         [self showLoading:NO];
@@ -149,6 +156,15 @@
         [_loading removeFromSuperview];
         _loading = nil;
     }
+}
+
+- (void)showEmpty {
+    _emptyBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 30)];
+    [_emptyBtn setTitle:@"这个明星的壁纸稀有呢" forState:UIControlStateNormal];
+    _emptyBtn.titleLabel.font = SWFontOfSize(20);
+    [_emptyBtn setTitleColor:kSWFontGreen forState:UIControlStateNormal];
+    _emptyBtn.center = self.view.center;
+    [self.view addSubview:_emptyBtn];
 }
 
 - (void)showRetry:(BOOL)isShow {

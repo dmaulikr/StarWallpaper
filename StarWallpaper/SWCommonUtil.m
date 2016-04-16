@@ -8,8 +8,24 @@
 
 #import "SWCommonUtil.h"
 #import "CRToast.h"
+#import "SWConstDef.h"
 
 @implementation SWCommonUtil
+
++ (BOOL)is5OrLater
+{
+    return (kScreenHeight <= 568);
+}
+
++ (BOOL)is6Or6s
+{
+    return (kScreenHeight == 667);
+}
+
++ (BOOL)is6pOr6sp
+{
+    return (kScreenHeight == 736);
+}
 
 + (UIViewController *)getCurrentVC
 {
