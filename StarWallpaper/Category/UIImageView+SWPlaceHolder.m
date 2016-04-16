@@ -49,6 +49,7 @@
     rotationAnimation.toValue = [NSNumber numberWithFloat:M_PI * 2.0];
     rotationAnimation.duration = 0.7;
     rotationAnimation.cumulative = YES;
+    rotationAnimation.removedOnCompletion = NO;
     rotationAnimation.repeatCount = 1024;
     [self.kdPlaceHolder.layer addAnimation:rotationAnimation forKey:@"rotationAnimation"];
     
