@@ -7,6 +7,7 @@
 //
 
 #import "SWCommonUtil.h"
+#import "CRToast.h"
 
 @implementation SWCommonUtil
 
@@ -89,6 +90,37 @@
         imageUrl = [imageUrl stringByAppendingString:[NSString stringWithFormat:@",%ld,%ld.webp", (long)width, (long)(width*kScreenHeight/kScreenWidth)]];
     }
     return imageUrl;
+}
+
++ (void)saveImageToAlbum:(UIImage *)image
+{
+    UIImageWriteToSavedPhotosAlbum(image, self, @selector(imageSavedToPhotosAlbum:didFinishSavingWithError:contextInfo:), nil);
+}
+
++ (void)imageSavedToPhotosAlbum:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
+{
+    NSString *notificationString = @"Hello";
+    UIColor *color;
+    if (!error) {
+        notificationString = @"成功保存到相册";
+        color = [UIColor blackColor];
+    }else
+    {
+        notificationString = @"保存到相册失败";
+        color = [UIColor redColor];
+    }
+    NSDictionary *options = @{
+                              kCRToastTextKey : notificationString,
+                              kCRToastTextAlignmentKey : @(NSTextAlignmentCenter),
+                              kCRToastBackgroundColorKey : color,
+                              kCRToastAnimationInTypeKey : @(CRToastAnimationTypeLinear),
+                              kCRToastAnimationOutTypeKey : @(CRToastAnimationTypeLinear),
+                              kCRToastAnimationInDirectionKey : @(CRToastAnimationDirectionTop),
+                              kCRToastAnimationOutDirectionKey : @(CRToastAnimationDirectionTop),
+                              kCRToastNotificationTypeKey: [UIApplication sharedApplication].isStatusBarHidden?@(CRToastTypeNavigationBar):@(CRToastTypeStatusBar)
+                              };
+    [CRToastManager showNotificationWithOptions:options
+                                completionBlock:nil];
 }
 
 @end

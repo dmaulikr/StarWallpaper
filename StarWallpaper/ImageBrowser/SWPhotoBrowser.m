@@ -9,10 +9,13 @@
 #import "SWPhotoBrowser.h"
 #import "SWDatabaseManager.h"
 #import "SWImageItemDO.h"
+#import "SDImageCache.h"
+#import "SWCommonUtil.h"
 
 @interface SWPhotoBrowser ()
 
 @property (nonatomic, strong) UIButton *likeBtn;
+@property (nonatomic, strong) UIButton *saveBtn;
 
 @end
 
@@ -33,6 +36,14 @@
     [_likeBtn addTarget:self action:@selector(like) forControlEvents:UIControlEventTouchUpInside];
     [self updateLikeBtn];
     [self.view addSubview:_likeBtn];
+    
+    _saveBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 10 - 50, self.view.frame.size.height - 50, 50, 50)];
+    [_saveBtn setImage:[UIImage imageNamed:@"save"] forState:UIControlStateNormal];
+    _saveBtn.alpha = 0.6;
+    _saveBtn.imageEdgeInsets = UIEdgeInsetsMake(10, 10, 10, 10);
+    [_saveBtn addTarget:self action:@selector(save) forControlEvents:UIControlEventTouchUpInside];
+    [self updateLikeBtn];
+    [self.view addSubview:_saveBtn];
     
     UISwipeGestureRecognizer *swipeGesture = [[UISwipeGestureRecognizer alloc] init];
     swipeGesture.direction = UISwipeGestureRecognizerDirectionDown;
@@ -69,6 +80,13 @@
             }];
         }];
     }
+}
+
+- (void)save {
+    SWImageItemDO *item = [_itemArray objectAtIndex:self.currentIndex];
+    NSString *imageUrl = item.bigImageUrl;
+    UIImage *image = [[SDImageCache sharedImageCache] imageFromMemoryCacheForKey:imageUrl];
+    [SWCommonUtil saveImageToAlbum:image];
 }
 
 - (void)swipe:(UISwipeGestureRecognizer *)swipe

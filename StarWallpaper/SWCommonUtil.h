@@ -15,5 +15,6 @@
 + (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString;
 + (NSString *)getBigImageUrl:(NSString *)imageUrl;
 + (NSString *)getSmallImageUrl:(NSString *)imageUrl;
++ (void)saveImageToAlbum:(UIImage *)image;
 
 @end

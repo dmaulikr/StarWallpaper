@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "SWConstDef.h"
+#import "CRToast.h"
 
 @interface AppDelegate ()
 
@@ -18,6 +19,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
+    
+    [self initCRToast];
     
     NSString *keyword = [[NSUserDefaults standardUserDefaults] objectForKey:kKeyword];
     if (!keyword || keyword.length<=0) {
@@ -46,6 +49,15 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)initCRToast {
+    [CRToastManager setDefaultOptions:@{
+                                        kCRToastNotificationTypeKey : @(CRToastTypeStatusBar),
+                                        kCRToastFontKey             : SWFontOfSize(17),
+                                        kCRToastTextColorKey        : [UIColor whiteColor],
+                                        kCRToastBackgroundColorKey  : [UIColor orangeColor],
+                                        kCRToastAutorotateKey       : @(YES)}];
 }
 
 @end

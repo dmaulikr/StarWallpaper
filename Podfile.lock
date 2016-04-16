@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.0.4)
   - AFNetworking/UIKit (3.0.4):
     - AFNetworking/NSURLSession
+  - CRToast (0.0.9)
   - DACircularProgress (2.3.1)
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
@@ -84,6 +85,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (= 3.0.4)
+  - CRToast (from `git@github.com:cruffenach/CRToast.git`, tag `0.0.9`)
   - FMDB (~> 2.6.2)
   - libextobjc (= 0.4.1)
   - MWPhotoBrowser (= 2.1.1)
@@ -91,8 +93,19 @@ DEPENDENCIES:
   - SDWebImage/WebP (= 3.7.5)
   - YYModel (= 1.0.2)
 
+EXTERNAL SOURCES:
+  CRToast:
+    :git: git@github.com:cruffenach/CRToast.git
+    :tag: 0.0.9
+
+CHECKOUT OPTIONS:
+  CRToast:
+    :git: git@github.com:cruffenach/CRToast.git
+    :tag: 0.0.9
+
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
+  CRToast: 5a78c22b921c5ed3487488af605bc403a9c92fed
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   libextobjc: a650fc1bf489a3d3a9bc2e621efa3e1006fc5471

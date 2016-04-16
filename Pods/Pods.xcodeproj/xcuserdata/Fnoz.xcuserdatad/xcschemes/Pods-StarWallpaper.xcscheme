@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '8243141370A03AC1B1105B75'
+               BlueprintIdentifier = '9CD3351641E561B96DD4FC12'
                BlueprintName = 'Pods-StarWallpaper'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-StarWallpaper.a'>
