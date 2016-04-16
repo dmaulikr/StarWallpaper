@@ -105,7 +105,7 @@
 }
 
 - (void)gotoWeibo {
-    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://weibo.com/fnoz"]];
 }
 
 - (void)gotoMail {
