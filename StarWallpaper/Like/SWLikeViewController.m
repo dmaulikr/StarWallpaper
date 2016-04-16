@@ -40,6 +40,11 @@
     [self.collectionView registerClass:[SWHomeImageCellCollectionViewCell class] forCellWithReuseIdentifier:kSWHomeImageCellCollectionViewCell];
     [self.view addSubview:self.collectionView];
     
+    UIButton *backToTopBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width-50, _collectionView.frame.size.height-80, 50, 50)];
+    [backToTopBtn setImage:[UIImage imageNamed:@"backUp"] forState:UIControlStateNormal];
+    [backToTopBtn addTarget:self action:@selector(backToTop) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:backToTopBtn];
+    
     UIButton *homeBtn = [[UIButton alloc] initWithFrame:CGRectMake((self.view.frame.size.width-50)*0.5, self.view.frame.size.height - 50, 50, 50)];
     homeBtn.alpha = 0.6;
     [homeBtn setImage:[UIImage imageNamed:@"backDown"] forState:UIControlStateNormal];
@@ -52,6 +57,10 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)backToTop {
+    [_collectionView setContentOffset:CGPointZero animated:YES];
 }
 
 - (void)back {

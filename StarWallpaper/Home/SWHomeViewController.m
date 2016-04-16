@@ -50,6 +50,11 @@
     [self.collectionView registerClass:[SWHomeImageCellCollectionViewCell class] forCellWithReuseIdentifier:kSWHomeImageCellCollectionViewCell];
     [self.view addSubview:self.collectionView];
     
+    UIButton *backToTopBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width-50, _collectionView.frame.size.height-80, 50, 50)];
+    [backToTopBtn setImage:[UIImage imageNamed:@"backUp"] forState:UIControlStateNormal];
+    [backToTopBtn addTarget:self action:@selector(backToTop) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:backToTopBtn];
+    
     UIView *bottomBar = [[UIView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height-50, self.view.frame.size.width, 50)];
     bottomBar.backgroundColor = [UIColor blackColor];
     [self.view addSubview:bottomBar];
@@ -78,6 +83,10 @@
     [self addLaunchView];
 }
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+}
+
 - (void)addLaunchView {
     _launchView = [[UIView alloc] initWithFrame:self.view.frame];
     _launchView.backgroundColor = kSWBackGroundGray;
@@ -93,8 +102,8 @@
     }];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+- (void)backToTop {
+    [_collectionView setContentOffset:CGPointZero animated:YES];
 }
 
 - (void)getResultForKeyword:(NSString *)keyword {
