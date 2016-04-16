@@ -29,6 +29,7 @@
 @property (nonatomic, strong) NSArray *itemArray;
 @property (nonatomic, strong) RZSquaresLoading *loading;
 @property (nonatomic, strong) UIButton *retryBtn;
+@property (nonatomic, strong) UIView *launchView;
 
 @end
 
@@ -73,6 +74,23 @@
     [bottomBar addSubview:rightBtn];
  
     [self getResultForKeyword:[[NSUserDefaults standardUserDefaults] objectForKey:kKeyword]];
+    
+    [self addLaunchView];
+}
+
+- (void)addLaunchView {
+    _launchView = [[UIView alloc] initWithFrame:self.view.frame];
+    _launchView.backgroundColor = kSWBackGroundGray;
+    UIImageView *logoView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 120, 120)];
+    logoView.image = [UIImage imageNamed:@"Launch"];
+    logoView.center = CGPointMake(_launchView.frame.size.width * 0.5, _launchView.frame.size.height * 0.5);
+    [_launchView addSubview:logoView];
+    [self.view addSubview:_launchView];
+    [UIView animateWithDuration:0.7 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        _launchView.layer.opacity = 0;
+    } completion:^(BOOL finished) {
+        [_launchView removeFromSuperview];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

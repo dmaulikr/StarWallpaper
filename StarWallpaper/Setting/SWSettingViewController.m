@@ -115,7 +115,8 @@
 }
 
 - (void)gotoStore {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"itms-apps://"]];
+    NSString  *nsStringToOpen = [NSString  stringWithFormat: @"itms-apps://itunes.apple.com/app/id%@", @"1104673142"];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:nsStringToOpen]];
 }
 
 @end
