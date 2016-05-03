@@ -78,7 +78,10 @@ static NSString *const kSWSearchSuggestTableViewCell = @"SWSearchSuggestTableVie
     _tableView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:_tableView];
     
-    UIButton *homeBtn = [[UIButton alloc] initWithFrame:CGRectMake((self.view.frame.size.width-50)*0.5, self.view.frame.size.height - 50, 50, 50)];
+    UIButton *homeBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+    homeBtn.frame = CGRectMake((self.view.frame.size.width-50)*0.5, self.view.frame.size.height - 50, 50, 50);
+    homeBtn.tintColor = [UIColor whiteColor];
+    homeBtn.imageEdgeInsets = UIEdgeInsetsMake(19, 15, 19, 15);
     homeBtn.alpha = 0.6;
     [homeBtn setImage:[UIImage imageNamed:@"backDown"] forState:UIControlStateNormal];
     [homeBtn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];

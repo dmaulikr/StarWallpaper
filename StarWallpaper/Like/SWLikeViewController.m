@@ -42,12 +42,19 @@
     [self.collectionView registerClass:[SWHomeImageCellCollectionViewCell class] forCellWithReuseIdentifier:kSWHomeImageCellCollectionViewCell];
     [self.view addSubview:self.collectionView];
     
-    _backToTopBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width-50, _collectionView.frame.size.height-80, 50, 50)];
+    _backToTopBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+    _backToTopBtn.frame = CGRectMake(self.view.frame.size.width-50, _collectionView.frame.size.height-80, 50, 50);
+    _backToTopBtn.tintColor = [UIColor whiteColor];
+    _backToTopBtn.imageEdgeInsets = UIEdgeInsetsMake(19, 15, 19, 15);
+    _backToTopBtn.alpha = 0.6;
     [_backToTopBtn setImage:[UIImage imageNamed:@"backUp"] forState:UIControlStateNormal];
     [_backToTopBtn addTarget:self action:@selector(backToTop) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_backToTopBtn];
     
-    UIButton *homeBtn = [[UIButton alloc] initWithFrame:CGRectMake((self.view.frame.size.width-50)*0.5, self.view.frame.size.height - 50, 50, 50)];
+    UIButton *homeBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+    homeBtn.frame = CGRectMake((self.view.frame.size.width-50)*0.5, self.view.frame.size.height - 50, 50, 50);
+    homeBtn.tintColor = [UIColor whiteColor];
+    homeBtn.imageEdgeInsets = UIEdgeInsetsMake(19, 15, 19, 15);
     homeBtn.alpha = 0.6;
     [homeBtn setImage:[UIImage imageNamed:@"backDown"] forState:UIControlStateNormal];
     [homeBtn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
