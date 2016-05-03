@@ -73,6 +73,9 @@
     _keywordBtn.titleLabel.font = SWFontOfSize(22);
     [_keywordBtn addTarget:self action:@selector(keywordClicked) forControlEvents:UIControlEventTouchUpInside];
     [bottomBar addSubview:_keywordBtn];
+    if (![[[NSUserDefaults standardUserDefaults] objectForKey:kHasDoneTwinkleWord] boolValue]) {
+        [_keywordBtn.layer addAnimation:[self opacityForever_Animation:0.7] forKey:nil];
+    }
     
     UIButton *rightBtn = [[UIButton alloc] initWithFrame:CGRectMake(bottomBar.frame.size.width - 50, 0, 50, 50)];
     [rightBtn setImage:[UIImage imageNamed:@"homeSetting"] forState:UIControlStateNormal];
@@ -190,6 +193,8 @@
 }
 
 - (void)keywordClicked {
+    [[NSUserDefaults standardUserDefaults] setValue:@(YES) forKey:kHasDoneTwinkleWord];
+    [_keywordBtn.layer removeAllAnimations];
     @weakify(self)
     [SWSearchViewController presentWithKeyword:_currentKeyword selectedKeywordBlock:^(NSString *keyword) {
         @strongify(self)
@@ -205,6 +210,20 @@
 - (void)settingClicked {
     SWSettingViewController *settingVc = [[SWSettingViewController alloc] init];
     [self presentViewController:settingVc animated:YES completion:nil];
+}
+
+-(CABasicAnimation *)opacityForever_Animation:(float)time
+{
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"opacity"];
+    animation.fromValue = [NSNumber numberWithFloat:1.0f];
+    animation.toValue = [NSNumber numberWithFloat:0.0f];
+    animation.autoreverses = YES;
+    animation.duration = time;
+    animation.repeatCount = MAXFLOAT;
+    animation.removedOnCompletion = NO;
+    animation.fillMode = kCAFillModeForwards;
+    animation.timingFunction=[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+    return animation;
 }
 
 #pragma mark UICollectionViewDataSource
