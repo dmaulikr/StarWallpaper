@@ -12,4 +12,5 @@ target 'StarWallpaper' do
   pod 'MWPhotoBrowser', '2.1.1'
   pod 'FMDB', '~> 2.6.2'
   pod 'CRToast', :git => 'git@github.com:cruffenach/CRToast.git', :tag => '0.0.9'
+  pod 'UMengAnalytics-NO-IDFA'
 end

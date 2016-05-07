@@ -9,6 +9,8 @@
 #ifndef SWConstDef_h
 #define SWConstDef_h
 
+#define kUMengAppKey @"572e070a67e58e7b430001f3"
+
 
 #define SWFontOfSize(sz) [UIFont fontWithName:@"RTWS YueGothic Trial" size:(sz)]
 #define SWCurrentVC [SWCommonUtil getCurrentVC]
