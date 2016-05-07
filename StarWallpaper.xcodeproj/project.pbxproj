@@ -519,15 +519,15 @@
 			baseConfigurationReference = 626A14ABE24A101A5DE4B671 /* Pods-StarWallpaper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Fnoz Ita (X3664LTV52)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Fnoz Ita (X3664LTV52)";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/StarWallpaper/pchFile.pch";
 				INFOPLIST_FILE = StarWallpaper/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fnoz.StarWallpaper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "4dccb146-a20f-4645-bb3b-87c437770c73";
 			};
 			name = Debug;
 		};
@@ -536,15 +536,15 @@
 			baseConfigurationReference = 1DDFE378E9E3C31C9F735237 /* Pods-StarWallpaper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Fnoz Ita (X3664LTV52)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Fnoz Ita (X3664LTV52)";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/StarWallpaper/pchFile.pch";
 				INFOPLIST_FILE = StarWallpaper/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fnoz.StarWallpaper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "4dccb146-a20f-4645-bb3b-87c437770c73";
 			};
 			name = Release;
 		};
