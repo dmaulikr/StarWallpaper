@@ -8,16 +8,29 @@
 
 #import "SWUserGuildView.h"
 
+@interface SWUserGuildView ()
+
+@property (nonatomic, strong) UIScrollView *containerView;
+
+@end
+
 @implementation SWUserGuildView
 
 - (instancetype)initWithFrame:(CGRect)frame {
-    
     self = [super initWithFrame:[UIScreen mainScreen].bounds];
     if (self) {
-        self.backgroundColor = [UIColor whiteColor];
+        [self initView];
     }
-    
     return self;
+}
+
+- (void)initView {
+    self.backgroundColor = [UIColor clearColor];
+    _containerView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth - 100, kScreenHeight - 200)];
+    _containerView.center = CGPointMake(kScreenWidth/2, kScreenHeight/2);
+    _containerView.backgroundColor = [UIColor whiteColor];
+    _containerView.layer.cornerRadius = 50;
+    [self addSubview:_containerView];
 }
 
 - (void)show {

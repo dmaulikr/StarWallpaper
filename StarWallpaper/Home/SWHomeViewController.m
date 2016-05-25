@@ -118,8 +118,8 @@
         [_launchView removeFromSuperview];
         if (![[[NSUserDefaults standardUserDefaults] objectForKey:kHasShowGuildView] boolValue]) {
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.7 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                SWUserGuildView *editView = [[SWUserGuildView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
-                [editView show];
+                SWUserGuildView *guildView = [[SWUserGuildView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
+                [guildView show];
             });
         }
     }];
