@@ -24,6 +24,7 @@
 
 
 #define kHasDoneTwinkleWord @"kHasDoneTwinkleWord"
+#define kHasShowGuildView @"kHasShowGuildView"
 
 
 #endif /* SWConstDef_h */
