@@ -81,7 +81,7 @@ PODS:
   - SDWebImage/WebP (3.7.5):
     - libwebp
     - SDWebImage/Core
-  - UMengAnalytics-NO-IDFA (3.6.7)
+  - UMengAnalytics-NO-IDFA (4.0.3)
   - YYModel (1.0.2)
 
 DEPENDENCIES:
@@ -89,6 +89,7 @@ DEPENDENCIES:
   - CRToast (from `git@github.com:cruffenach/CRToast.git`, tag `0.0.9`)
   - FMDB (~> 2.6.2)
   - libextobjc (= 0.4.1)
+  - libwebp (= 0.4.3.1)
   - MWPhotoBrowser (= 2.1.1)
   - RZSquaresLoading (= 1.1)
   - SDWebImage/WebP (= 3.7.5)
@@ -116,7 +117,7 @@ SPEC CHECKSUMS:
   MWPhotoBrowser: ba0d0c09ffda3a7ea10093518738c502c1c7141c
   RZSquaresLoading: c0aefa508119a76497424829e439e1b8b0d12fdc
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
-  UMengAnalytics-NO-IDFA: 6d02561a00579b2e37718f204eb81347df5d7b8b
+  UMengAnalytics-NO-IDFA: 173a5a2541536225f4c947935560975136f18a34
   YYModel: 7a467eff45ae3641c33efb136c262d33b6f48c1a
 
 COCOAPODS: 0.39.0
