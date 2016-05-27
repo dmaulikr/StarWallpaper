@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "SWConstDef.h"
 #import "CRToast.h"
-#import "MobClick.h"
+#import "UMMobClick/MobClick.h"
 
 @interface AppDelegate ()
 
@@ -19,7 +19,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [MobClick startWithAppkey:kUMengAppKey reportPolicy:BATCH channelId:@"iOS"];
+    UMConfigInstance.appKey = kUMengAppKey;
+    UMConfigInstance.channelId = @"iOS";
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
     
     [self initCRToast];
