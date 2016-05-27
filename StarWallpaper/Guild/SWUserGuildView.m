@@ -29,8 +29,16 @@
     _containerView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth - 100, kScreenHeight - 200)];
     _containerView.center = CGPointMake(kScreenWidth/2, kScreenHeight/2);
     _containerView.backgroundColor = [UIColor whiteColor];
-    _containerView.layer.cornerRadius = 50;
+    _containerView.layer.cornerRadius = 20;
+    _containerView.contentSize = CGSizeMake(_containerView.frame.size.width * 3, _containerView.frame.size.height);
+    _containerView.pagingEnabled = YES;
     [self addSubview:_containerView];
+    
+    for (int i = 0; i < 3; i++) {
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(_containerView.frame.size.width * i + 15, 15, _containerView.frame.size.width - 30, (_containerView.frame.size.width - 30) * 1.78)];
+        imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"guild_%d", i]];
+        [_containerView addSubview:imageView];
+    }
 }
 
 - (void)show {
