@@ -20,7 +20,6 @@
 #import "SWPhotoBrowser.h"
 #import "SWLikeViewController.h"
 #import "SWSettingViewController.h"
-#import "SWUserGuildView.h"
 
 @interface SWHomeViewController () <UICollectionViewDelegate, UICollectionViewDataSource, MWPhotoBrowserDelegate>
 
@@ -96,33 +95,10 @@
  
     [self getResultForKeyword:[[NSUserDefaults standardUserDefaults] objectForKey:kKeyword]];
     
-    [self addLaunchView];
-
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-}
-
-- (void)addLaunchView {
-    _launchView = [[UIView alloc] initWithFrame:self.view.frame];
-    _launchView.backgroundColor = kSWBackGroundGray;
-    UIImageView *logoView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 120, 120)];
-    logoView.image = [UIImage imageNamed:@"Launch"];
-    logoView.center = CGPointMake(_launchView.frame.size.width * 0.5, _launchView.frame.size.height * 0.5);
-    [_launchView addSubview:logoView];
-    [self.view addSubview:_launchView];
-    [UIView animateWithDuration:0.7 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-        _launchView.layer.opacity = 0;
-    } completion:^(BOOL finished) {
-        [_launchView removeFromSuperview];
-        if (![[[NSUserDefaults standardUserDefaults] objectForKey:kHasShowGuildView] boolValue]) {
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.7 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                SWUserGuildView *guildView = [[SWUserGuildView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
-                [guildView show];
-            });
-        }
-    }];
 }
 
 - (void)backToTop {
