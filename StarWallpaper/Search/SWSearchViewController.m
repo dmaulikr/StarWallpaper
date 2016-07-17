@@ -46,8 +46,12 @@ static NSString *const kSWSearchSuggestTableViewCell = @"SWSearchSuggestTableVie
     inputAngBtnBgView.layer.cornerRadius = 5.0f;
     [self.view addSubview:inputAngBtnBgView];
     
-    UIImageView *logoView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 8, inputAngBtnBgView.frame.size.height, inputAngBtnBgView.frame.size.height)];
+    UIImageView *logoView = [[UIImageView alloc] initWithFrame:CGRectMake(11, 9, inputAngBtnBgView.frame.size.height - 2, inputAngBtnBgView.frame.size.height - 2)];
     logoView.image = [UIImage imageNamed:@"Launch"];
+    logoView.layer.shadowColor = [UIColor lightGrayColor].CGColor;//shadowColor阴影颜色
+    logoView.layer.shadowOffset = CGSizeMake(0,0);//shadowOffset阴影偏移，默认(0, -3),这个跟shadowRadius配合使用
+    logoView.layer.shadowOpacity = 1;//阴影透明度，默认0
+    logoView.layer.shadowRadius = 3;//阴影半径，默认3
     [self.view addSubview:logoView];
     
     self.textField = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, inputAngBtnBgView.frame.size.width, inputAngBtnBgView.frame.size.height)];
