@@ -77,7 +77,7 @@
 				<string>6B9FA140F4D39887675E48CB5EC6B9B1</string>
 				<string>4949B04A6405CF31BDF1966E904A4801</string>
 				<string>068009325F07320BB07215B75DAAF4C5</string>
-				<string>4215960B445511849373D01B387AD9B6</string>
+				<string>1D502892AA19A1683066D4D328EA7F47</string>
 				<string>09414D9BF976769FEE6329A59D586936</string>
 			</array>
 			<key>isa</key>
@@ -1566,6 +1566,21 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
+		<key>1D502892AA19A1683066D4D328EA7F47</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>AF4B1512E86E274C7A0B7D8E039B7198</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>UMengAnalytics-NO-IDFA</string>
+			<key>path</key>
+			<string>UMengAnalytics-NO-IDFA</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>1D60BA6F394E1DC42F50B460EB719239</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -2994,19 +3009,6 @@
 			<key>sourceTree</key>
 			<string>DEVELOPER_DIR</string>
 		</dict>
-		<key>40CA0BD0A383E826401E3D614D1B0963</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>EA84AA8CA5316E5A71A3C63E06A7E13F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>411C120AFB9B4CB45D3994F822F53407</key>
 		<dict>
 			<key>fileRef</key>
@@ -3056,21 +3058,6 @@
 			<string>dec_neon.c</string>
 			<key>path</key>
 			<string>src/dsp/dec_neon.c</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4215960B445511849373D01B387AD9B6</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>40CA0BD0A383E826401E3D614D1B0963</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>UMengAnalytics-NO-IDFA</string>
-			<key>path</key>
-			<string>UMengAnalytics-NO-IDFA</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -8393,6 +8380,21 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>AF4B1512E86E274C7A0B7D8E039B7198</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MobClick.h</string>
+			<key>path</key>
+			<string>umsdk_IOS_analytics_no-idfa_v3.6.7/UMAnalytics_Sdk_3.6.7/MobClick.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>AF7404A4462C49837386BE45E07C646D</key>
 		<dict>
 			<key>fileRef</key>
@@ -11309,19 +11311,6 @@
 			<string>MWPhotoBrowser.bundle</string>
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>EA84AA8CA5316E5A71A3C63E06A7E13F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>UMMobClick.framework</string>
-			<key>path</key>
-			<string>umsdk_IOS_analyics_no-idfa_v4.0.3/UMMobClick.framework</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>EB54F3D420AEF28FD16D5CDC7C119927</key>
 		<dict>
