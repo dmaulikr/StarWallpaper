@@ -10,6 +10,7 @@
 #import "SWConstDef.h"
 #import "CRToast.h"
 #import "UMMobClick/MobClick.h"
+#import "SWHomeViewController.h"
 
 @interface AppDelegate ()
 
@@ -61,6 +62,64 @@
                                         kCRToastTextColorKey        : [UIColor whiteColor],
                                         kCRToastBackgroundColorKey  : [UIColor orangeColor],
                                         kCRToastAutorotateKey       : @(YES)}];
+}
+
+- (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler {
+    UIViewController *vc = [self getCurrentVC];
+    while (![vc isKindOfClass:[SWHomeViewController class]]) {
+        [vc dismissViewControllerAnimated:NO completion:nil];
+        vc = [self getCurrentVC];
+    }
+    if ([shortcutItem.localizedTitle isEqualToString:@"收藏"]) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            if ([vc isKindOfClass:[SWHomeViewController class]]) {
+                [(SWHomeViewController *)vc likeBtnClicked];
+            }
+        });
+    }
+    else if ([shortcutItem.localizedTitle isEqualToString:@"搜索"]) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            if ([vc isKindOfClass:[SWHomeViewController class]]) {
+                [(SWHomeViewController *)vc keywordClicked];
+            }
+        });
+    }
+    else if ([shortcutItem.localizedTitle isEqualToString:@"反馈"]) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            if ([vc isKindOfClass:[SWHomeViewController class]]) {
+                [(SWHomeViewController *)vc settingClicked];
+            }
+        });
+    }
+}
+
+- (UIViewController *)getCurrentVC
+{
+    UIViewController *result = nil;
+    
+    UIWindow * window = [[UIApplication sharedApplication] keyWindow];
+    if (window.windowLevel != UIWindowLevelNormal)
+    {
+        NSArray *windows = [[UIApplication sharedApplication] windows];
+        for(UIWindow * tmpWin in windows)
+        {
+            if (tmpWin.windowLevel == UIWindowLevelNormal)
+            {
+                window = tmpWin;
+                break;
+            }
+        }
+    }
+    
+    UIView *frontView = [[window subviews] objectAtIndex:0];
+    id nextResponder = [frontView nextResponder];
+    
+    if ([nextResponder isKindOfClass:[UIViewController class]])
+        result = nextResponder;
+    else
+        result = window.rootViewController;
+    
+    return result;
 }
 
 @end

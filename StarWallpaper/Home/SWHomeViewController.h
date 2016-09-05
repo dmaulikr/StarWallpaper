@@ -10,6 +10,11 @@
 
 @interface SWHomeViewController : UIViewController
 
+- (void)keywordClicked;
+
+- (void)likeBtnClicked;
+
+- (void)settingClicked;
 
 @end
 
