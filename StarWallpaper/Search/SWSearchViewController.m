@@ -28,10 +28,19 @@ static NSString *const kSWSearchSuggestTableViewCell = @"SWSearchSuggestTableVie
 @implementation SWSearchViewController
 
 + (void)presentWithKeyword:(NSString *)keyword selectedKeywordBlock:(SWSelectedKeywordBlock)block {
-    SWSearchViewController *vc = [[SWSearchViewController alloc] init];
+    SWSearchViewController *vc = [SWSearchViewController sharedInstance];
     vc.keyword = keyword;
     vc.block = block;
     [SWCurrentVC presentViewController:vc animated:YES completion:nil];
+}
+
++ (SWSearchViewController *)sharedInstance {
+    static SWSearchViewController *_sharedInstance;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _sharedInstance = [[SWSearchViewController alloc] init];
+    });
+    return _sharedInstance;
 }
 
 -(void)viewDidLoad {
