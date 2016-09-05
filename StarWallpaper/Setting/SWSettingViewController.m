@@ -119,7 +119,7 @@
 }
 
 - (void)gotoStore {
-    NSString  *nsStringToOpen = [NSString  stringWithFormat: @"itms-apps://itunes.apple.com/app/id%@", @"1104673142"];
+    NSString  *nsStringToOpen = [NSString stringWithFormat:@"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@", @"1104673142"];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:nsStringToOpen]];
 }
 
