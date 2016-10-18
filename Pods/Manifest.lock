@@ -54,21 +54,30 @@ PODS:
     - libextobjc/RuntimeExtensions
   - libextobjc/RuntimeExtensions (0.4.1)
   - libextobjc/UmbrellaHeader (0.4.1)
-  - libwebp (0.4.3.1):
-    - libwebp/dec (= 0.4.3.1)
-    - libwebp/demux (= 0.4.3.1)
-    - libwebp/dsp (= 0.4.3.1)
-    - libwebp/enc (= 0.4.3.1)
-    - libwebp/mux (= 0.4.3.1)
-    - libwebp/utils (= 0.4.3.1)
-    - libwebp/webp (= 0.4.3.1)
-  - libwebp/dec (0.4.3.1)
-  - libwebp/demux (0.4.3.1)
-  - libwebp/dsp (0.4.3.1)
-  - libwebp/enc (0.4.3.1)
-  - libwebp/mux (0.4.3.1)
-  - libwebp/utils (0.4.3.1)
-  - libwebp/webp (0.4.3.1)
+  - libwebp (0.5.1):
+    - libwebp/core (= 0.5.1)
+    - libwebp/dec (= 0.5.1)
+    - libwebp/demux (= 0.5.1)
+    - libwebp/dsp (= 0.5.1)
+    - libwebp/enc (= 0.5.1)
+    - libwebp/mux (= 0.5.1)
+    - libwebp/utils (= 0.5.1)
+    - libwebp/webp (= 0.5.1)
+  - libwebp/core (0.5.1):
+    - libwebp/webp
+  - libwebp/dec (0.5.1):
+    - libwebp/core
+  - libwebp/demux (0.5.1):
+    - libwebp/core
+  - libwebp/dsp (0.5.1):
+    - libwebp/core
+  - libwebp/enc (0.5.1):
+    - libwebp/core
+  - libwebp/mux (0.5.1):
+    - libwebp/core
+  - libwebp/utils (0.5.1):
+    - libwebp/core
+  - libwebp/webp (0.5.1)
   - MBProgressHUD (0.9.2)
   - MWPhotoBrowser (2.1.1):
     - DACircularProgress (~> 2.3)
@@ -81,30 +90,19 @@ PODS:
   - SDWebImage/WebP (3.7.5):
     - libwebp
     - SDWebImage/Core
-  - UMengAnalytics-NO-IDFA (4.0.3)
+  - UMengAnalytics-NO-IDFA (4.1.1)
   - YYModel (1.0.2)
 
 DEPENDENCIES:
   - AFNetworking (= 3.0.4)
-  - CRToast (from `git@github.com:cruffenach/CRToast.git`, tag `0.0.9`)
+  - CRToast (= 0.0.9)
   - FMDB (~> 2.6.2)
   - libextobjc (= 0.4.1)
-  - libwebp (= 0.4.3.1)
   - MWPhotoBrowser (= 2.1.1)
   - RZSquaresLoading (= 1.1)
   - SDWebImage/WebP (= 3.7.5)
   - UMengAnalytics-NO-IDFA
   - YYModel (= 1.0.2)
-
-EXTERNAL SOURCES:
-  CRToast:
-    :git: git@github.com:cruffenach/CRToast.git
-    :tag: 0.0.9
-
-CHECKOUT OPTIONS:
-  CRToast:
-    :git: git@github.com:cruffenach/CRToast.git
-    :tag: 0.0.9
 
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
@@ -112,12 +110,12 @@ SPEC CHECKSUMS:
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   libextobjc: a650fc1bf489a3d3a9bc2e621efa3e1006fc5471
-  libwebp: 5f9db23073868b94b4f62ef8769ab052837fecc7
+  libwebp: b9126f8982a95370cf4eaad9bb3fefd57f052c15
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MWPhotoBrowser: ba0d0c09ffda3a7ea10093518738c502c1c7141c
   RZSquaresLoading: c0aefa508119a76497424829e439e1b8b0d12fdc
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
-  UMengAnalytics-NO-IDFA: 173a5a2541536225f4c947935560975136f18a34
+  UMengAnalytics-NO-IDFA: 1064992c1b7aaa22823179c0b33a664813fd7a85
   YYModel: 7a467eff45ae3641c33efb136c262d33b6f48c1a
 
 COCOAPODS: 0.39.0
