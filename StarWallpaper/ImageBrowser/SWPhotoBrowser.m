@@ -50,10 +50,10 @@
     [self updateLikeBtn];
     [self.view addSubview:_saveBtn];
     
-    UISwipeGestureRecognizer *swipeGesture = [[UISwipeGestureRecognizer alloc] init];
-    swipeGesture.direction = UISwipeGestureRecognizerDirectionDown;
-    [swipeGesture addTarget:self action:@selector(swipe:)];
-    [self.view addGestureRecognizer:swipeGesture];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] init];
+    [tap addTarget:self action:@selector(tap:)];
+    tap.numberOfTapsRequired = 1;
+    [self.view addGestureRecognizer:tap];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -94,9 +94,11 @@
     [SWCommonUtil saveImageToAlbum:image];
 }
 
-- (void)swipe:(UISwipeGestureRecognizer *)swipe
+- (void)tap:(UITapGestureRecognizer *)tap
 {
-    [self back];
+    if (UIGestureRecognizerStateEnded == tap.state) {
+        [self back];
+    }
 }
 
 - (void)back {

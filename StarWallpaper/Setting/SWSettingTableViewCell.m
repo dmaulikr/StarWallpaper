@@ -17,13 +17,13 @@
     if (self) {
         self.contentView.backgroundColor = kSWBackGroundGray;
         
-        _leftImageView = [[UIImageView alloc] initWithFrame:CGRectMake([SWCommonUtil is5OrLater]?70:90, 10, 60, 60)];
+        _leftImageView = [[UIImageView alloc] initWithFrame:CGRectMake(kScreenWidth * 0.5 - 90, 10, 60, 60)];
         _leftImageView.backgroundColor = [UIColor clearColor];
         _leftImageView.layer.cornerRadius = 30;
         _leftImageView.clipsToBounds = YES;
         [self.contentView addSubview:_leftImageView];
         
-        _rightBtn = [[UIButton alloc] initWithFrame:CGRectMake(kScreenWidth-([SWCommonUtil is5OrLater]?165:185), 25, 100, 30)];
+        _rightBtn = [[UIButton alloc] initWithFrame:CGRectMake(kScreenWidth * 0.5 - 10, 25, 100, 30)];
         _rightBtn.backgroundColor = [UIColor clearColor];
         _rightBtn.titleLabel.font = SWFontOfSize(18);
         [self.contentView addSubview:_rightBtn];

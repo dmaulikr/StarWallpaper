@@ -10,7 +10,7 @@
 
 @interface SWCommonUtil : NSObject
 
-+ (BOOL)is5OrLater;
++ (BOOL)is5OrEarlier;
 + (BOOL)is6Or6s;
 + (BOOL)is6pOr6sp;
 + (UIViewController *)getCurrentVC;

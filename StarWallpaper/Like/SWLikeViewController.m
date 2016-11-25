@@ -109,6 +109,12 @@
     }
 }
 
+#pragma mark UIScrollViewDelegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    _backToTopBtn.hidden = !(scrollView.contentOffset.y > scrollView.frame.size.height);
+    _backToTopBtn.alpha = (scrollView.contentOffset.y - scrollView.frame.size.height) / 20.0;
+}
+
 #pragma mark UICollectionViewDataSource
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {

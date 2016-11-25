@@ -50,20 +50,20 @@ static NSString *const kSWSearchSuggestTableViewCell = @"SWSearchSuggestTableVie
     
     _suggestArray = [SWSearchUtil getSuggestionArray];
     
-    UIView *inputAngBtnBgView = [[UIView alloc] initWithFrame:CGRectMake(10+(kSearchFieldHeight-16), 8, self.view.frame.size.width-20 - (kSearchFieldHeight-16)*2, kSearchFieldHeight-16)];
-    inputAngBtnBgView.backgroundColor = [UIColor clearColor];
-    inputAngBtnBgView.layer.cornerRadius = 5.0f;
-    [self.view addSubview:inputAngBtnBgView];
+//    UIView *inputAngBtnBgView = [[UIView alloc] initWithFrame:CGRectMake(10 + (kSearchFieldHeight - 16), 8, self.view.frame.size.width - 20 - (kSearchFieldHeight - 16) * 2, kSearchFieldHeight - 16)];
+//    inputAngBtnBgView.backgroundColor = [UIColor clearColor];
+//    inputAngBtnBgView.layer.cornerRadius = 5.0f;
+//    [self.view addSubview:inputAngBtnBgView];
+//    
+//    UIImageView *logoView = [[UIImageView alloc] initWithFrame:CGRectMake(11, 9, inputAngBtnBgView.frame.size.height - 2, inputAngBtnBgView.frame.size.height - 2)];
+//    logoView.image = [UIImage imageNamed:@"Launch"];
+//    logoView.layer.shadowColor = [UIColor lightGrayColor].CGColor;//shadowColor阴影颜色
+//    logoView.layer.shadowOffset = CGSizeMake(0,0);//shadowOffset阴影偏移，默认(0, -3),这个跟shadowRadius配合使用
+//    logoView.layer.shadowOpacity = 1;//阴影透明度，默认0
+//    logoView.layer.shadowRadius = 3;//阴影半径，默认3
+//    [self.view addSubview:logoView];
     
-    UIImageView *logoView = [[UIImageView alloc] initWithFrame:CGRectMake(11, 9, inputAngBtnBgView.frame.size.height - 2, inputAngBtnBgView.frame.size.height - 2)];
-    logoView.image = [UIImage imageNamed:@"Launch"];
-    logoView.layer.shadowColor = [UIColor lightGrayColor].CGColor;//shadowColor阴影颜色
-    logoView.layer.shadowOffset = CGSizeMake(0,0);//shadowOffset阴影偏移，默认(0, -3),这个跟shadowRadius配合使用
-    logoView.layer.shadowOpacity = 1;//阴影透明度，默认0
-    logoView.layer.shadowRadius = 3;//阴影半径，默认3
-    [self.view addSubview:logoView];
-    
-    self.textField = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, inputAngBtnBgView.frame.size.width, inputAngBtnBgView.frame.size.height)];
+    self.textField = [[UITextField alloc] initWithFrame:CGRectMake(12, 6, self.view.frame.size.width - kSearchFieldHeight - 12, kSearchFieldHeight - 6 * 2)];
     self.textField.backgroundColor = kSWIconWhite;
     self.textField.placeholder = @"你的明星壁纸，偶像在身边";
     self.textField.font = SWFontOfSize(20);
@@ -74,17 +74,17 @@ static NSString *const kSWSearchSuggestTableViewCell = @"SWSearchSuggestTableVie
     self.textField.leftViewMode = UITextFieldViewModeAlways;
     self.textField.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 12, self.textField.frame.size.height)];
     self.textField.returnKeyType = UIReturnKeySearch;
-    [inputAngBtnBgView addSubview:self.textField];
+    [self.view addSubview:self.textField];
     
     UIButton *searchBtn = [UIButton buttonWithType:UIButtonTypeSystem];
-    searchBtn.frame = CGRectMake(self.view.frame.size.width - ( 10 + (kSearchFieldHeight - 16)), 8, (kSearchFieldHeight - 16), inputAngBtnBgView.frame.size.height);
+    searchBtn.frame = CGRectMake(self.view.frame.size.width - kSearchFieldHeight + 3, 6, kSearchFieldHeight - 6 * 2, kSearchFieldHeight - 6 * 2);
     searchBtn.tintColor = kSWIconWhite;
     [searchBtn setImage:[UIImage imageNamed:@"goToSearch"] forState:UIControlStateNormal];
-    searchBtn.imageEdgeInsets = UIEdgeInsetsMake(6, 6, 6, 6);
+    searchBtn.imageEdgeInsets = UIEdgeInsetsMake(5, 4, 3, 4);
     [searchBtn addTarget:self action:@selector(search) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:searchBtn];
     
-    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, inputAngBtnBgView.frame.origin.y + inputAngBtnBgView.frame.size.height, self.view.frame.size.width, self.view.frame.size.height - (inputAngBtnBgView.frame.origin.y + inputAngBtnBgView.frame.size.height)) style:UITableViewStyleGrouped];
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, kSearchFieldHeight, self.view.frame.size.width, self.view.frame.size.height - (0 + kSearchFieldHeight) - 8) style:UITableViewStyleGrouped];
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.separatorStyle = NO;

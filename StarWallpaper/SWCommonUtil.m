@@ -12,7 +12,7 @@
 
 @implementation SWCommonUtil
 
-+ (BOOL)is5OrLater
++ (BOOL)is5OrEarlier
 {
     return (kScreenHeight <= 568);
 }
