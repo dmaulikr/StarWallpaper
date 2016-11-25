@@ -12,15 +12,15 @@
 #define kUMengAppKey @"572e070a67e58e7b430001f3"
 
 
-#define SWFontOfSize(sz) [UIFont fontWithName:@"RTWS YueGothic Trial" size:(sz)]
-#define SWCurrentVC [SWCommonUtil getCurrentVC]
+#define  SWFontOfSize(sz)  [UIFont fontWithName:@"RTWS YueGothic Trial" size:(sz)]
+#define  SWCurrentVC  [SWCommonUtil getCurrentVC]
 
-
-#define kSWBackGroundGray [UIColor colorWithRed:0x22/255.0 green:0x22/255.0 blue:0x22/255.0 alpha:1.0]
-#define kSWFontGreen [UIColor colorWithRed:0x99/255.0 green:0xc8/255.0 blue:0x00/255.0 alpha:0.7]
-#define kKeyword @"keyword"
-#define kScreenWidth ([UIScreen mainScreen].bounds.size.width)
-#define kScreenHeight ([UIScreen mainScreen].bounds.size.height)
+#define  kSWIconWhite  [UIColor colorWithRed:246/255.0 green:245/255.0 blue:243/255.0 alpha:1.0]
+#define  kSWBackGroundGray  [UIColor colorWithRed:61/255.0 green:61/255.0 blue:63/255.0 alpha:1.0]
+#define  kSWFontGreen  [UIColor colorWithRed:125/255.0 green:206/255.0 blue:148/255.0 alpha:1]
+#define  kKeyword  @"keyword"
+#define  kScreenWidth  ([UIScreen mainScreen].bounds.size.width)
+#define  kScreenHeight  ([UIScreen mainScreen].bounds.size.height)
 
 
 #define kHasDoneTwinkleWord @"kHasDoneTwinkleWord"

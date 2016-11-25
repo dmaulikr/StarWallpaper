@@ -25,19 +25,17 @@
     [super viewDidLoad];
     
     UIButton *homeBtn = [UIButton buttonWithType:UIButtonTypeSystem];
-    homeBtn.frame = CGRectMake((self.view.frame.size.width-50)*0.5, self.view.frame.size.height - 50, 50, 50);
-    homeBtn.tintColor = [UIColor whiteColor];
-    homeBtn.imageEdgeInsets = UIEdgeInsetsMake(19, 15, 19, 15);
-    homeBtn.alpha = 0.6;
+    homeBtn.frame = CGRectMake((self.view.frame.size.width - 50) * 0.5, self.view.frame.size.height - 50, 50, 50);
+    homeBtn.tintColor = kSWIconWhite;
+    homeBtn.imageEdgeInsets = UIEdgeInsetsMake(13, 13, 13, 13);
     [homeBtn setImage:[UIImage imageNamed:@"backDown"] forState:UIControlStateNormal];
     [homeBtn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:homeBtn];
     
     _likeBtn = [UIButton buttonWithType:UIButtonTypeSystem];
     _likeBtn.frame = CGRectMake(10, self.view.frame.size.height - 50, 50, 50);
-    _likeBtn.tintColor = [UIColor whiteColor];
-    _likeBtn.imageEdgeInsets = UIEdgeInsetsMake(15, 13, 15, 13);
-    _likeBtn.alpha = 0.6;
+    _likeBtn.tintColor = kSWIconWhite;
+    _likeBtn.imageEdgeInsets = UIEdgeInsetsMake(13, 13, 13, 13);
     [_likeBtn setImage:[UIImage imageNamed:@"like"] forState:UIControlStateNormal];
     [_likeBtn addTarget:self action:@selector(like) forControlEvents:UIControlEventTouchUpInside];
     [self updateLikeBtn];
@@ -45,9 +43,8 @@
     
     _saveBtn = [UIButton buttonWithType:UIButtonTypeSystem];
     _saveBtn.frame = CGRectMake(self.view.frame.size.width - 10 - 50, self.view.frame.size.height - 50, 50, 50);
-    _saveBtn.tintColor = [UIColor whiteColor];
-    _saveBtn.imageEdgeInsets = UIEdgeInsetsMake(15, 13, 15, 13);
-    _saveBtn.alpha = 0.6;
+    _saveBtn.tintColor = kSWIconWhite;
+    _saveBtn.imageEdgeInsets = UIEdgeInsetsMake(13, 13, 13, 13);
     [_saveBtn setImage:[UIImage imageNamed:@"save"] forState:UIControlStateNormal];
     [_saveBtn addTarget:self action:@selector(save) forControlEvents:UIControlEventTouchUpInside];
     [self updateLikeBtn];
@@ -73,7 +70,7 @@
         } completion:^(BOOL finished) {
             [_likeBtn setImage:[UIImage imageNamed:@"like"] forState:UIControlStateNormal];
             [UIView animateWithDuration:0.4 animations:^{
-                _likeBtn.alpha = 0.6;
+                _likeBtn.alpha = 1;
             }];
         }];
     }
@@ -84,7 +81,7 @@
         } completion:^(BOOL  finished) {
             [_likeBtn setImage:[UIImage imageNamed:@"unLike"] forState:UIControlStateNormal];
             [UIView animateWithDuration:0.4 animations:^{
-                _likeBtn.alpha = 0.6;
+                _likeBtn.alpha = 1;
             }];
         }];
     }

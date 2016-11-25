@@ -54,9 +54,8 @@
     
     _backToTopBtn = [UIButton buttonWithType:UIButtonTypeSystem];
     _backToTopBtn.frame = CGRectMake(self.view.frame.size.width-50, _collectionView.frame.size.height-80, 50, 50);
-    _backToTopBtn.tintColor = [UIColor whiteColor];
-    _backToTopBtn.imageEdgeInsets = UIEdgeInsetsMake(19, 15, 19, 15);
-    _backToTopBtn.alpha = 0.6;
+    _backToTopBtn.tintColor = kSWIconWhite;
+    _backToTopBtn.imageEdgeInsets = UIEdgeInsetsMake(15, 15, 15, 15);
     [_backToTopBtn setImage:[UIImage imageNamed:@"backUp"] forState:UIControlStateNormal];
     [_backToTopBtn addTarget:self action:@selector(backToTop) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_backToTopBtn];
@@ -67,10 +66,9 @@
     
     UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeSystem];
     leftBtn.frame = CGRectMake(0, 0, 50, 50);
-    leftBtn.tintColor = [UIColor whiteColor];
-    leftBtn.imageEdgeInsets = UIEdgeInsetsMake(15, 13, 15, 13);
+    leftBtn.tintColor = kSWIconWhite;
+    leftBtn.imageEdgeInsets = UIEdgeInsetsMake(13, 13, 13, 13);
     [leftBtn setImage:[UIImage imageNamed:@"unLike"] forState:UIControlStateNormal];
-    leftBtn.alpha = 0.6;
     [leftBtn addTarget:self action:@selector(likeBtnClicked) forControlEvents:UIControlEventTouchUpInside];
     [bottomBar addSubview:leftBtn];
     
@@ -86,10 +84,9 @@
     
     UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeSystem];
     rightBtn.frame = CGRectMake(bottomBar.frame.size.width - 50, 0, 50, 50);
-    rightBtn.tintColor = [UIColor whiteColor];
-    rightBtn.imageEdgeInsets = UIEdgeInsetsMake(13, 13, 13, 13);
+    rightBtn.tintColor = kSWIconWhite;
+    rightBtn.imageEdgeInsets = UIEdgeInsetsMake(14, 14, 14, 14);
     [rightBtn setImage:[UIImage imageNamed:@"homeSetting"] forState:UIControlStateNormal];
-    rightBtn.alpha = 0.6;
     [rightBtn addTarget:self action:@selector(settingClicked) forControlEvents:UIControlEventTouchUpInside];
     [bottomBar addSubview:rightBtn];
  

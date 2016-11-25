@@ -22,7 +22,7 @@
         
         _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, frame.size.height-20, frame.size.width, 20)];
         _titleLabel.font = SWFontOfSize(16);
-        _titleLabel.textColor = [UIColor whiteColor];
+        _titleLabel.textColor = kSWIconWhite;
         _titleLabel.textAlignment = NSTextAlignmentRight;
         [self.contentView addSubview:_titleLabel];
     }

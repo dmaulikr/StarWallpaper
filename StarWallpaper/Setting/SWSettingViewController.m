@@ -31,13 +31,13 @@
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, logoImageView.frame.origin.y+logoImageView.frame.size.height + 20, kScreenWidth, 30)];
     titleLabel.text = @"明星壁纸";
     titleLabel.font = SWFontOfSize(20);
-    titleLabel.textColor = [UIColor whiteColor];
+    titleLabel.textColor = kSWIconWhite;
     titleLabel.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:titleLabel];
     
     self.view.backgroundColor = kSWBackGroundGray;
     
-    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, kScreenHeight/2, kScreenWidth, 240) style:UITableViewStylePlain];
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, kScreenHeight / 2, kScreenWidth, 240) style:UITableViewStylePlain];
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.separatorStyle = NO;
@@ -47,10 +47,9 @@
     [self.view addSubview:_tableView];
     
     UIButton *homeBtn = [UIButton buttonWithType:UIButtonTypeSystem];
-    homeBtn.frame = CGRectMake((self.view.frame.size.width-50)*0.5, self.view.frame.size.height - 50, 50, 50);
-    homeBtn.tintColor = [UIColor whiteColor];
-    homeBtn.imageEdgeInsets = UIEdgeInsetsMake(19, 15, 19, 15);
-    homeBtn.alpha = 0.6;
+    homeBtn.frame = CGRectMake((self.view.frame.size.width - 50) * 0.5, self.view.frame.size.height - 50, 50, 50);
+    homeBtn.tintColor = kSWIconWhite;
+    homeBtn.imageEdgeInsets = UIEdgeInsetsMake(13, 13, 13, 13);
     [homeBtn setImage:[UIImage imageNamed:@"backDown"] forState:UIControlStateNormal];
     [homeBtn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:homeBtn];
@@ -58,7 +57,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)back {
