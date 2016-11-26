@@ -33,20 +33,12 @@
 @property (nonatomic, strong) UIButton *backToTopBtn;
 @property (nonatomic, strong) UIButton *emptyBtn;
 
-@property (nonatomic, strong) NSArray *names;
-@property (nonatomic, copy) NSString *result;
-@property (nonatomic, assign) NSInteger index;
-
 @end
 
 @implementation SWHomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.names = [@"陈翔、周韦彤" componentsSeparatedByString:@"、"];
-    self.result = @"";
-
     
     UICollectionViewFlowLayout *flowLayout=[[UICollectionViewFlowLayout alloc] init];
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
@@ -112,12 +104,17 @@
 }
 
 - (void)getResultForKeyword:(NSString *)keyword {
-    if (self.index >= self.names.count) {
-        NSLog(self.result);
+    [_emptyBtn removeFromSuperview];
+    if ([keyword isEqualToString:_currentKeyword] || 0 == [keyword stringByReplacingOccurrencesOfString:@" " withString:@""].length) {
         return;
     }
-    keyword = self.names[self.index];
-    self.index = self.index + 1;
+    _currentKeyword = keyword;
+    [[NSUserDefaults standardUserDefaults] setObject:_currentKeyword forKey:kKeyword];
+    _itemArray = nil;
+    [_collectionView reloadData];
+    [self showLoading:YES];
+    [self showRetry:NO];
+    [_keywordBtn setTitle:keyword forState:UIControlStateNormal];
     
     @weakify(self)
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
@@ -126,15 +123,17 @@
         NSString *responseString = [SWCommonUtil replaceUnicode:[[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding]];
         @strongify(self)
         SWImageListDO *imageList = [SWImageListDO yy_modelWithJSON:responseString];
-        NSLog(@"Fnoz:%@", keyword);
-        self.result = [self.result stringByAppendingString:[NSString stringWithFormat:@"%@ (%lu); ", keyword, (unsigned long)imageList.itemArray.count]];
         self.itemArray = imageList.itemArray;
-        [self getResultForKeyword:@""];
+        [self showLoading:NO];
+        [self.collectionView reloadData];
+        if (!imageList.itemArray.count) {
+            [_backToTopBtn removeFromSuperview];
+            [self showEmpty];
+        }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         @strongify(self)
-        self.result = [self.result stringByAppendingString:[NSString stringWithFormat:@"%@ (error); ", keyword]];
-        [self getResultForKeyword:@""];
-
+        [self showLoading:NO];
+        [self showRetry:YES];
     }];
     manager.responseSerializer=[AFHTTPResponseSerializer serializer];
 }
