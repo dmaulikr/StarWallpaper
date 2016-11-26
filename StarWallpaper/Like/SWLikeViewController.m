@@ -48,6 +48,7 @@
     _backToTopBtn.imageEdgeInsets = UIEdgeInsetsMake(15, 15, 15, 15);
     [_backToTopBtn setImage:[UIImage imageNamed:@"backUp"] forState:UIControlStateNormal];
     [_backToTopBtn addTarget:self action:@selector(backToTop) forControlEvents:UIControlEventTouchUpInside];
+    _backToTopBtn.hidden = YES;
     [self.view addSubview:_backToTopBtn];
     
     UIButton *homeBtn = [UIButton buttonWithType:UIButtonTypeSystem];

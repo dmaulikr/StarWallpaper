@@ -55,6 +55,7 @@
     _backToTopBtn = [UIButton buttonWithType:UIButtonTypeSystem];
     _backToTopBtn.frame = CGRectMake(self.view.frame.size.width-50, _collectionView.frame.size.height-80, 50, 50);
     _backToTopBtn.tintColor = kSWIconWhite;
+    _backToTopBtn.hidden = YES;
     _backToTopBtn.imageEdgeInsets = UIEdgeInsetsMake(15, 15, 15, 15);
     [_backToTopBtn setImage:[UIImage imageNamed:@"backUp"] forState:UIControlStateNormal];
     [_backToTopBtn addTarget:self action:@selector(backToTop) forControlEvents:UIControlEventTouchUpInside];

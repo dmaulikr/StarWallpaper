@@ -22,14 +22,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launch" translatesAutoresizingMaskIntoConstraints="NO" id="3O9-Ko-l19">
-                                <rect key="frame" x="127.5" y="273.5" width="120" height="120"/>
+                                <rect key="frame" x="132.5" y="278.5" width="110" height="110"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="If0-ML-0KK"/>
-                                    <constraint firstAttribute="width" constant="120" id="hfI-IY-1kL"/>
+                                    <constraint firstAttribute="height" constant="110" id="If0-ML-0KK"/>
+                                    <constraint firstAttribute="width" constant="110" id="hfI-IY-1kL"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.13331398367881775" green="0.13334444165229797" blue="0.13331207633018494" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.23916080594062805" green="0.23908448219299316" blue="0.24734160304069519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="3O9-Ko-l19" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="246" id="6ID-Ec-bBA"/>
                             <constraint firstItem="3O9-Ko-l19" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="APg-Uq-Cxd"/>
@@ -50,6 +50,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Launch" width="90" height="90"/>
+        <image name="Launch" width="150" height="150"/>
     </resources>
 </document>

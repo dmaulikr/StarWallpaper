@@ -7,14 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		100B315D1DE94D3C0071D153 /* SWCommonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 100B315B1DE94D3C0071D153 /* SWCommonUtil.m */; };
+		100B31671DE967AB0071D153 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 100B31661DE967AB0071D153 /* LaunchScreen.storyboard */; };
 		1028A94F1CB5087100C3E276 /* RTWSYueGoTrial-LightCond.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1028A94E1CB5087100C3E276 /* RTWSYueGoTrial-LightCond.ttf */; };
-		1028A9521CB50D4800C3E276 /* SWCommonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1028A9511CB50D4800C3E276 /* SWCommonUtil.m */; };
 		1028A9541CB50E7600C3E276 /* pchFile.pch in Resources */ = {isa = PBXBuildFile; fileRef = 1028A9531CB50D9E00C3E276 /* pchFile.pch */; };
 		10527BD01CAE75B1004EB822 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10527BCF1CAE75B1004EB822 /* main.m */; };
 		10527BD31CAE75B1004EB822 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10527BD21CAE75B1004EB822 /* AppDelegate.m */; };
-		10527BD91CAE75B1004EB822 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10527BD71CAE75B1004EB822 /* Main.storyboard */; };
 		10527BDB1CAE75B1004EB822 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10527BDA1CAE75B1004EB822 /* Assets.xcassets */; };
-		10527BDE1CAE75B1004EB822 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10527BDC1CAE75B1004EB822 /* LaunchScreen.storyboard */; };
 		10527BE81CAE7CF7004EB822 /* SWHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10527BE71CAE7CF7004EB822 /* SWHomeViewController.m */; };
 		10527BF31CB209F6004EB822 /* SWSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10527BF21CB209F6004EB822 /* SWSearchViewController.m */; };
 		10527BF71CB2CE72004EB822 /* SWImageListDO.m in Sources */ = {isa = PBXBuildFile; fileRef = 10527BF61CB2CE72004EB822 /* SWImageListDO.m */; };
@@ -36,21 +35,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		100B315A1DE94D3C0071D153 /* SWCommonUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWCommonUtil.h; sourceTree = "<group>"; };
+		100B315B1DE94D3C0071D153 /* SWCommonUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWCommonUtil.m; sourceTree = "<group>"; };
+		100B315C1DE94D3C0071D153 /* SWConstDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWConstDef.h; sourceTree = "<group>"; };
+		100B31661DE967AB0071D153 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1028A94E1CB5087100C3E276 /* RTWSYueGoTrial-LightCond.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RTWSYueGoTrial-LightCond.ttf"; sourceTree = "<group>"; };
-		1028A9501CB50D4800C3E276 /* SWCommonUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWCommonUtil.h; sourceTree = "<group>"; };
-		1028A9511CB50D4800C3E276 /* SWCommonUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWCommonUtil.m; sourceTree = "<group>"; };
 		1028A9531CB50D9E00C3E276 /* pchFile.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pchFile.pch; sourceTree = "<group>"; };
 		10527BCB1CAE75B0004EB822 /* StarWallpaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWallpaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10527BCF1CAE75B1004EB822 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		10527BD11CAE75B1004EB822 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		10527BD21CAE75B1004EB822 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		10527BD81CAE75B1004EB822 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		10527BDA1CAE75B1004EB822 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		10527BDD1CAE75B1004EB822 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10527BDF1CAE75B1004EB822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10527BE61CAE7CF7004EB822 /* SWHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWHomeViewController.h; sourceTree = "<group>"; };
 		10527BE71CAE7CF7004EB822 /* SWHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWHomeViewController.m; sourceTree = "<group>"; };
-		10527BEF1CAFEDBF004EB822 /* SWConstDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWConstDef.h; sourceTree = "<group>"; };
 		10527BF11CB209F6004EB822 /* SWSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWSearchViewController.h; sourceTree = "<group>"; };
 		10527BF21CB209F6004EB822 /* SWSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWSearchViewController.m; sourceTree = "<group>"; };
 		10527BF51CB2CE72004EB822 /* SWImageListDO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWImageListDO.h; sourceTree = "<group>"; };
@@ -100,6 +98,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		100B31591DE94D3C0071D153 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				100B315A1DE94D3C0071D153 /* SWCommonUtil.h */,
+				100B315B1DE94D3C0071D153 /* SWCommonUtil.m */,
+				100B315C1DE94D3C0071D153 /* SWConstDef.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		10527BC21CAE75B0004EB822 = {
 			isa = PBXGroup;
 			children = (
@@ -121,25 +129,18 @@
 		10527BCD1CAE75B1004EB822 /* StarWallpaper */ = {
 			isa = PBXGroup;
 			children = (
-				10A7BBDB1CBFE8260053209E /* Setting */,
+				10527BE51CAE7CF7004EB822 /* Home */,
+				10527BF01CB209D4004EB822 /* Search */,
 				1085D1261CBEAEC900D34336 /* Like */,
-				108874921CBBF0A6000F9CEF /* Database */,
+				10A7BBDB1CBFE8260053209E /* Setting */,
 				1088748E1CBB87D7000F9CEF /* ImageBrowser */,
+				108874921CBBF0A6000F9CEF /* Database */,
 				1088743D1CBAA121000F9CEF /* Category */,
 				10527BF41CB2CE32004EB822 /* Model */,
-				10527BF01CB209D4004EB822 /* Search */,
-				10527BE51CAE7CF7004EB822 /* Home */,
-				10527BEF1CAFEDBF004EB822 /* SWConstDef.h */,
-				1028A9501CB50D4800C3E276 /* SWCommonUtil.h */,
-				1028A9511CB50D4800C3E276 /* SWCommonUtil.m */,
+				100B31591DE94D3C0071D153 /* Common */,
 				10527BD11CAE75B1004EB822 /* AppDelegate.h */,
 				10527BD21CAE75B1004EB822 /* AppDelegate.m */,
-				10527BD71CAE75B1004EB822 /* Main.storyboard */,
 				10527BDA1CAE75B1004EB822 /* Assets.xcassets */,
-				10527BDC1CAE75B1004EB822 /* LaunchScreen.storyboard */,
-				1028A9531CB50D9E00C3E276 /* pchFile.pch */,
-				10527BDF1CAE75B1004EB822 /* Info.plist */,
-				1028A94E1CB5087100C3E276 /* RTWSYueGoTrial-LightCond.ttf */,
 				10527BCE1CAE75B1004EB822 /* Supporting Files */,
 			);
 			path = StarWallpaper;
@@ -148,6 +149,10 @@
 		10527BCE1CAE75B1004EB822 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				100B31661DE967AB0071D153 /* LaunchScreen.storyboard */,
+				1028A9531CB50D9E00C3E276 /* pchFile.pch */,
+				10527BDF1CAE75B1004EB822 /* Info.plist */,
+				1028A94E1CB5087100C3E276 /* RTWSYueGoTrial-LightCond.ttf */,
 				10527BCF1CAE75B1004EB822 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -323,10 +328,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1028A9541CB50E7600C3E276 /* pchFile.pch in Resources */,
-				10527BDE1CAE75B1004EB822 /* LaunchScreen.storyboard in Resources */,
+				100B31671DE967AB0071D153 /* LaunchScreen.storyboard in Resources */,
 				10527BDB1CAE75B1004EB822 /* Assets.xcassets in Resources */,
 				1028A94F1CB5087100C3E276 /* RTWSYueGoTrial-LightCond.ttf in Resources */,
-				10527BD91CAE75B1004EB822 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,11 +391,11 @@
 			files = (
 				10A960F41CBD3EA600946028 /* SWSearchSuggestSubDO.m in Sources */,
 				10A960F11CBD3E0E00946028 /* SWSearchSuggestDO.m in Sources */,
+				100B315D1DE94D3C0071D153 /* SWCommonUtil.m in Sources */,
 				108874951CBBF15B000F9CEF /* SWDatabaseManager.m in Sources */,
 				1085D1291CBEAF0400D34336 /* SWLikeViewController.m in Sources */,
 				108874911CBB87D7000F9CEF /* SWPhotoBrowser.m in Sources */,
 				10527BFA1CB2CECD004EB822 /* SWImageItemDO.m in Sources */,
-				1028A9521CB50D4800C3E276 /* SWCommonUtil.m in Sources */,
 				10527BD31CAE75B1004EB822 /* AppDelegate.m in Sources */,
 				10527BF71CB2CE72004EB822 /* SWImageListDO.m in Sources */,
 				1088743C1CBA8DDD000F9CEF /* SWHomeImageCellCollectionViewCell.m in Sources */,
@@ -409,25 +413,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		10527BD71CAE75B1004EB822 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				10527BD81CAE75B1004EB822 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		10527BDC1CAE75B1004EB822 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				10527BDD1CAE75B1004EB822 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		10527BE01CAE75B1004EB822 /* Debug */ = {

@@ -26,9 +26,9 @@ static NSString *const kSWSearchSuggestCollectionViewCell = @"SWSearchSuggestCol
     
     UICollectionViewFlowLayout *flowLayout=[[UICollectionViewFlowLayout alloc] init];
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
-    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 80) collectionViewLayout:flowLayout];
-    self.collectionView.dataSource=self;
-    self.collectionView.delegate=self;
+    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kSWSearchSuggestTableViewCellSize) collectionViewLayout:flowLayout];
+    self.collectionView.dataSource = self;
+    self.collectionView.delegate = self;
     self.collectionView.showsHorizontalScrollIndicator = NO;
     _collectionView.backgroundColor = kSWBackGroundGray;
     self.collectionView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
@@ -37,17 +37,17 @@ static NSString *const kSWSearchSuggestCollectionViewCell = @"SWSearchSuggestCol
 }
 
 #pragma mark UICollectionViewDataSource
--(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return _item.keywordItems.count;
 }
 
--(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
     return 1;
 }
 
--(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     SWSearchSuggestCollectionViewCell *cell = (SWSearchSuggestCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:kSWSearchSuggestCollectionViewCell forIndexPath:indexPath];
     [cell setData:[_item.keywordItems objectAtIndex:indexPath.row]];
@@ -55,7 +55,7 @@ static NSString *const kSWSearchSuggestCollectionViewCell = @"SWSearchSuggestCol
 }
 
 #pragma mark UICollectionViewDelegate
--(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     SWSearchSuggestSubDO *subItem = [_item.keywordItems objectAtIndex:indexPath.row];
     [_delegate clickWithKeyword:subItem.keyword];
@@ -69,7 +69,7 @@ static NSString *const kSWSearchSuggestCollectionViewCell = @"SWSearchSuggestCol
 #pragma mark UICollectionViewDelegateFlowLayout
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(80,80);
+    return CGSizeMake(kSWSearchSuggestTableViewCellSize, kSWSearchSuggestTableViewCellSize);
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section

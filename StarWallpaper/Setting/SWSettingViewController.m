@@ -20,15 +20,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIImageView *logoImageView = [[UIImageView alloc] initWithFrame:CGRectMake((kScreenWidth - 110)/2, 110, 110, 110)];
-    logoImageView.image = [UIImage imageNamed:@"Launch"];
-    logoImageView.layer.shadowColor = [UIColor lightGrayColor].CGColor;//shadowColor阴影颜色
-    logoImageView.layer.shadowOffset = CGSizeMake(0,0);//shadowOffset阴影偏移，默认(0, -3),这个跟shadowRadius配合使用
-    logoImageView.layer.shadowOpacity = 1;//阴影透明度，默认0
-    logoImageView.layer.shadowRadius = 3;//阴影半径，默认3
-    [self.view addSubview:logoImageView];
+    UIView *shadowView = [[UIView alloc] initWithFrame:CGRectMake((kScreenWidth - 110) / 2, 110, 110, 110)];
+    shadowView.layer.shadowColor = [UIColor lightGrayColor].CGColor;
+    shadowView.layer.shadowOffset = CGSizeMake(0, 0);
+    shadowView.layer.shadowOpacity = 0.2;
+    shadowView.layer.shadowRadius = 5;
+    [self.view addSubview:shadowView];
     
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, logoImageView.frame.origin.y+logoImageView.frame.size.height + 20, kScreenWidth, 30)];
+    UIImageView *logoImageView = [[UIImageView alloc] initWithFrame:shadowView.bounds];
+    logoImageView.image = [UIImage imageNamed:@"Launch"];
+    logoImageView.layer.cornerRadius = 25;
+    logoImageView.layer.masksToBounds = YES;
+    [shadowView addSubview:logoImageView];
+    
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, shadowView.frame.origin.y + shadowView.frame.size.height + 20, kScreenWidth, 30)];
     titleLabel.text = @"明星壁纸";
     titleLabel.font = SWFontOfSize(20);
     titleLabel.textColor = kSWIconWhite;

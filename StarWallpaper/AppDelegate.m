@@ -24,10 +24,14 @@
     UMConfigInstance.channelId = @"iOS";
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
     
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.rootViewController = [[SWHomeViewController alloc] init];
+    [self.window makeKeyAndVisible];    
+    
     [self initCRToast];
     
     NSString *keyword = [[NSUserDefaults standardUserDefaults] objectForKey:kKeyword];
-    if (!keyword || keyword.length<=0) {
+    if (!keyword || keyword.length <= 0) {
         [[NSUserDefaults standardUserDefaults] setObject:@"贝克汉姆" forKey:kKeyword];
     }
     return YES;
@@ -56,12 +60,11 @@
 }
 
 - (void)initCRToast {
-    [CRToastManager setDefaultOptions:@{
-                                        kCRToastNotificationTypeKey : @(CRToastTypeStatusBar),
-                                        kCRToastFontKey             : SWFontOfSize(17),
-                                        kCRToastTextColorKey        : [UIColor whiteColor],
-                                        kCRToastBackgroundColorKey  : [UIColor orangeColor],
-                                        kCRToastAutorotateKey       : @(YES)}];
+    [CRToastManager setDefaultOptions:@{kCRToastNotificationTypeKey: @(CRToastTypeStatusBar),
+                                        kCRToastFontKey: SWFontOfSize(17),
+                                        kCRToastTextColorKey: [UIColor whiteColor],
+                                        kCRToastBackgroundColorKey: [UIColor orangeColor],
+                                        kCRToastAutorotateKey: @(YES)}];
 }
 
 - (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler {

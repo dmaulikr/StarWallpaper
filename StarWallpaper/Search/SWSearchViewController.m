@@ -84,7 +84,7 @@ static NSString *const kSWSearchSuggestTableViewCell = @"SWSearchSuggestTableVie
     [searchBtn addTarget:self action:@selector(search) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:searchBtn];
     
-    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, kSearchFieldHeight, self.view.frame.size.width, self.view.frame.size.height - (0 + kSearchFieldHeight) - 8) style:UITableViewStyleGrouped];
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, kSearchFieldHeight, self.view.frame.size.width, self.view.frame.size.height - kSearchFieldHeight) style:UITableViewStyleGrouped];
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.separatorStyle = NO;
@@ -155,7 +155,7 @@ static NSString *const kSWSearchSuggestTableViewCell = @"SWSearchSuggestTableVie
 {
     UIView *header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 25)];
     SWSearchSuggestDO *item = [_suggestArray objectAtIndex:section];
-    UILabel *typeLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 10, self.view.frame.size.width, 18)];
+    UILabel *typeLabel = [[UILabel alloc] initWithFrame:CGRectMake(12, 10, self.view.frame.size.width, 18)];
     typeLabel.text = item.type;
     typeLabel.textColor = kSWFontGreen;
     typeLabel.font = SWFontOfSize(18);
@@ -170,7 +170,7 @@ static NSString *const kSWSearchSuggestTableViewCell = @"SWSearchSuggestTableVie
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 80;
+    return kSWSearchSuggestTableViewCellSize;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

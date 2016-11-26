@@ -13,6 +13,7 @@
 + (BOOL)is5OrEarlier;
 + (BOOL)is6Or6s;
 + (BOOL)is6pOr6sp;
+
 + (UIViewController *)getCurrentVC;
 + (NSString *)replaceUnicode:(NSString *)unicodeStr;
 + (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString;

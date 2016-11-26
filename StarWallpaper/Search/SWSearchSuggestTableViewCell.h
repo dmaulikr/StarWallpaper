@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#define  kSWSearchSuggestTableViewCellSize  100
+
 @protocol SWSearchSuggestTableViewCellDelegate <NSObject>
 
 - (void)clickWithKeyword:(NSString *)keyword;
