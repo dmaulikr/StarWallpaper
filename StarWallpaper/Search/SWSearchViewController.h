@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SWViewController.h"
 
 typedef void (^SWSelectedKeywordBlock)(NSString *keyword);
 
-@interface SWSearchViewController : UIViewController
+@interface SWSearchViewController : SWViewController
 
 @property (nonatomic, copy) NSString *keyword;
 

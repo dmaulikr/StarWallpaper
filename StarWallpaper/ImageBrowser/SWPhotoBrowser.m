@@ -11,6 +11,8 @@
 #import "SWImageItemDO.h"
 #import "SDImageCache.h"
 #import "SWCommonUtil.h"
+#import "SWPhotoPresentAnimator.h"
+#import "SWPhotoDismissAnimator.h"
 
 @interface SWPhotoBrowser ()
 
@@ -20,6 +22,14 @@
 @end
 
 @implementation SWPhotoBrowser
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.transitioningDelegate = self;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -124,6 +134,20 @@
     {
         [_likeBtn setImage:[UIImage imageNamed:@"unLike"] forState:UIControlStateNormal];
     }
+}
+
+- (id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
+{
+    SWPhotoPresentAnimator *presentAnimator = [[SWPhotoPresentAnimator alloc] init];
+    presentAnimator.oriCenter = self.oriCenter;
+    return presentAnimator;
+}
+
+- (id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed;
+{
+    SWPhotoDismissAnimator *dismissAnimator = [[SWPhotoDismissAnimator alloc] init];
+    dismissAnimator.oriCenter = self.oriCenter;
+    return dismissAnimator;
 }
 
 @end

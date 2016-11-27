@@ -8,8 +8,9 @@
 
 #import <MWPhotoBrowser/MWPhotoBrowser.h>
 
-@interface SWPhotoBrowser : MWPhotoBrowser
+@interface SWPhotoBrowser : MWPhotoBrowser <UIViewControllerTransitioningDelegate>
 
 @property (nonatomic, strong) NSArray *itemArray;
+@property (nonatomic, assign) CGPoint oriCenter;
 
 @end

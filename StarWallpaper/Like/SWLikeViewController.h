@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SWViewController.h"
 
-@interface SWLikeViewController : UIViewController
+@interface SWLikeViewController : SWViewController
 
 @end
