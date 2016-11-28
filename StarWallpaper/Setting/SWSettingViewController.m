@@ -20,20 +20,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIView *shadowView = [[UIView alloc] initWithFrame:CGRectMake((kScreenWidth - 110) / 2, 110, 110, 110)];
-    shadowView.layer.shadowColor = [UIColor lightGrayColor].CGColor;
-    shadowView.layer.shadowOffset = CGSizeMake(0, 0);
-    shadowView.layer.shadowOpacity = 0.2;
-    shadowView.layer.shadowRadius = 5;
-    [self.view addSubview:shadowView];
+    UIImageView *logoImageView = [[UIImageView alloc] initWithFrame:CGRectMake((kScreenWidth - 140) / 2, 95, 140, 140)];
+    logoImageView.image = [UIImage imageNamed:@"icon_shadow"];
+    [self.view addSubview:logoImageView];
     
-    UIImageView *logoImageView = [[UIImageView alloc] initWithFrame:shadowView.bounds];
-    logoImageView.image = [UIImage imageNamed:@"Launch"];
-    logoImageView.layer.cornerRadius = 25;
-    logoImageView.layer.masksToBounds = YES;
-    [shadowView addSubview:logoImageView];
-    
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, shadowView.frame.origin.y + shadowView.frame.size.height + 20, kScreenWidth, 30)];
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, logoImageView.frame.origin.y + logoImageView.frame.size.height + 20, kScreenWidth, 30)];
     titleLabel.text = @"明星壁纸";
     titleLabel.font = SWFontOfSize(20);
     titleLabel.textColor = kSWIconWhite;
