@@ -18,6 +18,7 @@
 
 @property (nonatomic, strong) UIButton *likeBtn;
 @property (nonatomic, strong) UIButton *saveBtn;
+@property (nonatomic, strong) UIButton *homeBtn;
 
 @end
 
@@ -34,16 +35,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIButton *homeBtn = [UIButton buttonWithType:UIButtonTypeSystem];
-    homeBtn.frame = CGRectMake((self.view.frame.size.width - 50) * 0.5, self.view.frame.size.height - 50, 50, 50);
-    homeBtn.tintColor = kSWIconWhite;
-    homeBtn.imageEdgeInsets = UIEdgeInsetsMake(13, 13, 13, 13);
-    [homeBtn setImage:[UIImage imageNamed:@"backDown"] forState:UIControlStateNormal];
-    [homeBtn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:homeBtn];
+    _homeBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+    _homeBtn.frame = CGRectMake((self.view.frame.size.width - 50) * 0.5, self.view.frame.size.height, 50, 50);
+    _homeBtn.tintColor = kSWIconWhite;
+    _homeBtn.imageEdgeInsets = UIEdgeInsetsMake(13, 13, 13, 13);
+    [_homeBtn setImage:[UIImage imageNamed:@"backDown"] forState:UIControlStateNormal];
+    [_homeBtn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_homeBtn];
     
     _likeBtn = [UIButton buttonWithType:UIButtonTypeSystem];
-    _likeBtn.frame = CGRectMake(10, self.view.frame.size.height - 50, 50, 50);
+    _likeBtn.frame = CGRectMake(10, self.view.frame.size.height, 50, 50);
     _likeBtn.tintColor = kSWIconWhite;
     _likeBtn.imageEdgeInsets = UIEdgeInsetsMake(13, 13, 13, 13);
     [_likeBtn setImage:[UIImage imageNamed:@"like"] forState:UIControlStateNormal];
@@ -52,13 +53,21 @@
     [self.view addSubview:_likeBtn];
     
     _saveBtn = [UIButton buttonWithType:UIButtonTypeSystem];
-    _saveBtn.frame = CGRectMake(self.view.frame.size.width - 10 - 50, self.view.frame.size.height - 50, 50, 50);
+    _saveBtn.frame = CGRectMake(self.view.frame.size.width - 10 - 50, self.view.frame.size.height, 50, 50);
     _saveBtn.tintColor = kSWIconWhite;
     _saveBtn.imageEdgeInsets = UIEdgeInsetsMake(13, 13, 13, 13);
     [_saveBtn setImage:[UIImage imageNamed:@"save"] forState:UIControlStateNormal];
     [_saveBtn addTarget:self action:@selector(save) forControlEvents:UIControlEventTouchUpInside];
     [self updateLikeBtn];
     [self.view addSubview:_saveBtn];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [UIView animateWithDuration:0.7 animations:^{
+            _homeBtn.frame = CGRectMake((self.view.frame.size.width - 50) * 0.5, self.view.frame.size.height - 50, 50, 50);
+            _likeBtn.frame = CGRectMake(10, self.view.frame.size.height - 50, 50, 50);
+            _saveBtn.frame = CGRectMake(self.view.frame.size.width - 10 - 50, self.view.frame.size.height - 50, 50, 50);
+        }];
+    });
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] init];
     [tap addTarget:self action:@selector(tap:)];
@@ -112,6 +121,11 @@
 }
 
 - (void)back {
+    [UIView animateWithDuration:0.3 animations:^{
+        _homeBtn.frame = CGRectMake((self.view.frame.size.width - 50) * 0.5, self.view.frame.size.height, 50, 50);
+        _likeBtn.frame = CGRectMake(10, self.view.frame.size.height, 50, 50);
+        _saveBtn.frame = CGRectMake(self.view.frame.size.width - 10 - 50, self.view.frame.size.height, 50, 50);
+    }];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
