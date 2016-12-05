@@ -159,8 +159,11 @@
 
 - (id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed;
 {
+    CGFloat horizonOffset = ((NSInteger)(self.currentIndex % 3) - (self.oriIndex % 3)) * ((kScreenWidth - 8) / 3 + 4);
+    CGFloat verticalOffset = (self.currentIndex / 3 - self.oriIndex / 3) * ((kScreenWidth-8)/3 * kScreenHeight / kScreenWidth + 4);
+
     SWPhotoDismissAnimator *dismissAnimator = [[SWPhotoDismissAnimator alloc] init];
-    dismissAnimator.oriCenter = self.oriCenter;
+    dismissAnimator.oriCenter = CGPointMake(self.oriCenter.x + horizonOffset, self.oriCenter.y + verticalOffset);
     return dismissAnimator;
 }
 

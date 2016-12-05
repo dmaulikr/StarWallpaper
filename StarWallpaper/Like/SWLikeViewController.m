@@ -159,7 +159,8 @@
     SWHomeImageCellCollectionViewCell *cell = (SWHomeImageCellCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
     CGRect oriFrame = [cell convertRect:cell.bounds toView:cell.window];
     browser.oriCenter = CGPointMake(oriFrame.origin.x + oriFrame.size.width * 0.5, oriFrame.origin.y + oriFrame.size.height * 0.5 - 2);
-    
+    browser.oriIndex = indexPath.row;
+
     browser.itemArray = _itemArray;
     browser.zoomPhotosToFill = YES;
     browser.customImageSelectedIconName = @"ImageSelected.png";

@@ -12,5 +12,6 @@
 
 @property (nonatomic, strong) NSArray *itemArray;
 @property (nonatomic, assign) CGPoint oriCenter;
+@property (nonatomic, assign) NSInteger oriIndex;
 
 @end

@@ -15,10 +15,14 @@
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
-        _mainImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
+        _mainImageView = [[UIImageView alloc] initWithFrame:self.bounds];
         _mainImageView.backgroundColor = [UIColor clearColor];
         _mainImageView.contentMode = UIViewContentModeScaleAspectFill;
         [self.contentView addSubview:_mainImageView];
+        
+        UIImageView *maskView = [[UIImageView alloc] initWithFrame:self.bounds];
+        maskView.image = [UIImage imageNamed:@"mask"];
+        [self.contentView addSubview:maskView];
         
         _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, frame.size.height-20, frame.size.width, 20)];
         _titleLabel.font = SWFontOfSize(16);
